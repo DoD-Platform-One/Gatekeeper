@@ -12,7 +12,7 @@ repos:
     - id: kustomize
       name: validate kustomize - core contraint templates
       args:
-        - deploy/constraint-templates/core
+        - deploy/contraint-templates/core
 
     # Core Contraints
     - id: kustomize
