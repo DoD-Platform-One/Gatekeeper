@@ -4,6 +4,8 @@ commonLabels:
 
 commonAnnotations:
   argocd.argoproj.io/sync-wave: "2"
+  argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+
 
 resources:
   - all_ns_must_have_owner.yaml
