@@ -1,4 +1,5 @@
 namespace: gatekeeper-system
+
 resources:
   - opa-gatekeeper
   - contraint-templates/core
