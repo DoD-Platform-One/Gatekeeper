@@ -2,11 +2,23 @@ repos:
 - repo: https://repo1.dsop.io/platform-one/plugins/pre-commit-bootstraps.git
   rev: v0.2.0
   hooks:
+    # All Core
+    - id: kustomize
+      name: validate kustomize - core
+      args:
+        - deploy
+
     # Gatekeeper
     - id: kustomize
       name: validate kustomize - opa gatekeeper
       args:
         - deploy/opa-gatekeeper
+
+    # Configs
+    - id: kustomize
+      name: validate kustomize - core configs
+      args:
+        - deploy/configs
 
     # Core Contraint Templates
     - id: kustomize
