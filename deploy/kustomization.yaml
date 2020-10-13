@@ -10,4 +10,4 @@ resources:
   - contraint-templates/core
 
   # Core constraints
-  - constraints/core
+  # - constraints/core
