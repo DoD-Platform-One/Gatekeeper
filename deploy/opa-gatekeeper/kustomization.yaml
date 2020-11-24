@@ -1,5 +1,0 @@
-commonLabels:
-  owner: p1
-
-resources:
-  - gatekeeper.yaml
