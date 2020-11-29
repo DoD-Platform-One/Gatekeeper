@@ -40,7 +40,9 @@ A sample ContraintTemplate is shown shown below.
 
 <details>
     <summary>Sample ConstraintTemplate</summary>
-    ```
+    
+<p>    
+```
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
@@ -68,5 +70,6 @@ spec:
           count(missing) > 0
           msg := sprintf("you must provide labels: %v", [missing])
         }
-    ```
+```
+</p>
 </details>
