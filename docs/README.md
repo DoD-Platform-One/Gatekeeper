@@ -39,7 +39,8 @@ The repo contains a directory (deploy/) which contain ConstraintTemplate and Con
 A sample ContraintTemplate is shown shown below. 
 
 <details>
-<summary>Sample ConstraintTemplate</summary>
+    <summary>Sample ConstraintTemplate</summary>
+    ```
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
@@ -60,7 +61,6 @@ spec:
     - target: admission.k8s.gatekeeper.sh
       rego: |
         package k8srequiredlabels
-
         violation[{"msg": msg, "details": {"missing_labels": missing}}] {
           provided := {label | input.review.object.metadata.labels[label]}
           required := {label | label := input.parameters.labels[_]}
@@ -68,5 +68,5 @@ spec:
           count(missing) > 0
           msg := sprintf("you must provide labels: %v", [missing])
         }
-
+    ```
 </details>
