@@ -39,10 +39,8 @@ The repo contains a directory (deploy/) which contain ConstraintTemplate and Con
 A sample ContraintTemplate is shown shown below. 
 
 <details>
-    <summary>Sample ConstraintTemplate</summary>
-    
-<p>    
-```
+    <summary>Sample ConstraintTemplate</summary> 
+<pre> 
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
@@ -70,6 +68,5 @@ spec:
           count(missing) > 0
           msg := sprintf("you must provide labels: %v", [missing])
         }
-```
-</p>
+</pre>
 </details>
