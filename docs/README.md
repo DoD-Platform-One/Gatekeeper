@@ -70,3 +70,34 @@ spec:
         }
 </pre>
 </details>
+
+* Constraints represent the instantiation of the ConstraintTemplates. They inform Gatekeeper that the admin wants a ConstraintTemplate to be enforced, and how.
+
+A Sammple constraint which instantiates the ConstraintTemplate "k8srequiredlabels" is shown below. 
+
+<details>
+    <summary>Sample Constraint</summary> 
+<pre> 
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sRequiredLabels
+metadata:
+  name: ns-must-have-gk
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Namespace"]
+  parameters:
+    labels: ["gatekeeper"]
+</pre>
+</details>
+
+The deploy folder in the repository contains constraintTemplates and constraints whcih are meant to be deployed in the cluster. 
+
+The `deploy/constraints/core` directory contains a constraint for enforcing namespace owners. 
+
+
+### Additional links 
+
+  * [Webinar: K8s with OPA Gatekeeper](https://www.youtube.com/watch?v=v4wJE3I8BYM)
+  * [Gatekeeper Policy Library](https://github.com/open-policy-agent/gatekeeper-library/tree/master/library/general)
