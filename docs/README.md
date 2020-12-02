@@ -10,7 +10,7 @@ To get more information about OPA Gatekeeper , please refer to this [link](https
 To install and test just the Gatekeeper application, follow these steps 
 
 ### Prerequisite 
-* A kubernetes cluster with cluster-admin access. To ease local develeopment and testing, install [k3d](https://k3d.io)
+* A kubernetes cluster with cluster-admin access. To ease local development and testing, install [k3d](https://k3d.io)
 * Helm binary - follow these [installation instructions](https://helm.sh/docs/intro/install/)
 
 ### Procedure 
@@ -33,7 +33,7 @@ To install and test just the Gatekeeper application, follow these steps
 
 ### ConstraintTemplates and Constraints 
 
-The repo contains a directory (deploy/) which contain ConstraintTemplate and Constraints. 
+The repo contains a directory `(deploy/) `which contain ConstraintTemplate and Constraints. 
 * ConstraintTemplates describe both the Rego that enforces the constraint and the schema of the constraint. It is the same context as the ConstraintTemplate being a crd with the schema definition and the contraints being the CRs passing parameters. 
 
 A sample ContraintTemplate is shown shown below. 
