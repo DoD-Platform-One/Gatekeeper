@@ -73,7 +73,7 @@ spec:
 
 * Constraints represent the instantiation of the ConstraintTemplates. They inform Gatekeeper that the admin wants a ConstraintTemplate to be enforced, and how.
 
-A Sammple constraint which instantiates the ConstraintTemplate "k8srequiredlabels" is shown below. 
+A sample constraint which instantiates the ConstraintTemplate "k8srequiredlabels" is shown below. 
 
 <details>
     <summary>Sample Constraint</summary> 
