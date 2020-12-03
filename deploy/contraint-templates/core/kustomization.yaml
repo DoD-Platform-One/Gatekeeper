@@ -1,0 +1,7 @@
+commonLabels:
+  owner: p1
+  policy-type: core
+commonAnnotations:
+  argocd.argoproj.io/sync-wave: "1"
+resources:
+- k8srequiredlabels_template.yaml

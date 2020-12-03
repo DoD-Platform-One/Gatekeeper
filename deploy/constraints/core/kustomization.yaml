@@ -1,0 +1,25 @@
+commonLabels:
+  owner: p1
+  policy-type: core
+commonAnnotations:
+  argocd.argoproj.io/sync-wave: "2"
+  argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+resources:
+- all_ns_must_have_owner.yaml
+patches:
+- target:
+    group: constraints.gatekeeper.sh
+    version: v1beta1
+  patch: |-
+    apiVersion: constraints.gatekeeper.sh/v1beta1
+    kind: K8sRequiredLabels
+    metadata:
+      name: all
+    spec:
+      parameters:
+        exemptNamespaces:
+          - istio-system
+          - monitoring
+          - elastic-system
+          - logging
+          - gatekeeper-system
