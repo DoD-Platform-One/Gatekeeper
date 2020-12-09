@@ -8,7 +8,7 @@ logLevel: INFO
 emitAdmissionEvents: false
 emitAuditEvents: false
 image:
-  repository: openpolicyagent/gatekeeper
+  repository: registry1.dsop.io/ironbank/opensource/openpolicyagent/gatekeeper
   release: v3.1.2
   pullPolicy: IfNotPresent
 nodeSelector: { kubernetes.io/os: linux }
@@ -29,5 +29,5 @@ customResourceDefinitions:
 # Additions from upstream
 createNamespace: true
 imagePullSecrets:
-  []
-#  - name: private-registry
+  
+  - name: private-registry
