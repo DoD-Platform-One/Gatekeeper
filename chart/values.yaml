@@ -27,7 +27,7 @@ customResourceDefinitions:
   create: true
 
 # Additions from upstream
-createNamespace: true
+createNamespace: false
 imagePullSecrets:
   
   - name: private-registry
