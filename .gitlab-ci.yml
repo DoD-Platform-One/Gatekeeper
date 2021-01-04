@@ -4,5 +4,4 @@ include:
     file: '/templates/package-tests.yml'
 variables:
   PROJECT_NAME: gatekeeper-system
-  BRANCH: ib-check
-
+  BRANCH: master
