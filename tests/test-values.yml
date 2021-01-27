@@ -30,4 +30,4 @@ customResourceDefinitions:
 createNamespace: false
 imagePullSecrets:
   
-  - name: private-registry
+  - name: private-registry-mil
