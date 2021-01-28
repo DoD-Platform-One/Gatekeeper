@@ -15,7 +15,7 @@ To install and test just the Gatekeeper application, follow these steps
 
 ### Procedure 
 *  Clone the application repository 
-   `git clone https://repo1.dsop.io/platform-one/big-bang/apps/core/policy.git`
+   `git clone https://repo1.dso.mil/platform-one/big-bang/apps/core/policy.git`
 *  Change into the policy directory and lint the chart  - make surre there are no errors. 
    `cd policy && helm lint chart`
 *   Install the chart 

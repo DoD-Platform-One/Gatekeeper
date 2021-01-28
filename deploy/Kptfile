@@ -6,6 +6,6 @@ upstream:
   type: git
   git:
     commit: eefa3ff9a3b8527d6b107e802226fd8776f6bd3b
-    repo: https://repo1.dsop.io/platform-one/big-bang/apps/core/policy
+    repo: https://repo1.dso.mil/platform-one/big-bang/apps/core/policy
     directory: /deploy
     ref: bb-566-codeowners
