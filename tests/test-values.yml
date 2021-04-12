@@ -1,3 +1,4 @@
 createNamespace: false
-imagePullSecrets:
-- name: private-registry-mil
+image:
+  pullSecrets:
+  - name: private-registry-mil

@@ -47,6 +47,7 @@ spec:
                   - webhook
               topologyKey: kubernetes.io/hostname
             weight: 100
+      automountServiceAccountToken: true
       containers:
       - args:
         - --port=8443
@@ -89,12 +90,13 @@ spec:
             path: /readyz
             port: 9090
         resources: 
-{{ toYaml .Values.resources | indent 10 }}
+{{ toYaml .Values.controllerManager.resources | indent 10 }}
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
             drop:
             - all
+          readOnlyRootFilesystem: true
           runAsGroup: 999
           runAsNonRoot: true
           runAsUser: 1000
@@ -102,16 +104,17 @@ spec:
         - mountPath: /certs
           name: cert
           readOnly: true
-      {{- with .Values.imagePullSecrets }}
-      imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
       nodeSelector: 
-{{ toYaml .Values.nodeSelector | indent 8 }}
+{{ toYaml .Values.controllerManager.nodeSelector | indent 8 }}
       affinity:
-{{ toYaml .Values.affinity | indent 8 }}
+{{ toYaml .Values.controllerManager.affinity | indent 8 }}
       tolerations:
-{{ toYaml .Values.tolerations | indent 8 }}
+{{ toYaml .Values.controllerManager.tolerations | indent 8 }}
+      imagePullSecrets:
+{{ toYaml .Values.image.pullSecrets | indent 8 }}
+{{- if .Values.controllerManager.priorityClassName }}
+      priorityClassName: {{ .Values.controllerManager.priorityClassName }}
+{{- end }}
       serviceAccountName: gatekeeper-admin
       terminationGracePeriodSeconds: 60
       volumes:

@@ -4,7 +4,7 @@ metadata:
   labels:
     app: '{{ template "gatekeeper.name" . }}'
     chart: '{{ template "gatekeeper.name" . }}'
-    control-plane: controller-manager
+    control-plane: audit-controller
     gatekeeper.sh/operation: audit
     gatekeeper.sh/system: "yes"
     heritage: '{{ .Release.Service }}'
@@ -35,6 +35,7 @@ spec:
         heritage: '{{ .Release.Service }}'
         release: '{{ .Release.Name }}'
     spec:
+      automountServiceAccountToken: true
       containers:
       - args:
         - --audit-interval={{ .Values.auditInterval }}
@@ -77,24 +78,26 @@ spec:
             path: /readyz
             port: 9090
         resources: 
-{{ toYaml .Values.resources | indent 10 }}
+{{ toYaml .Values.audit.resources | indent 10 }}
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
             drop:
             - all
+          readOnlyRootFilesystem: true
           runAsGroup: 999
           runAsNonRoot: true
           runAsUser: 1000
-      {{- with .Values.imagePullSecrets }}
-      imagePullSecrets:
-        {{- toYaml . | nindent 8}}
-      {{- end }}
-      nodeSelector:
-{{ toYaml .Values.nodeSelector | indent 8 }}
+      nodeSelector: 
+{{ toYaml .Values.audit.nodeSelector | indent 8 }}
       affinity:
-{{ toYaml .Values.affinity | indent 8 }}
+{{ toYaml .Values.audit.affinity | indent 8 }}
       tolerations:
-{{ toYaml .Values.tolerations | indent 8 }}
+{{ toYaml .Values.audit.tolerations | indent 8 }}
+      imagePullSecrets:
+{{ toYaml .Values.image.pullSecrets | indent 8 }}
+{{- if .Values.audit.priorityClassName }}
+      priorityClassName: {{ .Values.audit.priorityClassName }}
+{{- end }}
       serviceAccountName: gatekeeper-admin
       terminationGracePeriodSeconds: 60
