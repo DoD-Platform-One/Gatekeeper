@@ -25,7 +25,7 @@ spec:
   targets:
     - target: admission.k8s.gatekeeper.sh
       rego: |
-         package main
+         package k8srequiredpods
 
 
           # https://kubesec.io/basics/containers-resources-limits-memory
