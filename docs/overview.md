@@ -5,11 +5,11 @@ OPA Gatekeeper controls the policies for Kubernetes and acts as a customizable K
 
 OPA Gatekeeper functionality includes:
 
-- [An extensible, parameterized policy library]().
+- [An extensible, parameterized policy library](https://repo1.dso.mil/platform-one/big-bang/apps/core/policy/-/blob/documentation-standard/docs/policylibrary.md).
 - A high level language, [Rego](https://www.openpolicyagent.org/docs/latest/policy-language/), to create policies.
-- [Constraints/Constraint Templates]().
-- [Security]()  
-- [Test framework]() for developing tests for policies.
+- [Constraints/Constraint Templates](https://repo1.dso.mil/platform-one/big-bang/apps/core/policy/-/blob/documentation-standard/docs/ConstraintTemplates.md).
+- [Security](https://repo1.dso.mil/platform-one/big-bang/apps/core/policy/-/blob/documentation-standard/docs/sso-integration.md)  
+- [Test framework](https://repo1.dso.mil/platform-one/big-bang/apps/core/policy/-/blob/documentation-standard/docs/test.md) for developing tests for policies.
 
 The main focus of OPA Gatekeeper is to assist in applying Best Practices, Security, and policies in the Kubernetes environment. We will also look at Disaster Recovery and Troubleshooting for OPA Gatekeeper.
 
