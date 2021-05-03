@@ -10,6 +10,6 @@ Here's a few tips to aid in the debugging process according to [Open Policy Agen
 - In the opa container logs, check for POST requests
 - Make sue the proper namespaces are configured in the webhooks
 
-Below is a link for other debugging tips.
+Below is a link for other debugging tips:
 
 - [OPA Gatekeeper Debugging](https://open-policy-agent.github.io/gatekeeper/website/docs/debug/)
