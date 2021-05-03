@@ -5,7 +5,7 @@ you to verify the accuracy of policies and provides a framework to assists in wr
 rule modification time.
 
 OPA Gatekeeper evaluates policies against all pod request in any namespace unless specified. Tests are expressed as standard [Rego](https://www.openpolicyagent.org/docs/latest/policy-language/) rules with a naming convention that prefixes the rule name
-with test_. By default, opa test, subcommand runs all test, reports the number of tests executed, and displays all failed tests or errors. It also includes a [dryrun](https://www.infracloud.io/blogs/opa-and-gatekeeper/) functionality which enables testing a Constraint on a live cluster without enforcing it.
+with test_. By default, opa test runs all subcommands, reports the number of tests executed, and displays all failed tests or errors. It also includes a [dryrun](https://www.infracloud.io/blogs/opa-and-gatekeeper/) functionality which enables testing a Constraint on a live cluster without enforcing it.
 This functionality allows testing the Constraint without negatively impacting the cluster operations.
 
 Click her for information on [Testing](https://www.openshift.com/blog/better-kubernetes-security-with-open-policy-agent-opa-part-2).

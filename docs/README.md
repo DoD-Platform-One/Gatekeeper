@@ -1,4 +1,5 @@
-OPA Gatekeeper is a kubernetes implementation of OPA.  It differs from it by adding 
+OPA Gatekeeper is a kubernetes implementation of OPA. It differs from it by adding
+
 *  An extensible, parameterized policy library
 *  Native Kubernetes CRs for instantiating the policy library (aka contraints)
 *  Native Kubernetes CRDs for extending the policy library (aka "constraint templates")
@@ -36,7 +37,7 @@ To install and test just the Gatekeeper application, follow these steps
 The repo contains a directory `(deploy/) `which contain ConstraintTemplate and Constraints. 
 * ConstraintTemplates describe both the Rego that enforces the constraint and the schema of the constraint. It is the same context as the ConstraintTemplate being a crd with the schema definition and the contraints being the CRs passing parameters. 
 
-A sample ContraintTemplate is shown shown below. 
+A sample ContraintTemplate is shown below. 
 
 <details>
     <summary>Sample ConstraintTemplate</summary> 

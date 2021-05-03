@@ -15,3 +15,7 @@ The main focus of OPA Gatekeeper is to assist in applying Best Practices, Securi
 
 Click [here](https://github.com/open-policy-agent/gatekeeper#installation-instructions) to view the many ways to install OPA Gatekeeper. 
 
+The below links provide more resources to get to know OPA Gatekeeper:
+
+- [K8s with OPA Gatekeeper](https://www.youtube.com/watch?v=v4wJE3I8BYM&t=2735s) 
+- [Fitness Validation For Your Kubernetes Apps: Policy As Code](https://itnext.io/fitness-validation-for-your-kubernetes-apps-policy-as-code-7fad698e7dec) 

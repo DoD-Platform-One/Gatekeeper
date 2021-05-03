@@ -17,7 +17,7 @@ Here is a [list]() of OPA Gatekeeper Templates.
 
 ### Constraints
 
-Native Kubernetes CRDs for instantiating the policy library called constraints. Constraints CRDs are written in the Rego language and are created after the Constraint Templates are in place. 
+Native Kubernetes CRDs for instantiating the policy library is called constraints. Constraints CRDs are written in the Rego language and are created after the Constraint Templates are in place. 
 Constraints are instances of the Constraint Templates. They define the policies and requirements that need to be met. 
 
 For more information on OPA Gatekeeper Constraints and Constraint Template refer to the following [link](https://open-policy-agent.github.io/gatekeeper/website/docs/howto/).
