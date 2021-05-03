@@ -18,4 +18,8 @@ Click [here](https://github.com/open-policy-agent/gatekeeper#installation-instru
 The below links provide more resources to get to know OPA Gatekeeper:
 
 - [K8s with OPA Gatekeeper](https://www.youtube.com/watch?v=v4wJE3I8BYM&t=2735s) 
-- [Fitness Validation For Your Kubernetes Apps: Policy As Code](https://itnext.io/fitness-validation-for-your-kubernetes-apps-policy-as-code-7fad698e7dec) 
+- [Fitness Validation For Your Kubernetes Apps: Policy As Code](https://itnext.io/fitness-validation-for-your-kubernetes-apps-policy-as-code-7fad698e7dec)
+- [Introduction to Open Policy Agent | Rawkode Live](https://www.youtube.com/watch?v=ejH4EzmL7e0)  
+- [OPA Best Practices](https://repo1.dso.mil/platform-one/big-bang/apps/core/policy/-/blob/documentation-standard/docs/best-practices.md)
+- [OPA Gatekeeper Troubleshooting Guide](https://repo1.dso.mil/platform-one/big-bang/apps/core/policy/-/blob/documentation-standard/docs/opa-troubleshooting-guide.md)
+- [Disaster/Recovery](https://repo1.dso.mil/platform-one/big-bang/apps/core/policy/-/blob/documentation-standard/docs/disaster-recovery.md)
