@@ -85,7 +85,7 @@ spec:
               container := input.spec.template.spec.containers[_]
                 container.securityContext.runAsNonRoot
               not container.securityContext.runAsNonRoot = true
-              msg = sprintf("%s in the %s %s is running as root", [container.name, input.kind, input.metadata.name])
+              msg = sprintf("%s in the %s %s has ability to run as roott", [container.name, input.kind, input.metadata.name])
             }
 
             # https://kubesec.io/basics/containers-securitycontext-runasuser/

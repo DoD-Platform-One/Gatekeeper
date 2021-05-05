@@ -26,33 +26,22 @@ spec:
     - target: admission.k8s.gatekeeper.sh
       rego: |
          package  k8denyserviceaccounttokenmount
-          name = input.metadata.name
-          required_deployment_labels {
-              input.metadata.labels["app.kubernetes.io/name"]
-              input.metadata.labels["app.kubernetes.io/instance"]
-              input.metadata.labels["app.kubernetes.io/version"]
-              input.metadata.labels["app.kubernetes.io/component"]
-              input.metadata.labels["app.kubernetes.io/part-of"]
-              input.metadata.labels["app.kubernetes.io/managed-by"]
-          }
-
-              deny[msg] {
-              kubernetes.is_deployment
-              not required_deployment_labels
-              msg = sprintf("%s must include Kubernetes recommended labels: https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/#labels", [name])
-            }
-
-            deny[msg] {
-              input.kind == "Deployment"
-              image := input.spec.template.spec.containers[_].image
-              not count(split(image, ":")) == 2
-              msg := sprintf("image '%v' doesn't specify a valid tag", [image])
-            }
-
-            deny[msg] {
-              input.kind == "Deployment"
-              image := input.spec.template.spec.containers[_].image
-              endswith(image, "latest")
-              msg := sprintf("image '%v' uses latest tag", [image])
-            }
-            
+          missing(obj) = true {
+          not obj.automountServiceAccountToken == true
+          not obj.automountServiceAccountToken == false
+          obj.serviceAccount == "default"
+        }
+        violation[{"msg": msg}] {
+          p := input_pod[_]
+          missing(p.spec)
+          msg := sprintf("automountServiceAccountToken field is missing for pod %v while using Service Account %v", [p.metadata.name, p.spec.serviceAccount])
+        }
+        violation[{"msg": msg, "details": {}}] {
+          p := input_pod[_]
+          p.spec.automountServiceAccountToken
+          p.spec.serviceAccount == "default"
+          msg := sprintf("Service Account token automount is not allowed for pod %v while using Service Account %v, spec.automountServiceAccountToken: %v", [p.metadata.name, p.spec.serviceAccount, p.spec.automountServiceAccountToken])
+        }
+        input_pod[p] {
+          p := input.review.object
+        }
