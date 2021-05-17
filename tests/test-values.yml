@@ -1,4 +1,15 @@
 createNamespace: false
 image:
   pullSecrets:
-  - name: private-registry-mil
+  - name: private-registry
+
+bbtests:
+  scripts:
+    image: registry1.dso.mil/ironbank/opensource/kubernetes-1.20/kubectl-1.20:v1.20.6
+    additionalVolumeMounts:
+      - name: "{{ .Chart.Name }}-constraint-config"
+        mountPath: /yaml
+    additionalVolumes:
+      - name: "{{ .Chart.Name }}-constraint-config"
+        configMap:
+          name: "{{ .Chart.Name }}-constraint-config"
