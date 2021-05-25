@@ -1,6 +1,6 @@
 replicas: 3
 auditInterval: 60
-constraintViolationsLimit: 20
+constraintViolationsLimit: 1000
 auditFromCache: false
 createNamespace: true
 disableValidatingWebhook: false
