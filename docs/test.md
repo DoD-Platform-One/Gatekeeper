@@ -8,6 +8,6 @@ OPA Gatekeeper evaluates policies against all pod request in any namespace unles
 with test_. By default, opa test runs all subcommands, reports the number of tests executed, and displays all failed tests or errors. It also includes a [dryrun](https://www.infracloud.io/blogs/opa-and-gatekeeper/) functionality which enables testing a Constraint on a live cluster without enforcing it.
 This functionality allows testing the Constraint without negatively impacting the cluster operations.
 
-Click her for information on [Testing](https://www.openshift.com/blog/better-kubernetes-security-with-open-policy-agent-opa-part-2).
+Click here for information on [Testing](https://www.openshift.com/blog/better-kubernetes-security-with-open-policy-agent-opa-part-2).
 
 
