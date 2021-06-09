@@ -13,7 +13,6 @@ The two main types of policy authoring Gatekeeper uses are Constraint Templates 
 [Constraint Templates](https://github.com/open-policy-agent/gatekeeper#constraint-templates) constraint templates. OPA Gatekeeper's library of parameterized Constraint Templates determine enforcement rules and the constraint schema. The Constraint Template CRDs are written in OPA's query language called Rego. Rego is a simple syntax that incorporates a 
 small set of functions and operators for query evaluation. The Constraint Templates does not trigger the policy enforcement without the assistance of Constraints.
 
-Here is a [list](https://repo1.dso.mil/platform-one/big-bang/apps/core/policy/-/blob/documentation-standard/docs/ConstraintTemplates.md) of OPA Gatekeeper Templates.
 
 ### Constraints
 
