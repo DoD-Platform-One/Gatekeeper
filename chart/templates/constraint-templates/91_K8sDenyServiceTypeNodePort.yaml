@@ -22,5 +22,5 @@ spec:
         violation[{"msg": msg}] {
           input.review.kind.kind == "Service"
           input.review.object.spec.type == "NodePort"
-           msg := sprintf("Service Type can't  be NodePort for the service",  [input.reviw.kind.kind])     
+           msg := sprintf("Service Type can't  be NodePort for the service",  [input.review.kind.kind])     
         }
