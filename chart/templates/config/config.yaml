@@ -15,3 +15,6 @@ spec:
       - group: "networking.k8s.io"
         version: "v1"
         kind: "Ingress"
+      - group: ""
+        kind: Service
+        version: v1
