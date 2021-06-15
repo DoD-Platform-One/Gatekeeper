@@ -2,40 +2,40 @@
 
 These constraint templates come with OPA Gatekeeper:
 
-## Required Labels
+### Required Labels
 
 Identifies objects not having labels used for enforcing kubernetes apps labels
 
-## Required Label Values
+### Required Label Values
 
 Identifies objects not having a valid value for a given label key.  Used for istio compliance
 
-##  No Annotation Values
+###  No Annotation Values
 
 Identifies objects having an annotation that's not supported.  Used for istio compliance
 
-## Required Probes
+### Required Probes
 
 Identifies pods that don't have a health or liveness probe
 
-## Allowed Repos
+### Allowed Repos
 
 Identifies images that are pulled from a non-approved registry
 
-## Container Limits
+### Container Limits
 
 Identifies pods and containers that don't have a container limit
 
-## PVC Limits
+### PVC Limits
 
 Identifies pvcs that are unusually large
 
-## Isito Injection
+### Isito Injection
 
-## Protected Namespaces
+### Protected Namespaces
 
-## Regulated Resources
+### Regulated Resources
 
-## Banned Image Tags
+### Banned Image Tags
 
 Identifies pods using `latest` image tag
