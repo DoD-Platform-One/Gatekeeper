@@ -2,23 +2,34 @@ replicas: 3
 auditInterval: 60
 constraintViolationsLimit: 1000
 auditFromCache: false
-createNamespace: true
 disableValidatingWebhook: false
 validatingWebhookTimeoutSeconds: 3
 enableDeleteOperations: false
+experimentalEnableMutation: false
 auditChunkSize: 0
 logLevel: INFO
+logDenies: false
 emitAdmissionEvents: false
 emitAuditEvents: false
+postInstall:
+  labelNamespace:
+    enabled: true
+    image:
+      repository: registry1.dso.mil/ironbank/opensource/kubernetes-1.21/kubectl
+      tag: v1.21.1
+      pullPolicy: IfNotPresent
+      pullSecrets: []
 image:
   repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
-  release: v3.3.0
+  release: v3.4.0
   pullPolicy: IfNotPresent
   pullSecrets: []
 podAnnotations:
   { container.seccomp.security.alpha.kubernetes.io/manager: runtime/default }
+podLabels: {}
 secretAnnotations: {}
 controllerManager:
+  hostNetwork: false
   priorityClassName: system-cluster-critical
   affinity:
     podAntiAffinity:
@@ -42,6 +53,7 @@ controllerManager:
       cpu: 100m
       memory: 256Mi
 audit:
+  hostNetwork: false
   priorityClassName: system-cluster-critical
   affinity: {}
   tolerations: []
@@ -53,8 +65,9 @@ audit:
     requests:
       cpu: 100m
       memory: 256Mi
-customResourceDefinitions:
-  create: true
+pdb:
+  controllerManager:
+    minAvailable: 1
 
 #Bigbang Additions
 monitoring:

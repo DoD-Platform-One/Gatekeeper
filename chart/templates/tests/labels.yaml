@@ -3,7 +3,7 @@ apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sRequiredLabelValues
 metadata:
   name: pods-need-k8s-app-labels-test
-  namespace: gatekeeper-system
+  namespace: '{{ .Release.Namespace }}'
   annotations:
     helm.sh/hook: test-success
   labels:

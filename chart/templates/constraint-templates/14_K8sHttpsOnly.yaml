@@ -2,6 +2,8 @@ apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
   name: k8shttpsonly
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Requires Ingress resources to be HTTPS only; TLS configuration should
       be set and `kubernetes.io/ingress.allow-http` annotation equals false.

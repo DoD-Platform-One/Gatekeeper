@@ -2,7 +2,7 @@ apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
   labels:
-    app.kubernetes.io/instance: opa-gatekeeper
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   name: k8srequiredprobes
 spec:
   crd:
@@ -31,7 +31,7 @@ spec:
         violation[{"msg": msg}] {
           container := input.review.object.spec.containers[_]
           exempt := {ignore | ignore := input.parameters.exemptContainers[_]}
-          not exempt[container.name] 
+          not exempt[container.name]
           probe := input.parameters.probes[_]
           not container[probe]
           msg := sprintf("Container <%v> in your <%v> <%v> has no <%v>", [container.name, input.review.kind.kind, input.review.object.metadata.name, probe])
