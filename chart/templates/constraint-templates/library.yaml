@@ -1,6 +1,8 @@
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls the user and group IDs of the container.
   name: k8spspallowedusers
@@ -195,6 +197,8 @@ spec:
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls restricting escalation to root privileges.
   name: k8spspallowprivilegeescalationcontainer
@@ -234,6 +238,8 @@ spec:
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls the AppArmor profile used by containers.
   name: k8spspapparmor
@@ -276,6 +282,8 @@ spec:
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls Linux capabilities.
   name: k8spspcapabilities
@@ -353,6 +361,8 @@ spec:
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls the allowlist of Flexvolume drivers.
   name: k8spspflexvolumes
@@ -399,6 +409,8 @@ spec:
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls the `sysctl` profile used by containers.
   name: k8spspforbiddensysctls
@@ -441,6 +453,8 @@ spec:
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls allocating an FSGroup that owns the Pod's volumes.
   name: k8spspfsgroup
@@ -516,6 +530,8 @@ spec:
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls usage of the host filesystem.
   name: k8spsphostfilesystem
@@ -625,6 +641,8 @@ spec:
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls usage of host namespaces.
   name: k8spsphostnamespace
@@ -653,6 +671,8 @@ spec:
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls usage of host networking and ports.
   name: k8spsphostnetworkingports
@@ -706,6 +726,8 @@ spec:
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls running of privileged containers.
   name: k8spspprivilegedcontainer
@@ -736,6 +758,8 @@ spec:
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls the allowed `procMount` types for the container.
   name: k8spspprocmount
@@ -804,6 +828,8 @@ spec:
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Requires the use of a read only root file system.
   name: k8spspreadonlyrootfilesystem
@@ -845,6 +871,8 @@ spec:
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls the seccomp profile used by containers.
   name: k8spspseccomp
@@ -905,6 +933,8 @@ spec:
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls the SELinux context of the container.
   name: k8spspselinuxv2
@@ -980,6 +1010,8 @@ spec:
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
+  labels:
+    {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls usage of volume types.
   name: k8spspvolumetypes

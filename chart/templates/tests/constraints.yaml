@@ -1,7 +1,7 @@
 {{- include "bb-test-lib.script-configmap.overrides" (list . "gatekeeper-test.script-configmap") }}
 {{- define "gatekeeper-test.script-configmap" }}
 metadata:
-  namespace: gatekeeper-system
+  namespace: '{{ .Release.Namespace }}'
   labels:
     helm.sh/chart: '{{ template "gatekeeper.name" . }}'
     app: '{{ template "gatekeeper.name" . }}'
@@ -11,7 +11,7 @@ metadata:
 {{- include "bb-test-lib.script-runner.overrides" (list . "gatekeeper-test.script-runner") -}}
 {{- define "gatekeeper-test.script-runner" -}}
 metadata:
-  namespace: gatekeeper-system
+  namespace: '{{ .Release.Namespace }}'
   labels:
     helm.sh/chart: '{{ template "gatekeeper.name" . }}'
     app: '{{ template "gatekeeper.name" . }}'
@@ -26,7 +26,7 @@ metadata:
   name: "{{ .Chart.Name }}-constraint-config"
   labels:
     helm-test: enabled
-  namespace: gatekeeper-system
+  namespace: '{{ .Release.Namespace }}'
 data:
   config.yaml: |-
     {{- include "test-manifest" . | nindent 4 }}

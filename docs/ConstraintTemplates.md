@@ -2,40 +2,184 @@
 
 These constraint templates come with OPA Gatekeeper:
 
-### Required Labels
+## K8sAllowedRepos
 
-Identifies objects not having labels used for enforcing kubernetes apps labels
+Image Repositories
+Container images must be pulled from the specified repositories.
 
-### Required Label Values
+## K8sBannedImageTags
 
-Identifies objects not having a valid value for a given label key.  Used for istio compliance
+Banned Image Tags
+Container Images cannot use specified tags
 
-###  No Annotation Values
+## K8sBlockNodePort
 
-Identifies objects having an annotation that's not supported.  Used for istio compliance
+Node Ports
+Services must not use node ports.
 
-### Required Probes
+## K8sContainerLimits
 
-Identifies pods that don't have a health or liveness probe
+Resource Limits
+Containers must have cpu / memory limits and the values must be below the specified maximum.
 
-### Allowed Repos
+## K8sContainerRatios
 
-Identifies images that are pulled from a non-approved registry
+Resource Ratio
+Container resource limits to requests ratio must not be higher than specified.
 
-### Container Limits
+## K8sDenyServiceAccountTokentAutoMount
 
-Identifies pods and containers that don't have a container limit
+Deny Service Account Token Auto Mount
+Service Accounts must not automatically mount API credentials
 
-### PVC Limits
+## K8sExternalIPs
 
-Identifies pvcs that are unusually large
+External IPs
+Services may only contain specified external IPs.
 
-### Isito Injection
+## K8sHttpsOnly
 
-### Protected Namespaces
+Ingress on HTTPS Only
+Ingress must only allow HTTPS connections.
 
-### Regulated Resources
+## K8sImageDigests
 
-### Banned Image Tags
+Image Digests
+Containers must use images with a digest instead of a tag.
 
-Identifies pods using `latest` image tag
+## K8sIstioInjection
+
+Deprecated in favor of K8sRequiredLabelValues
+
+## K8sNoAnnotationValues
+
+Annotation Values
+Containers must have the specified annotations.
+
+## K8sProtectedNamespaces
+
+Protected Namespaces
+Resources cannot be deployed into specified namespaces.
+
+## K8sPSPAllowedUsers
+
+Users and Groups
+Containers must be run as one of the specified users and groups.
+
+## K8sPSPAllowPrivilegeEscalationContainer
+
+Privilege Escalation
+Containers must not allow escalaton of privileges.
+
+## K8sPSPAppArmor
+
+AppArmor Profile
+Containers may only use specified AppArmor profiles.
+
+## K8sPSPCapabilities
+
+Image Digests
+Containers may only use specified Linux capabilities
+
+## K8sPSPFlexVolumes
+
+Flex Volume Drivers
+Containers may only use Flex Volumes with the specified drivers
+
+## K8sPSPForbiddenSysctls
+
+SysCtls
+Containers must not use specified sysctls.
+
+## K8sPSPFSGroup
+
+Deprecated in favor of K8sPSPAllowedUsers
+
+## K8sPSPHostFilesystem
+
+Host Filesystem Paths
+Containers may only map volumes to the host node at the specified paths.
+
+## K8sPSPHostNamespace
+
+Host Namespace
+Containers must not share the host's namespaces
+
+## K8sPSPHostNetworkingPorts
+
+Host Network Ports
+Container images may only use host ports that are specified.
+
+## K8sPSPPrivilegedContainer
+
+Privilged Containers
+Containers must not run as privileged.
+
+## K8sPSPProcMount
+
+Proc Mount
+Containers may only use the specified ProcMount types.
+
+## K8sPSPReadOnlyRootFilesystem
+
+Read-only Root Filesystem
+Containers must have read-only root filesystems.
+
+## K8sPSPSeccomp
+
+Seccomp
+Containers may only use the specified seccomp profiles.
+
+## K8sPSPSELinuxV2
+
+SELinux
+Containers may only use the SELnux options specified.
+
+## K8sPSPVolumeTypes
+
+Volume Types
+Containers may only use the specified volume types in volume mounts.
+
+## K8sPvcLimits
+
+Persistent Volume Claim Limits
+Persistent Volume Claims must not be larger than the specified limit.
+
+## K8sRegulatedResources
+
+Resource List
+Resources must be in the specified allow list or not in the specified deny list.
+
+## K8sRequiredLabels
+
+Required Labels
+Containers must have the specified labels.
+
+## K8sRequiredLabelValues
+
+Required Labels
+Containers must have the specified labels and values.
+
+## K8sRequiredPods
+
+Deprecated in favor of using individual constraints.
+
+## K8sRequiredProbes
+
+Probes
+Container must have specified probes and probe types.
+
+## K8sUniqueIngressHost
+
+Unique Ingress Hosts
+Ingress hosts must be unique.
+
+## K8sUniqueServiceSelector
+
+Unique Service Selector
+Services must have unique selectors within a namespace.
+
+## RestrictedTaintToleration
+
+Taints and Tolerations
+Container must be configured according to specified taint and toleration rules.
