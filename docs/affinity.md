@@ -1,20 +1,21 @@
 # Affinity
 
-* [kubernetes affinity ](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity)
+Pod constraints for Istio are implemented following the [kubernetes affinity documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity). Istio can constraint a pod using `nodeSelector`, `nodeAffinity`, or the pod Affinity/Anti-affinity feature.
 
-Pod constraints for istio operator is implemented following the kubernetes affinity documentation. Istio Operator can constraint a pod using nodeSelector or Affinity/Antti-affinity feature
+## nodeSelector
 
-## nodeSelector 
-in the values.yaml  add nodeSelector like:
-```
+in the `values.yaml` add `nodeSelector` like:
+
+```yaml
  nodeSelector:
-    <key>: <values> 
+    <key>: <values>
 ```
 
 ## nodeAffinity
-in the values of yaml. add nodeaffinity like:
 
-```
+in the `values.yaml`, add `nodeAffinity` like:
+
+```yaml
 affinity:
     nodeAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
@@ -34,10 +35,12 @@ affinity:
             values:
             - another-node-label-value
 ```
-## podAffinity
-in the values.yaml add pod affinity/antiaffinity like:
 
-```
+## podAffinity
+
+In `values.yaml` add pod affinity/anti-affinity like:
+
+```yaml
 affinity:
     podAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
@@ -60,6 +63,3 @@ affinity:
               - S2
           topologyKey: topology.kubernetes.io/zone
 ```
-
-
-
