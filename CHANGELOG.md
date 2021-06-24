@@ -2,6 +2,14 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.4.0-bb.1]
+### Added
+- Constraints were moved from cluster-auditor to OPA gatekeeper package
+### Changed
+- Constraint template library split into individual files
+- Constraints renamed to match values.yaml
+- Constraint Templates renamed to match kind
+
 ## [3.4.0-bb.0]
 ### Added
 - Common labels on Big Bang created components

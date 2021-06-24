@@ -78,7 +78,7 @@ Containers may only use specified AppArmor profiles.
 
 ## K8sPSPCapabilities
 
-Image Digests
+Linux Capabilities
 Containers may only use specified Linux capabilities
 
 ## K8sPSPFlexVolumes

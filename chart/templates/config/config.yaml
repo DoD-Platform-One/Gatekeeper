@@ -18,5 +18,11 @@ spec:
         version: "v1"
         kind: "Ingress"
       - group: ""
+        version: "v1"
+        kind: "Namespace"
+      - group: ""
+        version: "v1"
+        kind: "Pod"
+      - group: ""
+        version: "v1"
         kind: Service
-        version: v1

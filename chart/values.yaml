@@ -69,6 +69,267 @@ pdb:
   controllerManager:
     minAvailable: 1
 
-#Bigbang Additions
+# Big Bang Constraints
+violations:
+  # Violations values are as follows:
+  # <constraint name>:
+  #   enabled: boolean - enables constraint
+  #   enforcementAction: 'dryrun' or 'deny' - behavior of constraint when violation is found
+  #   match: map - allows inclusions / exclusions to constraints
+  #     namespaceSelector:
+  #       matchExpressions:
+  #       - {key: name, operator: In, values: [tenant]}
+  #     OR
+  #     excludedNamespaces:
+  #     - <name of namespace to exclude>
+  #   parameters: map - additional parameters specific to constraint
+  allowedAppArmorProfiles:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      allowedProfiles:
+        - runtime/default
+  allowedCapabilities:
+    enabled: true
+    enforcementAction: dryrun
+    match:
+      excludedNamespaces:
+        - kube-system
+    parameters:
+      allowedCapabilities:
+        - NET_BIND_SERVICE
+      requiredDropCapabilities:
+        - all
+  allowedDockerRegistries:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      repos:
+        - registry1.dso.mil
+        - registry.dso.mil
+  allowedFlexVolumes:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      allowedFlexVolumes: []
+      # - driver: "example/lvm"
+  allowedHostFilesystem:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      allowedHostPaths: []
+      # - readOnly: true
+      #   pathPrefix: "/foo"
+  allowedIPs:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      allowedIPs: []
+      # - 1.2.3.4/32
+  allowedProcMount:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      procMount: Default
+  allowedSecCompProfiles:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      allowedProfiles:
+      - "runtime/default"
+  allowedUsers:
+    enabled: true
+    enforcementAction: dryrun
+    match:
+      excludedNamespaces:
+        - kube-system
+    parameters:
+      runAsUser:
+        rule: MustRunAsNonRoot # MustRunAs # RunAsAny
+      fsGroup:
+        rule: MustRunAs # MayRunAs # RunAsAny
+        ranges:
+          - min: 1000
+            max: 65535
+      runAsGroup:
+        rule: MustRunAs # MayRunAs # RunAsAny
+        ranges:
+          - min: 1000
+            max: 65535
+      supplementalGroups:
+        rule: MustRunAs # MayRunAs # RunAsAny
+        ranges:
+          - min: 1000
+            max: 65535
+  bannedImageTags:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      tags:
+        - latest
+  blockNodePort:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+  containerRatio:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      ratio: '2'
+  hostNetworking:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      hostNetwork: false
+  httpsOnly:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      allowedCapabilities:
+        - NET_BIND_SERVICE
+      requiredDropCapabilities:
+        - all
+  imageDigest:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+  namespacesHaveIstio:
+    enabled: true
+    enforcementAction: dryrun
+    match:
+      namespaceSelector:
+        matchExpressions:
+          - key: admission.gatekeeper.sh/ignore
+            operator: DoesNotExist
+    parameters:
+      labels:
+        - allowedRegex: ^enabled
+          key: istio-injection
+  noBigContainers:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      cpu: 2000m
+      exemptContainers:
+        - ''
+      memory: 4G
+  noHostNamespace:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+  noPrivilegedContainers:
+    enabled: true
+    enforcementAction: dryrun
+    match:
+      excludedNamespaces:
+        - kube-system
+  noPrivilegedEscalation:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+  noSysctls:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      forbiddenSysctls:
+        - '*'
+  podsHaveIstio:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      annotations:
+        - disallowedRegex: ^disabled
+          key: sidecar.istio.io/inject
+  readOnlyRoot:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+  requiredLabels:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      labels:
+        - allowedRegex: ''
+          key: app.kubernetes.io/name
+        - allowedRegex: ''
+          key: app.kubernetes.io/instance
+        - allowedRegex: ''
+          key: app.kubernetes.io/version
+        - allowedRegex: ''
+          key: app.kubernetes.io/component
+        - allowedRegex: ''
+          key: app.kubernetes.io/part-of
+        - allowedRegex: ''
+          key: app.kubernetes.io/managed-by
+  requiredProbes:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      probeTypes:
+        - tcpSocket
+        - httpGet
+        - exec
+      probes:
+        - readinessProbe
+        - livenessProbe
+  restrictedTaint:
+    enabled: true
+    enforcementAction: dryrun
+    match:
+      excludedNamespaces:
+        - kube-system
+    parameters:
+      allowGlobalToleration: false
+      restrictedTaint:
+        effect: NoSchedule
+        key: privileged
+        value: 'true'
+  selinuxPolicy:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      allowedSELinuxOptions: []
+  uniqueIngressHost:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+  uniqueServiceSelector:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+  volumeTypes:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
+    parameters:
+      volumes:
+        # - "*" # * may be used to allow all volume types
+        - configMap
+        - emptyDir
+        - projected
+        - secret
+        - downwardAPI
+        - persistentVolumeClaim
+        - hostPath #required for allowedHostPaths
+        - flexVolume #required for allowedFlexVolumes
+
+# Bigbang Additions
 monitoring:
   enabled: false

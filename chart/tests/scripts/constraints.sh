@@ -1,25 +1,70 @@
 #!/bin/bash
-set -ex
 
-echo "Wait for gatekeeper to be ready"
-kubectl wait --for=condition=ready --timeout=120s pod -l app=gatekeeper  -n gatekeeper-system
-sleep 60
+echo "Test 1: Detect missing constraints with bad k8s objects"
+echo "*Apply bad k8s objects*"
+violations=$(kubectl apply -n default -f /yaml/bad.yaml 2>&1)
 
-echo "Create Constraint K8sRequiredLabelValues"
-kubectl apply -f /yaml/config.yaml
-sleep 60
-kubectl describe K8sRequiredLabelValues pods-need-k8s-app-labels-test -n gatekeeper-system
+for constraint in $(kubectl get constraints -o jsonpath='{range .items[*]}{@.kind}{","}{@.metadata.name}{"\n"}{end}');
+do
+constraintKind=$(echo $constraint | cut -d "," -f 1)
+constraintName=$(echo $constraint | cut -d "," -f 2)
+if [[ ! $violations == *"$constraintName"* ]]; then
+  missing_violation="true"
+  echo "MISSING VIOLATION: Constraint $constraintKind/$constraintName"
+fi
+done
 
-echo "Check if test pod violation was recorded by gatekeeper"
-sleep 60
-kubectl get K8sRequiredLabelValues pods-need-k8s-app-labels-test -o jsonpath='{.status.violations[?(@.name == "gatekeeper-script-test")].namespace}' | grep gatekeeper-system || export VIOLATION="false"
+if [[ $missing_violation == "true"  ]]; then
+  #Due to formatting issue
+  echo -e "\n**ALL VIOLATIONS: **"
+  kubectl apply -n default -f /yaml/bad.yaml
+  echo -e "\n"
+  kubectl get all -n default
+  echo -e "\nSome constraints are missing violations on bad k8s objects"
+  echo "Test 1: Failed"
+else
+  echo "Test 1: Passed"
+fi
+echo "*Delete created k8s objects*"
+kubectl delete -n default -f /yaml/bad.yaml || true
 
-echo "Delete Constraint K8sRequiredLabelValues"
-kubectl delete -f /yaml/config.yaml
 
-if [[ ${VIOLATION} == "false" ]]; then
-  echo "Gatekeeper could not detect violation."
-  exit 1
+echo -e "\n\nTest 2: Detect constraints violations with good k8s objects"
+echo "*Apply good k8s objects*"
+
+violations=$(kubectl apply -n default -f /yaml/good.yaml 2>&1)
+
+for constraint in $(kubectl get constraints -o jsonpath='{range .items[*]}{@.kind}{","}{@.metadata.name}{"\n"}{end}');
+do
+constraintKind=$(echo $constraint | cut -d "," -f 1)
+constraintName=$(echo $constraint | cut -d "," -f 2)
+if [[ $violations == *"$constraintName"* ]]; then
+  found_violation="true"
+  echo "Found Constraint $constraintKind/$constraintName violation"
+fi
+done
+
+if [[ $found_violation == "true"  ]]; then
+  echo -e "\n**ALL VIOLATIONS: **"
+  kubectl apply -n default -f /yaml/good.yaml
+  echo -e "\n"
+  kubectl get all -n default
+  echo "\nConstraints violation found on good k8s objects"
+  echo "Test 2: Failed"
+else
+  echo "Test 2: Passed"
 fi
 
-echo "Test was successful"
+#check number of good objects created
+objects_created=$(kubectl get ns,pod,svc,ingress -n default -oname -l app.kubernetes.io/name=cluster-auditor | wc -l)
+objects_expected="4"
+
+echo "*Delete created k8s objects*"
+kubectl delete -n default -f /yaml/good.yaml || true
+
+if [[ $missing_violation == "true" || $found_violation == "true"  ]]; then
+  echo -e "\nConclusion: Test Failed"
+  exit 1
+elif test "$objects_created" -eq "$objects_expected"; then
+  echo -e "\nConclusion: Test Passed"
+fi
