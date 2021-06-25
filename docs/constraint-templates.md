@@ -27,11 +27,6 @@ Containers must have cpu / memory limits and the values must be below the specif
 Resource Ratio
 Container resource limits to requests ratio must not be higher than specified.
 
-## K8sDenyServiceAccountTokentAutoMount
-
-Deny Service Account Token Auto Mount
-Service Accounts must not automatically mount API credentials
-
 ## K8sExternalIPs
 
 External IPs
@@ -124,6 +119,11 @@ Containers may only use the specified ProcMount types.
 
 Read-only Root Filesystem
 Containers must have read-only root filesystems.
+
+## K8sDenySADefault
+
+Default Service Account
+Pods must not have default service account.
 
 ## K8sPSPSeccomp
 

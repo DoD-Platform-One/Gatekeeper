@@ -57,7 +57,7 @@ fi
 
 #check number of good objects created
 objects_created=$(kubectl get ns,pod,svc,ingress -n default -oname -l app.kubernetes.io/name=cluster-auditor | wc -l)
-objects_expected="4"
+objects_expected="5"
 
 echo "*Delete created k8s objects*"
 kubectl delete -n default -f /yaml/good.yaml || true

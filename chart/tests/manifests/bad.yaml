@@ -78,6 +78,7 @@ metadata:
   name: bad-test-pod-2
   namespace: default
 spec:
+  serviceAccountName: default
   containers:
     - name: opa
       image: openpolicyagent/opa:0.9.latest

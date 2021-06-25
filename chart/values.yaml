@@ -235,6 +235,10 @@ violations:
     match:
       excludedNamespaces:
         - kube-system
+  noDefaultServiceAccount:
+    enabled: true
+    enforcementAction: dryrun
+    match: {}
   noPrivilegedEscalation:
     enabled: true
     enforcementAction: dryrun

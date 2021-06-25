@@ -25,6 +25,7 @@ rules:
   - services
   - ingresses
   - namespaces
+  - serviceaccounts
   verbs:
   - create
   - delete

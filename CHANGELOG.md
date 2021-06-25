@@ -2,6 +2,15 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.4.0-bb.2]
+### Added
+- `K8sDenySADefault` constraint template.
+- `K8sDenySADefault` constraint
+- Added `ServiceAccount` for good pod testing
+### Changed
+- Removed `K8sDenyServiceAccountTokentAutoMount` constraint template
+- Updated test script to account for added SA.
+
 ## [3.4.0-bb.1]
 ### Added
 - Constraints were moved from cluster-auditor to OPA gatekeeper package
