@@ -13,157 +13,219 @@ violations:
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   allowedCapabilities:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   allowedDockerRegistries:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   allowedFlexVolumes:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   allowedHostFilesystem:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   allowedIPs:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   allowedProcMount:
     enabled: false
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   allowedSecCompProfiles:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   allowedUsers:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   bannedImageTags:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   blockNodePort:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   containerRatio:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   hostNetworking:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   httpsOnly:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   imageDigest:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   namespacesHaveIstio:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   noBigContainers:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   noHostNamespace:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   noPrivilegedContainers:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   noPrivilegedEscalation:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   noDefaultServiceAccount:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   noSysctls:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   podsHaveIstio:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   readOnlyRoot:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   requiredLabels:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   requiredProbes:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   restrictedTaint:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   selinuxPolicy:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   uniqueIngressHost:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   uniqueServiceSelector:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
   volumeTypes:
     enforcementAction: deny
     match:
       namespaces:
         - default
+        - bad-pod-test-ns
+        - good-pod-test-ns
 
 bbtests:
   scripts:
