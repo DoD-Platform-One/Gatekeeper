@@ -11,221 +11,159 @@ violations:
   allowedAppArmorProfiles:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   allowedCapabilities:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   allowedDockerRegistries:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   allowedFlexVolumes:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   allowedHostFilesystem:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   allowedIPs:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   allowedProcMount:
     enabled: false
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   allowedSecCompProfiles:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   allowedUsers:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   bannedImageTags:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   blockNodePort:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   containerRatio:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   hostNetworking:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   httpsOnly:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   imageDigest:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   namespacesHaveIstio:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   noBigContainers:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   noHostNamespace:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   noPrivilegedContainers:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   noPrivilegedEscalation:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   noDefaultServiceAccount:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   noSysctls:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   podsHaveIstio:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   readOnlyRoot:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   requiredLabels:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   requiredProbes:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   restrictedTaint:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   selinuxPolicy:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   uniqueIngressHost:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   uniqueServiceSelector:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
   volumeTypes:
     enforcementAction: deny
     match:
-      excludedNamespaces:
-        - gatekeeper-system
-        - istio-system
-        - kube-system
+      namespaces:
+        - default
 
 bbtests:
   scripts:
