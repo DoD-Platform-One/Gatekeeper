@@ -149,6 +149,13 @@ violations:
         - gatekeeper-system
         - istio-system
         - kube-system
+  noDefaultServiceAccount:
+    enforcementAction: deny
+    match:
+      excludedNamespaces:
+        - gatekeeper-system
+        - istio-system
+        - kube-system
   noSysctls:
     enforcementAction: deny
     match:
