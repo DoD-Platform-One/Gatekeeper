@@ -2,7 +2,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sPSPHostNamespace
 metadata:
-  name: psp-no-host-namespace
+  name: no-host-namespace
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

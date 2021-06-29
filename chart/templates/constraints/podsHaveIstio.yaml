@@ -2,7 +2,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sNoAnnotationValues
 metadata:
-  name: pods-must-use-istio
+  name: pods-have-istio
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

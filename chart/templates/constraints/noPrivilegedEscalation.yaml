@@ -2,7 +2,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sPSPAllowPrivilegeEscalationContainer
 metadata:
-  name: psp-allow-privilege-escalation-container
+  name: no-privileged-escalation
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

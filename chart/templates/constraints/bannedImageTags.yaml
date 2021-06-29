@@ -2,7 +2,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sBannedImageTags
 metadata:
-  name: ban-image-tags
+  name: banned-image-tags
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

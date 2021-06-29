@@ -2,7 +2,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sHttpsOnly
 metadata:
-  name: ingress-https-only
+  name: https-only
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

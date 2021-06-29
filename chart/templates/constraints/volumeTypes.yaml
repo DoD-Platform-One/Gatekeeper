@@ -2,7 +2,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sPSPVolumeTypes
 metadata:
-  name: psp-volume-types
+  name: volume-types
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

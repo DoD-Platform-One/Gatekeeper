@@ -2,7 +2,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sPSPHostNetworkingPorts
 metadata:
-  name: psp-host-network-ports
+  name: host-networking
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

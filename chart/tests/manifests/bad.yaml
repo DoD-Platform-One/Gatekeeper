@@ -102,6 +102,11 @@ spec:
         periodSeconds: 10
       securityContext:
         procMount: Unmasked
+  tolerations:
+  - key: "privileged"
+    operator: "Equal"
+    value: "true"
+    effect: "NoSchedule"
 ---
 apiVersion: v1
 kind: Namespace
