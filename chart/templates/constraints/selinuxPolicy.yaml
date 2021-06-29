@@ -2,7 +2,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sPSPSELinuxV2
 metadata:
-  name: policy-selinux
+  name: selinux-policy
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

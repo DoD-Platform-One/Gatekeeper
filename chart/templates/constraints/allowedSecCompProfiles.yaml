@@ -2,7 +2,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sPSPSeccomp
 metadata:
-  name: psp-sec-comp
+  name: allowed-sec-somp-profiles
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

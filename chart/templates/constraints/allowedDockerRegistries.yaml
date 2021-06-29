@@ -2,7 +2,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sAllowedRepos
 metadata:
-  name: images-from-approved-repo
+  name: allowed-docker-registries
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

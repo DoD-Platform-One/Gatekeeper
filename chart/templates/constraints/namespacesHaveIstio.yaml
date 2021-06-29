@@ -2,7 +2,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sRequiredLabelValues
 metadata:
-  name: ns-must-have-istio
+  name: namespaces-have-istio
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

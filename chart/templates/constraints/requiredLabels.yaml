@@ -2,7 +2,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sRequiredLabelValues
 metadata:
-  name: pods-need-k8s-app-labels
+  name: required-labels
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

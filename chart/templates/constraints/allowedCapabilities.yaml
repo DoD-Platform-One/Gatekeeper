@@ -2,7 +2,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sPSPCapabilities
 metadata:
-  name: psp-capabilities
+  name: allowed-capabilities
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

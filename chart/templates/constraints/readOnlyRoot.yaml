@@ -2,7 +2,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sPSPReadOnlyRootFilesystem
 metadata:
-  name: read-only-rootsystem
+  name: read-only-root
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

@@ -2,7 +2,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sPSPAppArmor
 metadata:
-  name: psp-apparmor
+  name: allowed-app-armor-profiles
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
