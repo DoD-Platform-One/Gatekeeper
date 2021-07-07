@@ -111,11 +111,11 @@ violations:
         - registry.dso.mil
   allowedFlexVolumes:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     match: {}
     parameters:
-      allowedFlexVolumes: []
-      # - driver: "example/lvm"
+      allowedFlexVolumes: 
+      - driver: "example/lvm"
   allowedHostFilesystem:
     enabled: true
     enforcementAction: dryrun
