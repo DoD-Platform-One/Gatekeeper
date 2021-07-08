@@ -126,7 +126,7 @@ violations:
       #   pathPrefix: "/foo"
   allowedIPs:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     match: {}
     parameters:
       allowedIPs: []
