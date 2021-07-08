@@ -337,3 +337,8 @@ violations:
 # Bigbang Additions
 monitoring:
   enabled: false
+
+networkPolicies:
+  enabled: false
+  # See `kubectl cluster-info` and then resolve to IP
+  controlPlaneCidr: 0.0.0.0/0

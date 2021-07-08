@@ -1,11 +1,11 @@
-{{- include "bb-test-lib.script-configmap.overrides" (list . "gatekeeper-test.script-configmap") }}
+{{- include "gluon.tests.script-configmap.overrides" (list . "gatekeeper-test.script-configmap") }}
 {{- define "gatekeeper-test.script-configmap" }}
 metadata:
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
 {{- end }}
 ---
-{{- include "bb-test-lib.script-runner.overrides" (list . "gatekeeper-test.script-runner") -}}
+{{- include "gluon.tests.script-runner.overrides" (list . "gatekeeper-test.script-runner") -}}
 {{- define "gatekeeper-test.script-runner" -}}
 metadata:
   labels:
@@ -13,6 +13,8 @@ metadata:
 spec:
   serviceAccountName: test-service-account
 {{- end }}
+{{- if .Values.bbtests }}
+{{- if .Values.bbtests.enabled }}
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -27,3 +29,5 @@ metadata:
   namespace: '{{ .Release.Namespace }}'
 data:
   {{ (.Files.Glob "tests/manifests/*").AsConfig | nindent 2 }}
+{{- end }}
+{{- end }}
