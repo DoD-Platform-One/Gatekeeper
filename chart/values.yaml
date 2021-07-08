@@ -126,14 +126,14 @@ violations:
       #   pathPrefix: "/foo"
   allowedIPs:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     match: {}
     parameters:
       allowedIPs: []
       # - 1.2.3.4/32
   allowedProcMount:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     match: {}
     parameters:
       procMount: Default
@@ -337,3 +337,8 @@ violations:
 # Bigbang Additions
 monitoring:
   enabled: false
+
+networkPolicies:
+  enabled: false
+  # See `kubectl cluster-info` and then resolve to IP
+  controlPlaneCidr: 0.0.0.0/0
