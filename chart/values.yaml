@@ -133,7 +133,7 @@ violations:
       # - 1.2.3.4/32
   allowedProcMount:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     match: {}
     parameters:
       procMount: Default
