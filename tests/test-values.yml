@@ -1,3 +1,4 @@
+replicas: 1
 image:
   pullSecrets:
   - name: private-registry
@@ -228,6 +229,7 @@ violations:
         - good-pod-test-ns
 
 bbtests:
+  enabled: true
   scripts:
     image: registry1.dso.mil/ironbank/opensource/kubernetes-1.21/kubectl:v1.21.1
     additionalVolumeMounts:
@@ -241,3 +243,7 @@ bbtests:
           name: "{{ .Chart.Name }}-test-config"
       - name: "{{ .Chart.Name }}-kube-cache"
         emptyDir: {}
+
+networkPolicies:
+  enabled: true
+  controlPlaneCidr: 172.16.0.0/12

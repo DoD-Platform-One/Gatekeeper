@@ -1,4 +1,5 @@
 {{- if .Values.bbtests }}
+{{- if .Values.bbtests.enabled }}
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
@@ -59,4 +60,5 @@ subjects:
 - kind: ServiceAccount
   name: test-service-account
   namespace: {{ .Release.Namespace }}
+{{- end }}
 {{- end }}
