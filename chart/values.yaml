@@ -111,7 +111,7 @@ violations:
         - registry.dso.mil
   allowedFlexVolumes:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     match: {}
     parameters:
       allowedFlexVolumes: []
