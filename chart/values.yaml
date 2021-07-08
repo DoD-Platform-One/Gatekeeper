@@ -114,8 +114,8 @@ violations:
     enforcementAction: deny
     match: {}
     parameters:
-      allowedFlexVolumes: 
-      - driver: "example/lvm"
+      allowedFlexVolumes: []
+      # - driver: "example/lvm"
   allowedHostFilesystem:
     enabled: true
     enforcementAction: dryrun
