@@ -331,13 +331,10 @@ violations:
         - secret
         - downwardAPI
         - persistentVolumeClaim
-        - hostPath #required for allowedHostPaths
-        - flexVolume #required for allowedFlexVolumes
-
+      
 # Bigbang Additions
 monitoring:
   enabled: false
-
 networkPolicies:
   enabled: false
   # See `kubectl cluster-info` and then resolve to IP
