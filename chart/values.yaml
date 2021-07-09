@@ -252,7 +252,7 @@ violations:
         - '*'
   podsHaveIstio:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     match: {}
     parameters:
       annotations:
