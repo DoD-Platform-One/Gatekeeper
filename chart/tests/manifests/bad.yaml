@@ -4,7 +4,7 @@ metadata:
   name: bad-test-pod-1
   namespace: default
   annotations:
-    sidecar.istio.io/inject: "disabled"
+    sidecar.istio.io/inject: "false"
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
     container.apparmor.security.beta.kubernetes.io/opa: unconfined
 spec:
