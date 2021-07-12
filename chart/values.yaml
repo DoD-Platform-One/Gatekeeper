@@ -170,7 +170,7 @@ violations:
             max: 65535
   bannedImageTags:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     match: {}
     parameters:
       tags:
