@@ -252,11 +252,13 @@ violations:
         - '*'
   podsHaveIstio:
     enabled: true
-    enforcementAction: deny
-    match: {}
+    enforcementAction: dryrun
+    match: 
+      excludedNamespaces:
+        - istio-system
     parameters:
       annotations:
-        - disallowedRegex: ^disabled
+        - disallowedRegex: ^false
           key: sidecar.istio.io/inject
   readOnlyRoot:
     enabled: true
