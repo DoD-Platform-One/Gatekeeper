@@ -29,3 +29,10 @@ spec:
           banned[tag]
           msg := sprintf("container <%v> has banned image tag <%v>, banned tags are %v", [container.name, tag, banned])
         }
+
+        violation[{"msg": msg}] {
+          container := input.review.object.spec.containers[_]
+          tag := [contains(container.image, ":")]
+          not all(tag)
+          msg := sprintf("container <%v> didn't specify an image tag <%v>", [container.name, container.image])
+        }
