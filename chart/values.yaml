@@ -245,7 +245,7 @@ violations:
     match: {}
   noSysctls:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     match: {}
     parameters:
       forbiddenSysctls:
