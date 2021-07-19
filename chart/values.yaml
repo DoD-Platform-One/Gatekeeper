@@ -231,10 +231,12 @@ violations:
     match: {}
   noPrivilegedContainers:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     match:
       excludedNamespaces:
         - kube-system
+        # fluentbit needs privileged to read and store the buffer for tailing logs from the nodes
+        - logging
   noDefaultServiceAccount:
     enabled: true
     enforcementAction: dryrun
