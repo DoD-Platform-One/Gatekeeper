@@ -319,7 +319,7 @@ violations:
       allowedSELinuxOptions: []
   uniqueIngressHost:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     match: {}
   uniqueServiceSelector:
     enabled: true
