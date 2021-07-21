@@ -84,7 +84,9 @@ violations:
   #     - <name of namespace to exclude>
   #   parameters: map - additional parameters specific to constraint
   allowedAppArmorProfiles:
-    enabled: true
+    # By default the Iron Bank containers are either distroless or RHEL UBI so they do not have AppArmor.  
+    # This constraint should only be applied to namespaces with Debian derived (e.g. Ubuntu) Linux distros since it cannot ignore containers without AppArmor.
+    enabled: false
     enforcementAction: dryrun
     match: {}
     parameters:
