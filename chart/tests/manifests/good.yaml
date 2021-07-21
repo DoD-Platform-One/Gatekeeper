@@ -46,7 +46,6 @@ spec:
         readOnlyRootFilesystem: true
         procMount: Default
         capabilities:
-          add: ["NET_BIND_SERVICE"]
           drop: ["all"]
       readinessProbe:
         failureThreshold: 3
