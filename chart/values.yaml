@@ -313,8 +313,11 @@ violations:
         value: 'true'
   selinuxPolicy:
     enabled: true
-    enforcementAction: dryrun
-    match: {}
+    enforcementAction: deny
+    match:
+      excludedNamespaces:
+        # FluentBit needs selinux option type spc_t
+        - logging
     parameters:
       allowedSELinuxOptions: []
   uniqueIngressHost:
