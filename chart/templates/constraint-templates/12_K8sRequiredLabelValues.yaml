@@ -9,9 +9,6 @@ spec:
     spec:
       names:
         kind: K8sRequiredLabelValues
-        listKind: K8sRequiredLabelValuesList
-        plural: k8srequiredlabelvalues
-        singular: k8srequiredlabelvalues
       validation:
        # Schema for the `parameters` field
        openAPIV3Schema:

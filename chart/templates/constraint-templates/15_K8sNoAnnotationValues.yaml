@@ -10,9 +10,6 @@ spec:
     spec:
       names:
         kind: K8sNoAnnotationValues
-        listKind: K8sNoAnnotationValuesList
-        plural: k8snoannotationvalues
-        singular: k8snoannotationvalues
       validation:
        # Schema for the `parameters` field
        openAPIV3Schema:

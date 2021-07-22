@@ -13,6 +13,7 @@ OPA Gatekeeper functionality includes:
 - Audit functionality.
 - [Security](./docs/security.md)
 - [Test framework](./docs/test.md) for developing tests for policies.
+- [Upgrade](./docs/upgrade.md) Guide for upgrading versions.
 
 ## Installation
 
