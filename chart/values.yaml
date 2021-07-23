@@ -109,12 +109,15 @@ violations:
         - all
   allowedDockerRegistries:
     enabled: true
-    enforcementAction: dryrun
-    match: {}
+    enforcementAction: deny
+    match:
+      excludedNamespaces: 
+        - kube-system # ignored as the kubernetes distro cannot be controlled
     parameters:
       repos:
         - registry1.dso.mil
         - registry.dso.mil
+      exemptContainers: []
   allowedFlexVolumes:
     enabled: true
     enforcementAction: deny
