@@ -302,16 +302,20 @@ violations:
         - livenessProbe
   restrictedTaint:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     match:
       excludedNamespaces:
         - kube-system
+        - monitoring # Prometheus Node Exporter needs to be able to run on all nodes, regardless of taint, to gather node metrics
     parameters:
       allowGlobalToleration: false
       restrictedTaint:
         effect: NoSchedule
         key: privileged
         value: 'true'
+      # This section commented out but left in for future container exemption
+      # exemptContainers:
+      #   - node-exporter # specifically allows containers containing this string in the name for the prometheus-node-exporter containers
   selinuxPolicy:
     enabled: true
     enforcementAction: deny
