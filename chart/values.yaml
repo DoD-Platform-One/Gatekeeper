@@ -338,7 +338,7 @@ violations:
     match: {}
   volumeTypes:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     match: {}
     parameters:
       volumes:
