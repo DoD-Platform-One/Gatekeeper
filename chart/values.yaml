@@ -205,7 +205,7 @@ violations:
       hostNetwork: false
   httpsOnly:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     match: {}
   imageDigest:
     enabled: true
