@@ -197,10 +197,7 @@ violations:
   hostNetworking:
     enabled: true
     enforcementAction: deny
-    match:
-      excludedNamespaces:
-        #allow node exporter to export metrics. The exporters live in pod monitoring-monitoring-prometheus-node-exporter-XXXX
-        - monitoring
+    match: {}
     parameters:
       hostNetwork: false
   httpsOnly:
@@ -234,7 +231,7 @@ violations:
       memory: 4G
   noHostNamespace:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     match: {}
   noPrivilegedContainers:
     enabled: true
