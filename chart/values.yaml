@@ -1,13 +1,13 @@
 replicas: 3
-auditInterval: 60
-auditMatchKindOnly: false
+auditInterval: 300
+auditMatchKindOnly: true
 constraintViolationsLimit: 1000
 auditFromCache: false
 disableValidatingWebhook: false
 validatingWebhookTimeoutSeconds: 3
 enableDeleteOperations: false
 experimentalEnableMutation: false
-auditChunkSize: 0
+auditChunkSize: 500
 logLevel: INFO
 logDenies: false
 emitAdmissionEvents: false
@@ -87,7 +87,7 @@ violations:
   #     - <name of namespace to exclude>
   #   parameters: map - additional parameters specific to constraint
   allowedAppArmorProfiles:
-    # By default the Iron Bank containers are either distroless or RHEL UBI so they do not have AppArmor.  
+    # By default the Iron Bank containers are either distroless or RHEL UBI so they do not have AppArmor.
     # This constraint should only be applied to namespaces with Debian derived (e.g. Ubuntu) Linux distros since it cannot ignore containers without AppArmor.
     enabled: false
     enforcementAction: dryrun
@@ -101,9 +101,7 @@ violations:
     match:
       excludedNamespaces:
         - kube-system
-        
     parameters:
-      
       allowedCapabilities:  []
       requiredDropCapabilities:
         - all
@@ -111,7 +109,7 @@ violations:
     enabled: true
     enforcementAction: deny
     match:
-      excludedNamespaces: 
+      excludedNamespaces:
         - kube-system # ignored as the kubernetes distro cannot be controlled
     parameters:
       repos:
@@ -259,7 +257,7 @@ violations:
   podsHaveIstio:
     enabled: true
     enforcementAction: dryrun
-    match: 
+    match:
       excludedNamespaces:
         - istio-system
     parameters:
@@ -346,7 +344,7 @@ violations:
         - secret
         - downwardAPI
         - persistentVolumeClaim
-      
+
 # Bigbang Additions
 monitoring:
   enabled: false
