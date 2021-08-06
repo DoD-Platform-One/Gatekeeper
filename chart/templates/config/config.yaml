@@ -6,6 +6,9 @@ metadata:
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
 spec:
+  match:
+    - excludedNamespaces: ["kube-system", "{{ .Release.Namespace }}"]
+      processes: ["*"]
   sync:
     syncOnly:
       - group: "extensions"
