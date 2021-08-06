@@ -98,9 +98,7 @@ violations:
   allowedCapabilities:
     enabled: true
     enforcementAction: dryrun
-    match:
-      excludedNamespaces:
-        - kube-system
+    match: {}
     parameters:
       allowedCapabilities:  []
       requiredDropCapabilities:
@@ -108,9 +106,7 @@ violations:
   allowedDockerRegistries:
     enabled: true
     enforcementAction: deny
-    match:
-      excludedNamespaces:
-        - kube-system # ignored as the kubernetes distro cannot be controlled
+    match: {}
     parameters:
       repos:
         - registry1.dso.mil
@@ -154,9 +150,7 @@ violations:
   allowedUsers:
     enabled: true
     enforcementAction: dryrun
-    match:
-      excludedNamespaces:
-        - kube-system
+    match: {}
     parameters:
       runAsUser:
         rule: MustRunAsNonRoot # MustRunAs # RunAsAny
@@ -236,7 +230,6 @@ violations:
     enforcementAction: deny
     match:
       excludedNamespaces:
-        - kube-system
         # fluentbit needs privileged to read and store the buffer for tailing logs from the nodes
         - logging
   noDefaultServiceAccount:
@@ -303,7 +296,6 @@ violations:
     enforcementAction: deny
     match:
       excludedNamespaces:
-        - kube-system
         - monitoring # Prometheus Node Exporter needs to be able to run on all nodes, regardless of taint, to gather node metrics
     parameters:
       allowGlobalToleration: false
