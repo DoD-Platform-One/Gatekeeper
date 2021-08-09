@@ -49,11 +49,11 @@ controllerManager:
   nodeSelector: { kubernetes.io/os: linux }
   resources:
     limits:
-      cpu: 1000m
-      memory: 512Mi
+      cpu: 175m
+      memory: 260Mi
     requests:
-      cpu: 100m
-      memory: 256Mi
+      cpu: 175m
+      memory: 260Mi
 audit:
   hostNetwork: false
   priorityClassName: system-cluster-critical
@@ -62,11 +62,11 @@ audit:
   nodeSelector: { kubernetes.io/os: linux }
   resources:
     limits:
-      cpu: 1000m
-      memory: 512Mi
+      cpu: 1.2
+      memory: 560Mi
     requests:
-      cpu: 100m
-      memory: 256Mi
+      cpu: 1.2
+      memory: 560Mi
 pdb:
   controllerManager:
     minAvailable: 1
