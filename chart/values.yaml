@@ -319,10 +319,6 @@ violations:
     enabled: true
     enforcementAction: deny
     match: {}
-  uniqueServiceSelector:
-    enabled: true
-    enforcementAction: dryrun
-    match: {}
   volumeTypes:
     enabled: true
     enforcementAction: deny
