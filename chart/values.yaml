@@ -121,7 +121,7 @@ violations:
       # - driver: "example/lvm"
   allowedHostFilesystem:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     match: {}
     parameters:
       allowedHostPaths: []
