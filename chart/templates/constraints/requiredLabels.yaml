@@ -1,8 +1,8 @@
 {{- if .Values.violations.requiredLabels.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sRequiredLabelValues
+kind: {{ .Values.violations.requiredLabels.kind  }}
 metadata:
-  name: required-labels
+  name: {{ .Values.violations.requiredLabels.name  }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

@@ -1,8 +1,8 @@
 {{- if .Values.violations.noSysctls.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sPSPForbiddenSysctls
+kind: {{ .Values.violations.noSysctls.kind }}
 metadata:
-  name: no-sysctls
+  name: {{ .Values.violations.noSysctls.name }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

@@ -1,8 +1,8 @@
 {{- if .Values.violations.allowedCapabilities.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sPSPCapabilities
+kind: {{ .Values.violations.allowedCapabilities.kind }}
 metadata:
-  name: allowed-capabilities
+  name: {{ .Values.violations.allowedCapabilities.name }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

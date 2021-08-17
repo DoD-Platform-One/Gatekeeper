@@ -1,8 +1,8 @@
 {{- if .Values.violations.uniqueIngressHost.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sUniqueIngressHost
+kind: {{ .Values.violations.uniqueIngressHost.kind  }}
 metadata:
-  name: unique-ingress-hosts
+  name: {{ .Values.violations.uniqueIngressHost.name  }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

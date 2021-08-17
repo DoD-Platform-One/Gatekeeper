@@ -1,8 +1,8 @@
 {{- if .Values.violations.restrictedTaint.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: RestrictedTaintToleration
+kind: {{ .Values.violations.restrictedTaint.kind }}
 metadata:
-  name: restricted-taint
+  name: {{ .Values.violations.restrictedTaint.name }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

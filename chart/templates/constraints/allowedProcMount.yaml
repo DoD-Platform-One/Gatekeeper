@@ -1,8 +1,8 @@
 {{- if .Values.violations.allowedProcMount.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sPSPProcMount
+kind: {{ .Values.violations.allowedProcMount.kind }}
 metadata:
-  name: allowed-proc-mount
+  name: {{ .Values.violations.allowedProcMount.name }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

@@ -1,8 +1,8 @@
 {{- if .Values.violations.allowedAppArmorProfiles.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sPSPAppArmor
+kind: {{ .Values.violations.allowedAppArmorProfiles.kind }}
 metadata:
-  name: allowed-app-armor-profiles
+  name: {{ .Values.violations.allowedAppArmorProfiles.name }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

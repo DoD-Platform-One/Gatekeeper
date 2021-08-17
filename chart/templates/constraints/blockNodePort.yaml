@@ -1,8 +1,8 @@
 {{- if .Values.violations.blockNodePort.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sBlockNodePort
+kind: {{ .Values.violations.blockNodePort.kind  }}
 metadata:
-  name: block-node-ports
+  name: {{ .Values.violations.blockNodePort.name  }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

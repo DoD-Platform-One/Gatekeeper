@@ -213,13 +213,6 @@ violations:
         - default
         - bad-pod-test-ns
         - good-pod-test-ns
-  uniqueServiceSelector:
-    enforcementAction: deny
-    match:
-      namespaces:
-        - default
-        - bad-pod-test-ns
-        - good-pod-test-ns
   volumeTypes:
     enforcementAction: deny
     match:

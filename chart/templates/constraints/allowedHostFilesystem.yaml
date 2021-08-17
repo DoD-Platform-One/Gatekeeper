@@ -1,8 +1,8 @@
 {{- if .Values.violations.allowedHostFilesystem.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sPSPHostFilesystem
+kind: {{ .Values.violations.allowedHostFilesystem.kind }}
 metadata:
-  name: allowed-host-filesystem
+  name: {{ .Values.violations.allowedHostFilesystem.name }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

@@ -1,8 +1,8 @@
 {{- if .Values.violations.allowedDockerRegistries.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sAllowedRepos
+kind: {{ .Values.violations.allowedDockerRegistries.kind }}
 metadata:
-  name: allowed-docker-registries
+  name: {{ .Values.violations.allowedDockerRegistries.name }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

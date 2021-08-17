@@ -1,8 +1,8 @@
 {{- if .Values.violations.noPrivilegedEscalation.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sPSPAllowPrivilegeEscalationContainer
+kind: {{ .Values.violations.noPrivilegedEscalation.kind  }}
 metadata:
-  name: no-privileged-escalation
+  name: {{ .Values.violations.noPrivilegedEscalation.name  }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

@@ -1,8 +1,8 @@
 {{- if .Values.violations.readOnlyRoot.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sPSPReadOnlyRootFilesystem
+kind: {{ .Values.violations.readOnlyRoot.kind  }}
 metadata:
-  name: read-only-root
+  name: {{ .Values.violations.readOnlyRoot.name  }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

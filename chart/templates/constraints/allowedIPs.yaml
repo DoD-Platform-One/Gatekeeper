@@ -1,8 +1,8 @@
 {{- if .Values.violations.allowedIPs.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sExternalIPs
+kind: {{ .Values.violations.allowedIPs.kind }}
 metadata:
-  name: allowed-ips
+  name: {{ .Values.violations.allowedIPs.name }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

@@ -1,8 +1,8 @@
 {{- if .Values.violations.requiredProbes.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sRequiredProbes
+kind: {{ .Values.violations.requiredProbes.kind }}
 metadata:
-  name: required-probes
+  name: {{ .Values.violations.requiredProbes.name }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
