@@ -3,6 +3,12 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ---
 
+## [3.5.1-bb.11]
+### Added
+- Post-upgrade job to remove disabled constraints
+### Changed
+- Moved constraint kind and name to values.yaml
+
 ## [3.5.1-bb.10]
 ### Changed
 - Removed rule for `unique-service-selector`

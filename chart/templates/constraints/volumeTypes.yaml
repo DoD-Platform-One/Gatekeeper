@@ -1,8 +1,8 @@
 {{- if .Values.violations.volumeTypes.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sPSPVolumeTypes
+kind: {{ .Values.violations.volumeTypes.kind }}
 metadata:
-  name: volume-types
+  name: {{ .Values.violations.volumeTypes.name }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

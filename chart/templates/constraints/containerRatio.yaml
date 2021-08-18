@@ -1,8 +1,8 @@
 {{- if .Values.violations.containerRatio.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sContainerRatios
+kind: {{ .Values.violations.containerRatio.kind  }}
 metadata:
-  name: container-ratios
+  name: {{ .Values.violations.containerRatio.name  }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

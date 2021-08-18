@@ -1,8 +1,8 @@
 {{- if .Values.violations.allowedUsers.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sPSPAllowedUsers
+kind: {{ .Values.violations.allowedUsers.kind }}
 metadata:
-  name: allowed-users
+  name: {{ .Values.violations.allowedUsers.name }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

@@ -1,8 +1,8 @@
 {{- if .Values.violations.httpsOnly.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sHttpsOnly
+kind: {{ .Values.violations.httpsOnly.kind }}
 metadata:
-  name: https-only
+  name: {{ .Values.violations.httpsOnly.name }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

@@ -1,8 +1,8 @@
 {{- if .Values.violations.bannedImageTags.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sBannedImageTags
+kind: {{ .Values.violations.bannedImageTags.kind }}
 metadata:
-  name: banned-image-tags
+  name: {{ .Values.violations.bannedImageTags.name }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

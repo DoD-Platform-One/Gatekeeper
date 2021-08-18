@@ -1,8 +1,8 @@
 {{- if .Values.violations.allowedSecCompProfiles.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sPSPSeccomp
+kind: {{ .Values.violations.allowedSecCompProfiles.kind  }}
 metadata:
-  name: allowed-sec-somp-profiles
+  name: {{ .Values.violations.allowedSecCompProfiles.name  }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

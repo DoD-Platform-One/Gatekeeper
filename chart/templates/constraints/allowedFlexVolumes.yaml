@@ -1,8 +1,8 @@
 {{- if .Values.violations.allowedFlexVolumes.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sPSPFlexVolumes
+kind: {{ .Values.violations.allowedFlexVolumes.kind }}
 metadata:
-  name: allowed-flex-volumes
+  name: {{ .Values.violations.allowedFlexVolumes.name }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

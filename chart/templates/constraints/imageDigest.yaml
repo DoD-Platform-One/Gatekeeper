@@ -1,8 +1,8 @@
 {{- if .Values.violations.imageDigest.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sImageDigests
+kind: {{ .Values.violations.imageDigest.kind }}
 metadata:
-  name: image-digest
+  name: {{ .Values.violations.imageDigest.name }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

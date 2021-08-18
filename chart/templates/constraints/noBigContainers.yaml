@@ -1,8 +1,8 @@
 {{- if .Values.violations.noBigContainers.enabled }}
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: K8sContainerLimits
+kind: {{ .Values.violations.noBigContainers.kind  }}
 metadata:
-  name: no-big-container
+  name: {{ .Values.violations.noBigContainers.name  }}
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:

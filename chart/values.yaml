@@ -20,6 +20,14 @@ postInstall:
       tag: v1.21.1
       pullPolicy: IfNotPresent
       pullSecrets: []
+postUpgrade:
+  cleanupCRD:
+    enabled: true
+    image:
+      repository: registry1.dso.mil/ironbank/opensource/kubernetes-1.21/kubectl
+      tag: v1.21.1
+      pullPolicy: IfNotPresent
+      pullSecrets: []
 image:
   repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
   release: v3.5.1
@@ -91,6 +99,8 @@ violations:
     # This constraint should only be applied to namespaces with Debian derived (e.g. Ubuntu) Linux distros since it cannot ignore containers without AppArmor.
     enabled: false
     enforcementAction: dryrun
+    kind: K8sPSPAppArmor
+    name: allowed-app-armor-profiles
     match: {}
     parameters:
       allowedProfiles:
@@ -98,6 +108,8 @@ violations:
   allowedCapabilities:
     enabled: true
     enforcementAction: dryrun
+    kind: K8sPSPCapabilities
+    name: allowed-capabilities
     match: {}
     parameters:
       allowedCapabilities:  []
@@ -106,6 +118,8 @@ violations:
   allowedDockerRegistries:
     enabled: true
     enforcementAction: deny
+    kind: K8sAllowedRepos
+    name: allowed-docker-registries
     match: {}
     parameters:
       repos:
@@ -115,6 +129,8 @@ violations:
   allowedFlexVolumes:
     enabled: true
     enforcementAction: deny
+    kind: K8sPSPFlexVolumes
+    name: allowed-flex-volumes
     match: {}
     parameters:
       allowedFlexVolumes: []
@@ -122,6 +138,8 @@ violations:
   allowedHostFilesystem:
     enabled: true
     enforcementAction: dryrun
+    kind: K8sPSPHostFilesystem
+    name: allowed-host-filesystem
     match: {}
     parameters:
       allowedHostPaths: []
@@ -130,6 +148,8 @@ violations:
   allowedIPs:
     enabled: true
     enforcementAction: deny
+    kind: K8sExternalIPs
+    name: allowed-ips
     match: {}
     parameters:
       allowedIPs: []
@@ -137,12 +157,16 @@ violations:
   allowedProcMount:
     enabled: true
     enforcementAction: deny
+    kind: K8sPSPProcMount
+    name: allowed-proc-mount
     match: {}
     parameters:
       procMount: Default
   allowedSecCompProfiles:
     enabled: true
     enforcementAction: dryrun
+    kind: K8sPSPSeccomp
+    name: allowed-sec-comp-profiles
     match: {}
     parameters:
       allowedProfiles:
@@ -150,6 +174,8 @@ violations:
   allowedUsers:
     enabled: true
     enforcementAction: dryrun
+    kind: K8sPSPAllowedUsers
+    name: allowed-users
     match: {}
     parameters:
       runAsUser:
@@ -172,6 +198,8 @@ violations:
   bannedImageTags:
     enabled: true
     enforcementAction: deny
+    kind: K8sBannedImageTags
+    name: banned-image-tags
     match: {}
     parameters:
       tags:
@@ -179,30 +207,42 @@ violations:
   blockNodePort:
     enabled: true
     enforcementAction: dryrun
+    kind: K8sBlockNodePort
+    name: block-node-ports
     match: {}
   containerRatio:
     enabled: true
     enforcementAction: dryrun
+    kind: K8sContainerRatios
+    name: container-ratios
     match: {}
     parameters:
       ratio: '2'
   hostNetworking:
     enabled: true
     enforcementAction: deny
+    kind: K8sPSPHostNetworkingPorts
+    name: host-networking
     match: {}
     parameters:
       hostNetwork: false
   httpsOnly:
     enabled: true
     enforcementAction: deny
+    kind: K8sHttpsOnly
+    name: https-only
     match: {}
   imageDigest:
     enabled: true
     enforcementAction: dryrun
+    kind: K8sImageDigests
+    name: image-digest
     match: {}
   namespacesHaveIstio:
     enabled: true
     enforcementAction: dryrun
+    kind: K8sRequiredLabelValues
+    name: namespaces-have-istio
     match:
       namespaceSelector:
         matchExpressions:
@@ -215,6 +255,8 @@ violations:
   noBigContainers:
     enabled: true
     enforcementAction: dryrun
+    kind: K8sContainerLimits
+    name: no-big-container
     match: {}
     parameters:
       cpu: 2000m
@@ -224,10 +266,14 @@ violations:
   noHostNamespace:
     enabled: true
     enforcementAction: deny
+    kind: K8sPSPHostNamespace
+    name: no-host-namespace
     match: {}
   noPrivilegedContainers:
     enabled: true
     enforcementAction: deny
+    kind: K8sPSPPrivilegedContainer
+    name: no-privileged-containers
     match:
       excludedNamespaces:
         # fluentbit needs privileged to read and store the buffer for tailing logs from the nodes
@@ -235,14 +281,20 @@ violations:
   noDefaultServiceAccount:
     enabled: true
     enforcementAction: dryrun
+    kind: K8sDenySADefault
+    name: no-default-service-account
     match: {}
   noPrivilegedEscalation:
     enabled: true
     enforcementAction: dryrun
+    kind: K8sPSPAllowPrivilegeEscalationContainer
+    name: no-privileged-escalation
     match: {}
   noSysctls:
     enabled: true
     enforcementAction: deny
+    kind: K8sPSPForbiddenSysctls
+    name: no-sysctls
     match: {}
     parameters:
       forbiddenSysctls:
@@ -250,6 +302,8 @@ violations:
   podsHaveIstio:
     enabled: true
     enforcementAction: dryrun
+    kind: K8sNoAnnotationValues
+    name: pods-have-istio
     match:
       excludedNamespaces:
         - istio-system
@@ -260,10 +314,14 @@ violations:
   readOnlyRoot:
     enabled: true
     enforcementAction: dryrun
+    kind: K8sPSPReadOnlyRootFilesystem
+    name: read-only-root
     match: {}
   requiredLabels:
     enabled: true
     enforcementAction: dryrun
+    kind: K8sRequiredLabelValues
+    name: required-labels
     match: {}
     parameters:
       labels:
@@ -282,6 +340,8 @@ violations:
   requiredProbes:
     enabled: true
     enforcementAction: dryrun
+    kind: K8sRequiredProbes
+    name: required-probes
     match: {}
     parameters:
       probeTypes:
@@ -294,6 +354,8 @@ violations:
   restrictedTaint:
     enabled: true
     enforcementAction: deny
+    kind: RestrictedTaintToleration
+    name: restricted-taint
     match:
       excludedNamespaces:
         - monitoring # Prometheus Node Exporter needs to be able to run on all nodes, regardless of taint, to gather node metrics
@@ -309,6 +371,8 @@ violations:
   selinuxPolicy:
     enabled: true
     enforcementAction: deny
+    kind: K8sPSPSELinuxV2
+    name: selinux-policy
     match:
       excludedNamespaces:
         # FluentBit needs selinux option type spc_t
@@ -318,10 +382,14 @@ violations:
   uniqueIngressHost:
     enabled: true
     enforcementAction: deny
+    kind: K8sUniqueIngressHost
+    name: unique-ingress-hosts
     match: {}
   volumeTypes:
     enabled: true
     enforcementAction: deny
+    kind: K8sPSPVolumeTypes
+    name: volume-types
     match: {}
     parameters:
       volumes:
