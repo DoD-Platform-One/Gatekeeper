@@ -124,7 +124,6 @@ violations:
     parameters:
       repos:
         - registry1.dso.mil
-        - registry.dso.mil
       exemptContainers: []
   allowedFlexVolumes:
     enabled: true
@@ -274,10 +273,7 @@ violations:
     enforcementAction: deny
     kind: K8sPSPPrivilegedContainer
     name: no-privileged-containers
-    match:
-      excludedNamespaces:
-        # fluentbit needs privileged to read and store the buffer for tailing logs from the nodes
-        - logging
+    match: {}
   noDefaultServiceAccount:
     enabled: true
     enforcementAction: dryrun
@@ -304,9 +300,7 @@ violations:
     enforcementAction: dryrun
     kind: K8sNoAnnotationValues
     name: pods-have-istio
-    match:
-      excludedNamespaces:
-        - istio-system
+    match: {}
     parameters:
       annotations:
         - disallowedRegex: ^false
@@ -356,9 +350,7 @@ violations:
     enforcementAction: deny
     kind: RestrictedTaintToleration
     name: restricted-taint
-    match:
-      excludedNamespaces:
-        - monitoring # Prometheus Node Exporter needs to be able to run on all nodes, regardless of taint, to gather node metrics
+    match: {}
     parameters:
       allowGlobalToleration: false
       restrictedTaint:
@@ -373,10 +365,7 @@ violations:
     enforcementAction: deny
     kind: K8sPSPSELinuxV2
     name: selinux-policy
-    match:
-      excludedNamespaces:
-        # FluentBit needs selinux option type spc_t
-        - logging
+    match: {}
     parameters:
       allowedSELinuxOptions: []
   uniqueIngressHost:
@@ -408,5 +397,3 @@ networkPolicies:
   enabled: false
   # See `kubectl cluster-info` and then resolve to IP
   controlPlaneCidr: 0.0.0.0/0
-
-
