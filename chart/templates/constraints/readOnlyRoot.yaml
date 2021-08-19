@@ -20,4 +20,6 @@ spec:
     kinds:
       - apiGroups: [""]
         kinds: ["Pod"]
+  parameters:
+    {{- toYaml .Values.violations.readOnlyRoot.parameters | nindent 4}}
 {{- end }}

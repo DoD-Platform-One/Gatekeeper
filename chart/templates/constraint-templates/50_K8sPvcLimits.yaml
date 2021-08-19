@@ -17,6 +17,10 @@ spec:
               type: string
             memory:
               type: string
+            excludedResources:
+              type: array
+              items:
+                type: string
   targets:
     - target: admission.k8s.gatekeeper.sh
       rego: |
@@ -127,30 +131,41 @@ spec:
           new := to_number(raw) * mem_multiple(suffix)
         }
 
+        included(resourceName, exclusions) = true {
+          patterns := {pattern | exclusion := exclusions[_]; pattern := sprintf("^%v$", [exclusion])}
+          resource := concat("/", [input.review.object.metadata.namespace, resourceName])
+          matches := {match | match := patterns[_]; true == regex.match(match, resource)}
+          count(matches) == 0
+        }
 
         violation[{"msg": msg}] {
+          included(input.review.object.metadata.name, input.parameters.excludedResources)
           storage_orig := input.review.object.spec.resources.requests.storage
           not canonify_mem(storage_orig)
           msg := sprintf("PVC <%v> storagelimit <%v> could not be parsed", [input.review.object.metadata.name, storage_orig])
         }
 
         violation[{"msg": msg}] {
+          included(input.review.object.metadata.name, input.parameters.excludedResources)
           not input.review.object.spec.resources
           msg := sprintf("PVC <%v> has no resource requests", [input.review.object.metadata.name])
         }
 
         violation[{"msg": msg}] {
+          included(input.review.object.metadata.name, input.parameters.excludedResources)
           not input.review.object.spec.resources.requests
           msg := sprintf("PVC <%v> has no resource requests", [input.review.object.metadata.name])
         }
 
         violation[{"msg": msg}] {
+          included(input.review.object.metadata.name, input.parameters.excludedResources)
           not input.review.object.spec.resources.requests.storage
           msg := sprintf("PVC <%v> has no resource requests", [input.review.object.metadata.name])
         }
 
 
         violation[{"msg": msg}] {
+          included(input.review.object.metadata.name, input.parameters.excludedResources)
           storage_orig := input.review.object.spec.resources.requests.storage
           storage := canonify_mem(storage_orig)
           max_storage_orig := input.parameters.storage

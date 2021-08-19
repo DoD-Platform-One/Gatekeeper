@@ -21,4 +21,6 @@ spec:
     kinds:
       - apiGroups: ["extensions", "networking.k8s.io"]
         kinds: ["Ingress"]
+  parameters:
+    {{- toYaml .Values.violations.httpsOnly.parameters | nindent 4}}
 {{- end }}

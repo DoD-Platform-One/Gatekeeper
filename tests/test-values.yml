@@ -56,6 +56,8 @@ violations:
         - default
         - bad-pod-test-ns
         - good-pod-test-ns
+  # Proc mount cannot be validated on newer versions of Kubernetes
+  # since all values are mutated to "Default"
   allowedProcMount:
     enabled: false
     enforcementAction: deny
@@ -106,6 +108,9 @@ violations:
         - default
         - bad-pod-test-ns
         - good-pod-test-ns
+    parameters:
+      min: 8080
+      max: 8080
   httpsOnly:
     enforcementAction: deny
     match:

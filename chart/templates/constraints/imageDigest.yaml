@@ -21,4 +21,6 @@ spec:
     kinds:
       - apiGroups: [""]
         kinds: ["Pod"]
+  parameters:
+    {{- toYaml .Values.violations.imageDigest.parameters | nindent 4}}
 {{- end }}

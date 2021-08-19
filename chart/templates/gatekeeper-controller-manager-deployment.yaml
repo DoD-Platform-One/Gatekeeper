@@ -35,6 +35,8 @@ spec:
         gatekeeper.sh/system: "yes"
         heritage: '{{ .Release.Service }}'
         release: '{{ .Release.Name }}'
+        # Added by BigBang for upgrades to re-roll gatekeeper so CRDs are updated before post-upgrade hooks
+        helm.sh/chart: '{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}'
     spec:
       affinity:
         {{- toYaml .Values.controllerManager.affinity | nindent 8 }}

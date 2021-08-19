@@ -28,7 +28,7 @@ To install and test the Gatekeeper application, follow these steps
 
 - Clone the application repository
    `git clone https://repo1.dso.mil/platform-one/big-bang/apps/core/policy.git`
-- Change into the policy directory and lint the chart  - make surre there are no errors.
+- Change into the policy directory and lint the chart  - make sure there are no errors.
    `cd policy && helm lint chart`
 - Install the chart
     `helm upgrade -i -n gatekeeper-system --create-namespace --wait opa-gatekeeper chart --debug`
@@ -47,7 +47,7 @@ To install and test the Gatekeeper application, follow these steps
 
 The repo contains `ConstraintTemplate` and `Constraints`.
 
-- `ConstraintTemplates` describe both the Rego that enforces the constraint and the schema of the constraint. It is the same context as the `ConstraintTemplate` being a CRD with the schema definition and the `Contraints` being the CRs passing parameters.
+- `ConstraintTemplates` describe both the Rego that enforces the constraint and the schema of the constraint. It is the same context as the `ConstraintTemplate` being a CRD with the schema definition and the `Constraints` being the CRs passing parameters.
 
 You can find `ConstraintTemplates` in [`/chart/templates/constraint-templates`](./chart/templates/constraint-templates).
 
@@ -62,6 +62,7 @@ Further information on `Constraints` and `ConstraintTemplates`:
 - [Constraint Annotations](./docs/constraint-annotations.md)
 - [Policy Library](./docs/policylibrary.md)
 - [Rego](./docs/rego.md)
+- [Violation Exceptions](./docs/exceptions.md)
 
 ## Additional OPA Gatekeeper Links
 

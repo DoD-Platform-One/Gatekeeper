@@ -2,6 +2,17 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ---
+## [3.5.1-bb.14]
+### Changed
+- Fixed problems with K8sPSPHostNetworkingPorts template
+- Added fine grained control of excluded resources using namespace and resource name
+- Added chart label to controller to force reroll on chart upgrades
+- Renamed constraint template `K8sRequiredPod` to `K8sQualityOfService` and removed deprecated violations
+### Removed
+- Deprecated constraint templates removed
+  - `K8sRequiredLabels` (use `K8sRequiredLabelValues` instead)
+  - `K8sIstioInjection` (use `K8sRequiredLabelValues` instead )
+  - `K8sPSPFSGroup` (use `K8sPSPAllowedUsers` instead)
 
 ## [3.5.1-bb.13]
 ### Changed

@@ -145,6 +145,11 @@ Containers may only use the specified volume types in volume mounts.
 Persistent Volume Claim Limits
 Persistent Volume Claims must not be larger than the specified limit.
 
+## K8sQualityOfService
+
+Guaranteed Quality of Service
+Pods must have limits = requests to guarantee Quality of Service
+
 ## K8sRegulatedResources
 
 Resource List
@@ -152,8 +157,7 @@ Resources must be in the specified allow list or not in the specified deny list.
 
 ## K8sRequiredLabels
 
-Required Labels
-Containers must have the specified labels.
+Deprecated in favor of K8sRequiredLabelValues
 
 ## K8sRequiredLabelValues
 
