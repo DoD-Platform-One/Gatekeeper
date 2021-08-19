@@ -11,12 +11,27 @@ spec:
     spec:
       names:
         kind: K8sPSPReadOnlyRootFilesystem
+      validation:
+        openAPIV3Schema:
+          properties:
+            excludedResources:
+              type: array
+              items:
+                type: string
   targets:
   - rego: |
       package k8spspreadonlyrootfilesystem
 
+      included(resourceName, exclusions) = true {
+        patterns := {pattern | exclusion := exclusions[_]; pattern := sprintf("^%v$", [exclusion])}
+        resource := concat("/", [input.review.object.metadata.namespace, resourceName])
+        matches := {match | match := patterns[_]; true == regex.match(match, resource)}
+        count(matches) == 0
+      }
+
       violation[{"msg": msg, "details": {}}] {
           c := input_containers[_]
+          included(c.name, input.parameters.excludedResources)
           input_read_only_root_fs(c)
           msg := sprintf("only read-only root filesystem container is allowed: %v", [c.name])
       }

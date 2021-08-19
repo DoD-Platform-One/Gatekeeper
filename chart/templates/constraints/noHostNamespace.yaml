@@ -21,4 +21,6 @@ spec:
     kinds:
       - apiGroups: [""]
         kinds: ["Pod"]
+  parameters:
+    {{- toYaml .Values.violations.noHostNamespace.parameters | nindent 4}}
 {{- end }}

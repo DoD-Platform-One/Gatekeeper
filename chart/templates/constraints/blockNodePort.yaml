@@ -20,4 +20,6 @@ spec:
     kinds:
       - apiGroups: [""]
         kinds: ["Service"]
+  parameters:
+    {{- toYaml .Values.violations.blockNodePort.parameters | nindent 4}}
 {{- end }}

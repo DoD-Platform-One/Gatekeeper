@@ -70,14 +70,26 @@ spec:
                 rule:
                   type: string
               type: object
+            excludedResources:
+              type: array
+              items:
+                type: string
   targets:
   - rego: |
       package k8spspallowedusers
+
+      included(resourceName, exclusions) = true {
+        patterns := {pattern | exclusion := exclusions[_]; pattern := sprintf("^%v$", [exclusion])}
+        resource := concat("/", [input.review.object.metadata.namespace, resourceName])
+        matches := {match | match := patterns[_]; true == regex.match(match, resource)}
+        count(matches) == 0
+      }
 
       violation[{"msg": msg}] {
         fields := ["runAsUser", "runAsGroup", "supplementalGroups", "fsGroup"]
         field := fields[_]
         container := input_containers[_]
+        included(container.name, input.parameters.excludedResources)
         msg := get_type_violation(field, container)
       }
 

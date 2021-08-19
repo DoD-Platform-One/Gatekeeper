@@ -20,4 +20,6 @@ spec:
     kinds:
       - apiGroups: [""]
         kinds: ["Pod"]
+  parameters:
+    {{- toYaml .Values.violations.noPrivilegedContainers.parameters | nindent 4}}
 {{- end }}

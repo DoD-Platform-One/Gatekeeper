@@ -16,6 +16,10 @@ spec:
           properties:
             ratio:
               type: string
+            excludedResources:
+              type: array
+              items:
+                type: string
   targets:
     - target: admission.k8s.gatekeeper.sh
       rego: |
@@ -150,11 +154,22 @@ spec:
           new := to_number(raw) * mem_multiple(suffix)
         }
 
+        included(resourceName, exclusions) = true {
+          patterns := {pattern | exclusion := exclusions[_]; pattern := sprintf("^%v$", [exclusion])}
+          resource := concat("/", [input.review.object.metadata.namespace, resourceName])
+          matches := {match | match := patterns[_]; true == regex.match(match, resource)}
+          count(matches) == 0
+        }
+
         violation[{"msg": msg}] {
+          container := input.review.object.spec.containers[_]
+          included(container.name, input.parameters.excludedResources)
           general_violation[{"msg": msg, "field": "containers"}]
         }
 
         violation[{"msg": msg}] {
+          container := input.review.object.spec.initContainers[_]
+          included(container.name, input.parameters.excludedResources)
           general_violation[{"msg": msg, "field": "initContainers"}]
         }
 

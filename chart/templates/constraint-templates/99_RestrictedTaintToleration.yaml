@@ -27,11 +27,10 @@ spec:
               - effect
             allowGlobalToleration:
               type: boolean
-            # This section commented out but left in for future container exemption  
-            # exemptContainers:
-            #   type: array
-            #   items:
-            #     type: string
+            excludedResources:
+              type: array
+              items:
+                type: string
           required:
           - restrictedTaint
           - allowGlobalToleration
@@ -59,12 +58,16 @@ spec:
           input.parameters.allowGlobalToleration == true
         }
 
+        included(resourceName, exclusions) = true {
+          patterns := {pattern | exclusion := exclusions[_]; pattern := sprintf("^%v$", [exclusion])}
+          resource := concat("/", [input.review.object.metadata.namespace, resourceName])
+          matches := {match | match := patterns[_]; true == regex.match(match, resource)}
+          count(matches) == 0
+        }
+
         # Fail if matching toleration exists
         violation[{"msg": msg}] {
-          # This section commented out but left in for future container exemption 
-          # container := input.review.object.spec.containers[_]
-          # exempt := {ignore | ignore := input.parameters.exemptContainers[_]}
-          # not exempt[container.name]
+          included(pod.metadata.name, input.parameters.excludedResources)
           count(global_tolerations) == 0
           count(matching_tolerations) > 0
           msg := sprintf("Toleration is not allowed for taint %v", [taint])
@@ -73,10 +76,7 @@ spec:
         # Fail if global toleration exists and we disallow global tolerations for
         # this taint
         violation[{"msg": msg}] {
-          # This section commented out but left in for future container exemption 
-          # container := input.review.object.spec.containers[_]
-          # exempt := {ignore | ignore := input.parameters.exemptContainers[_]}
-          # not exempt[container.name]
+          included(pod.metadata.name, input.parameters.excludedResources)
           count(global_tolerations) > 0
           not allow_global
           msg := sprintf("Global tolerations not allowed for taint %v", [taint])

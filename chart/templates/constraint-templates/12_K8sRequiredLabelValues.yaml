@@ -11,23 +11,37 @@ spec:
         kind: K8sRequiredLabelValues
       validation:
        # Schema for the `parameters` field
-       openAPIV3Schema:
-         properties:
-           message:
-             type: string
-           labels:
-             type: array
-             items:
-               type: object
-               properties:
-                 key:
-                   type: string
-                 allowedRegex:
-                   type: string
+        openAPIV3Schema:
+          properties:
+            message:
+              type: string
+            labels:
+              type: array
+              items:
+                type: object
+                properties:
+                  key:
+                    type: string
+                  allowedRegex:
+                    type: string
+            excludedResources:
+              type: array
+              items:
+                type: string
   targets:
     - target: admission.k8s.gatekeeper.sh
       rego: |
         package k8srequiredlabels
+
+        resource = concat("/", [input.review.object.metadata.namespace, input.review.object.metadata.name]) {
+          input.review.object.metadata.namespace
+        } else = input.review.object.metadata.name
+
+        included(exclusions) = true {
+          patterns := {pattern | exclusion := exclusions[_]; pattern := sprintf("^%v$", [exclusion])}
+          matches := {match | match := patterns[_]; true == regex.match(match, resource)}
+          count(matches) == 0
+        }
 
         get_message(parameters, _default) = msg {
           not parameters.message
@@ -39,6 +53,7 @@ spec:
         }
 
         violation[{"msg": msg, "details": {"missing_labels": missing}}] {
+          included(input.parameters.excludedResources)
           provided := {label | input.review.object.metadata.labels[label]}
           required := {label | label := input.parameters.labels[_].key}
           missing := required - provided
@@ -48,6 +63,7 @@ spec:
         }
 
         violation[{"msg": msg}] {
+          included(input.parameters.excludedResources)
           value := input.review.object.metadata.labels[key]
           expected := input.parameters.labels[_]
           expected.key == key
