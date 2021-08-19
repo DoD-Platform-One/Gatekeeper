@@ -7,6 +7,11 @@ postInstall:
     image:
       pullSecrets:
       - name: private-registry
+postUpgrade:
+  cleanupCRD:
+    image:
+      pullSecrets:
+      - name: private-registry
 
 violations:
   allowedAppArmorProfiles:

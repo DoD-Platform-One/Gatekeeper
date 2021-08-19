@@ -19,6 +19,10 @@ spec:
         app.kubernetes.io/instance: {{ .Release.Name | quote }}
         helm.sh/chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     spec:
+      {{- if .Values.postUpgrade.cleanupCRD.image.pullSecrets }}
+      imagePullSecrets:
+      {{- .Values.postUpgrade.cleanupCRD.image.pullSecrets | toYaml | nindent 12 }}
+      {{- end }}
       serviceAccountName: "{{ .Chart.Name }}-crd-cleanup"
       containers:
         - name: crd-delete
