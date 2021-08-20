@@ -148,7 +148,7 @@ violations:
       # - namespace/pod
   allowedHostFilesystem:
     enabled: true
-    enforcementAction: dryrun
+    enforcementAction: deny
     kind: K8sPSPHostFilesystem
     name: allowed-host-filesystem
     match: {}
