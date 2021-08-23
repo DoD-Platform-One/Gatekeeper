@@ -5,12 +5,12 @@ metadata:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Requires the use of a read only root file system.
-  name: k8spspreadonlyrootfilesystem
+  name: k8spspreadonlyrootfilesystem2
 spec:
   crd:
     spec:
       names:
-        kind: K8sPSPReadOnlyRootFilesystem
+        kind: K8sPSPReadOnlyRootFilesystem2
       validation:
         openAPIV3Schema:
           properties:
@@ -20,7 +20,7 @@ spec:
                 type: string
   targets:
   - rego: |
-      package k8spspreadonlyrootfilesystem
+      package k8spspreadonlyrootfilesystem2
 
       included(resourceName, exclusions) = true {
         patterns := {pattern | exclusion := exclusions[_]; pattern := sprintf("^%v$", [exclusion])}
