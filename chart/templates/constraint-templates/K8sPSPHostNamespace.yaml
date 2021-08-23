@@ -5,12 +5,12 @@ metadata:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls usage of host namespaces.
-  name: k8spsphostnamespace
+  name: k8spsphostnamespace2
 spec:
   crd:
     spec:
       names:
-        kind: K8sPSPHostNamespace
+        kind: K8sPSPHostNamespace2
       validation:
         openAPIV3Schema:
           properties:
@@ -20,7 +20,7 @@ spec:
                 type: string
   targets:
   - rego: |
-      package k8spsphostnamespace
+      package k8spsphostnamespace2
 
       included(resourceName, exclusions) = true {
         patterns := {pattern | exclusion := exclusions[_]; pattern := sprintf("^%v$", [exclusion])}

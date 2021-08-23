@@ -1,7 +1,7 @@
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
-  name: k8shttpsonly
+  name: k8shttpsonly2
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
@@ -10,7 +10,7 @@ spec:
   crd:
     spec:
       names:
-        kind: K8sHttpsOnly
+        kind: K8sHttpsOnly2
       validation:
         # Schema for the `parameters` field
         openAPIV3Schema:
@@ -22,7 +22,7 @@ spec:
   targets:
     - target: admission.k8s.gatekeeper.sh
       rego: |
-        package k8shttpsonly
+        package k8shttpsonly2
         included(resourceName, exclusions) = true {
           patterns := {pattern | exclusion := exclusions[_]; pattern := sprintf("^%v$", [exclusion])}
           resource := concat("/", [input.review.object.metadata.namespace, resourceName])

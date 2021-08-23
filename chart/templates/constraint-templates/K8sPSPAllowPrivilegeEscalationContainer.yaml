@@ -5,12 +5,12 @@ metadata:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls restricting escalation to root privileges.
-  name: k8spspallowprivilegeescalationcontainer
+  name: k8spspallowprivilegeescalationcontainer2
 spec:
   crd:
     spec:
       names:
-        kind: K8sPSPAllowPrivilegeEscalationContainer
+        kind: K8sPSPAllowPrivilegeEscalationContainer2
       validation:
         openAPIV3Schema:
           properties:
@@ -20,7 +20,7 @@ spec:
                 type: string
   targets:
   - rego: |
-      package k8spspallowprivilegeescalationcontainer
+      package k8spspallowprivilegeescalationcontainer2
 
       included(resourceName, exclusions) = true {
         patterns := {pattern | exclusion := exclusions[_]; pattern := sprintf("^%v$", [exclusion])}

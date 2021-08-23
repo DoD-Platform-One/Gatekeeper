@@ -2,6 +2,11 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ---
+
+## [3.5.1-bb.15]
+### Changed
+- Changed names of several Constraint Templates to workaround upgrade problem when changing CRD schema
+
 ## [3.5.1-bb.14]
 ### Changed
 - Fixed problems with K8sPSPHostNetworkingPorts template

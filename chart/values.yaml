@@ -262,7 +262,7 @@ violations:
   httpsOnly:
     enabled: true
     enforcementAction: deny
-    kind: K8sHttpsOnly
+    kind: K8sHttpsOnly2
     name: https-only
     match: {}
     parameters:
@@ -271,7 +271,7 @@ violations:
   imageDigest:
     enabled: true
     enforcementAction: dryrun
-    kind: K8sImageDigests
+    kind: K8sImageDigests2
     name: image-digest
     match: {}
     parameters:
@@ -307,7 +307,7 @@ violations:
   noHostNamespace:
     enabled: true
     enforcementAction: deny
-    kind: K8sPSPHostNamespace
+    kind: K8sPSPHostNamespace2
     name: no-host-namespace
     match: {}
     parameters:
@@ -316,7 +316,7 @@ violations:
   noPrivilegedContainers:
     enabled: true
     enforcementAction: deny
-    kind: K8sPSPPrivilegedContainer
+    kind: K8sPSPPrivilegedContainer2
     name: no-privileged-containers
     match: {}
     parameters:
@@ -334,7 +334,7 @@ violations:
   noPrivilegedEscalation:
     enabled: true
     enforcementAction: dryrun
-    kind: K8sPSPAllowPrivilegeEscalationContainer
+    kind: K8sPSPAllowPrivilegeEscalationContainer2
     name: no-privileged-escalation
     match: {}
     parameters:
@@ -366,7 +366,7 @@ violations:
   readOnlyRoot:
     enabled: true
     enforcementAction: dryrun
-    kind: K8sPSPReadOnlyRootFilesystem
+    kind: K8sPSPReadOnlyRootFilesystem2
     name: read-only-root
     match: {}
     parameters:

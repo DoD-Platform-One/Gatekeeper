@@ -5,12 +5,12 @@ metadata:
     {{- include "gatekeeper.labels" . | nindent 4 }}
   annotations:
     description: Controls running of privileged containers.
-  name: k8spspprivilegedcontainer
+  name: k8spspprivilegedcontainer2
 spec:
   crd:
     spec:
       names:
-        kind: K8sPSPPrivilegedContainer
+        kind: K8sPSPPrivilegedContainer2
       validation:
         openAPIV3Schema:
           properties:
@@ -20,7 +20,7 @@ spec:
                 type: string
   targets:
   - rego: |
-      package k8spspprivileged
+      package k8spspprivilegedcontainer2
 
       included(resourceName, exclusions) = true {
         patterns := {pattern | exclusion := exclusions[_]; pattern := sprintf("^%v$", [exclusion])}
