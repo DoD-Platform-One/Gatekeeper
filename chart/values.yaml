@@ -58,10 +58,10 @@ controllerManager:
   resources:
     limits:
       cpu: 175m
-      memory: 260Mi
+      memory: 512Mi
     requests:
       cpu: 175m
-      memory: 260Mi
+      memory: 512Mi
 audit:
   hostNetwork: false
   priorityClassName: system-cluster-critical
