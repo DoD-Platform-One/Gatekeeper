@@ -3,6 +3,10 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [3.5.2-bb.1]
+### Changed
+- Updated upgrade job to remove orphan or disabled constraints.
+
 ## [3.5.2-bb.0]
 ### Changed
 - Updated application and corresponding helm chart to v3.5.2
