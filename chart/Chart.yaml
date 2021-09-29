@@ -1,13 +1,13 @@
 apiVersion: v2
-appVersion: v3.5.2
 description: A Helm chart for Gatekeeper
 name: gatekeeper
 keywords:
   - open policy agent
-version: 3.5.2-bb.2
+version: 3.6.0-bb.0
 home: https://github.com/open-policy-agent/gatekeeper
 sources:
   - https://github.com/open-policy-agent/gatekeeper.git
+appVersion: v3.6.0
 dependencies:
   - name: gluon
     version: 0.2.2
