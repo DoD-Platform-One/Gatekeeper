@@ -13,6 +13,7 @@ spec:
     listKind: ConstraintTemplateList
     plural: constrainttemplates
     singular: constrainttemplate
+  preserveUnknownFields: false
   scope: Cluster
   versions:
   - name: v1
@@ -105,7 +106,7 @@ spec:
             type: object
         type: object
     served: true
-    storage: false
+    storage: true
     subresources:
       status: {}
   - name: v1alpha1
@@ -139,6 +140,9 @@ spec:
                         type: object
                       validation:
                         properties:
+                          legacySchema:
+                            default: true
+                            type: boolean
                           openAPIV3Schema:
                             type: object
                             x-kubernetes-preserve-unknown-fields: true
@@ -229,6 +233,9 @@ spec:
                         type: object
                       validation:
                         properties:
+                          legacySchema:
+                            default: true
+                            type: boolean
                           openAPIV3Schema:
                             type: object
                             x-kubernetes-preserve-unknown-fields: true
@@ -285,6 +292,6 @@ spec:
             type: object
         type: object
     served: true
-    storage: true
+    storage: false
     subresources:
       status: {}

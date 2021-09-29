@@ -5,6 +5,8 @@ constraintViolationsLimit: 1000
 auditFromCache: false
 disableValidatingWebhook: false
 validatingWebhookTimeoutSeconds: 3
+validatingWebhookFailurePolicy: Ignore
+validatingWebhookCheckIgnoreFailurePolicy: Fail
 enableDeleteOperations: false
 experimentalEnableMutation: false
 auditChunkSize: 500
@@ -12,6 +14,7 @@ logLevel: INFO
 logDenies: false
 emitAdmissionEvents: false
 emitAuditEvents: false
+resourceQuota: true
 postInstall:
   labelNamespace:
     enabled: true
@@ -30,16 +33,27 @@ postUpgrade:
       pullSecrets: []
 image:
   repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
-  release: v3.5.2
+  release: v3.6.0
   pullPolicy: IfNotPresent
-  pullSecrets: []
+  pullSecrets:
+    - name: private-registry
+  crdUpgrade:
+    enabled: true
+  crdRepository: registry1.dso.mil/ironbank/opensource/kubernetes-1.21/kubectl
+  crdRelease: v1.21.1
+  # crdRepository: openpolicyagent/gatekeeper-crds
+  # crdRelease: v3.6.0
 podAnnotations:
   { container.seccomp.security.alpha.kubernetes.io/manager: runtime/default }
 podLabels: {}
 podCountLimit: 100
 secretAnnotations: {}
 controllerManager:
+  exemptNamespaces: []
   hostNetwork: false
+  port: 8443
+  metricsPort: 8888
+  healthPort: 9090
   priorityClassName: system-cluster-critical
   affinity:
     podAntiAffinity:
@@ -64,6 +78,8 @@ controllerManager:
       memory: 512Mi
 audit:
   hostNetwork: false
+  metricsPort: 8888
+  healthPort: 9090
   priorityClassName: system-cluster-critical
   affinity: {}
   tolerations: []
