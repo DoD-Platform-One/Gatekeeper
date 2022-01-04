@@ -20,7 +20,7 @@ postInstall:
     enabled: true
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes-1.21/kubectl
-      tag: v1.21.1
+      tag: v1.21.5
       pullPolicy: IfNotPresent
       pullSecrets: []
 postUpgrade:
@@ -28,19 +28,19 @@ postUpgrade:
     enabled: true
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes-1.21/kubectl
-      tag: v1.21.1
+      tag: v1.21.5
       pullPolicy: IfNotPresent
       pullSecrets: []
 image:
   repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
-  release: v3.6.0
+  release: v3.7.0
   pullPolicy: IfNotPresent
   pullSecrets:
     - name: private-registry
   crdUpgrade:
     enabled: true
   crdRepository: registry1.dso.mil/ironbank/opensource/kubernetes-1.21/kubectl
-  crdRelease: v1.21.1
+  crdRelease: v1.21.5
   # crdRepository: openpolicyagent/gatekeeper-crds
   # crdRelease: v3.6.0
 podAnnotations:
