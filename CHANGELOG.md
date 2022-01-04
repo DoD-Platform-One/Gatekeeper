@@ -3,6 +3,11 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [3.7.0-bb.0]
+### Changed
+- Updated application and corresponding helm chart to v3.7.0
+- Updated kubectl image
+
 ## [3.6.0-bb.2]
 ### Changed
 - Enable OPA to log denies by default
@@ -94,6 +99,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Updated constraint `https-only` enforcement to default deny
 
 ## [3.5.1-bb.3]
+### Changed
 - Updated constraint `volume-types` enforcement to default deny
 
 ## [3.5.1-bb.2]
@@ -183,6 +189,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [3.4.0-bb.3]
 ### Changed
 - Updated CI values to only include 'default' namespace for deny actions
+
 ## [3.4.0-bb.2]
 ### Added
 - `K8sDenySADefault` constraint template.
@@ -210,26 +217,30 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   - Use of helm specified namespace vs. hardcoded `gatekeeper-system`
 - Update docs/ConstraintTemplates list with latest templates
 
-## [3.3.0-bb.5] - 2021-06-14
-Remove constraint templates K8sRequiredDeploymentLabels & K8sRequiredIronBankImages.
-The constraint templates are replaced with K8sRequiredLabelValues & K8sAllowedRepos
+## [3.3.0-bb.5]
+### Changed
+- Remove constraint templates K8sRequiredDeploymentLabels & K8sRequiredIronBankImages.
+- The constraint templates are replaced with K8sRequiredLabelValues & K8sAllowedRepos
 
-## [3.3.0-bb.4] - 2021-06-11
+## [3.3.0-bb.4]
 ### Fixed
 - Typo in K8sDenyServiceNodePort message
 - Typo in K8sNoAnnotationValues message
 - Missing "service" in gatekeeper config
 
-## [3.3.0-bb.3] - 2021-06-03
-More Constraint Templates
+## [3.3.0-bb.3]
+### Changed
+- More Constraint Templates
 
-## [3.3.0-bb.2] - 2021-05-27
-Added Constraint Templates
+## [3.3.0-bb.2]
+### Changed
+- Added Constraint Templates
 
-## [3.3.0-bb.1] - 2021-05-17
-Added helm test
+## [3.3.0-bb.1]
+### Changed
+- Added helm test
 
-## [3.3.0-bb.0] - 2021-04-09
-Added changelog
-
-update chart and image to v3.3.0
+## [3.3.0-bb.0]
+### Changed
+- Added changelog
+- update chart and image to v3.3.0
