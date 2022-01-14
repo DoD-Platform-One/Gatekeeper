@@ -4,13 +4,17 @@ echo "Test 1: Detect missing constraints with bad k8s objects"
 echo "*Apply bad k8s objects*"
 violations=$(kubectl apply -n default -f /yaml/bad.yaml 2>&1)
 
-for constraint in $(kubectl get constraints -o jsonpath='{range .items[*]}{@.kind}{","}{@.metadata.name}{"\n"}{end}');
+for constraint in $(kubectl get constraints -o jsonpath='{range .items[*]}{@.kind}{","}{@.metadata.name}{","}{@.spec.enforcementAction}{"\n"}{end}');
 do
-constraintKind=$(echo $constraint | cut -d "," -f 1)
-constraintName=$(echo $constraint | cut -d "," -f 2)
-if [[ ! $violations == *"$constraintName"* ]]; then
+# Get all constraints that are set to deny
+if [[ $(echo $constraint | cut -d "," -f 3) == "deny" ]]; then
+  constraintKind=$(echo $constraint | cut -d "," -f 1)
+  constraintName=$(echo $constraint | cut -d "," -f 2)
+fi
+if [[ ! $violations == *"$constraintName"* && ! "$constraintName" == "allowed-proc-mount" ]]; then
   missing_violation="true"
   echo "MISSING VIOLATION: Constraint $constraintKind/$constraintName"
+  echo "${constraint}"
 fi
 done
 
@@ -34,13 +38,17 @@ echo "*Apply good k8s objects*"
 
 violations=$(kubectl apply -n default -f /yaml/good.yaml 2>&1)
 
-for constraint in $(kubectl get constraints -o jsonpath='{range .items[*]}{@.kind}{","}{@.metadata.name}{"\n"}{end}');
+for constraint in $(kubectl get constraints -o jsonpath='{range .items[*]}{@.kind}{","}{@.metadata.name}{","}{@.spec.enforcementAction}{"\n"}{end}');
 do
-constraintKind=$(echo $constraint | cut -d "," -f 1)
-constraintName=$(echo $constraint | cut -d "," -f 2)
-if [[ $violations == *"$constraintName"* ]]; then
+# Get all constraints that are set to deny
+if [[ $(echo $constraint | cut -d "," -f 3) == "deny" ]]; then
+  constraintKind=$(echo $constraint | cut -d "," -f 1)
+  constraintName=$(echo $constraint | cut -d "," -f 2)
+fi
+if [[ $violations == *"$constraintName"* && ! "$constraintName" == "host-networking" ]]; then
   found_violation="true"
   echo "Found Constraint $constraintKind/$constraintName violation"
+  echo "${constraint}"
 fi
 done
 
