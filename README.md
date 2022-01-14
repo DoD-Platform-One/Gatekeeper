@@ -1,6 +1,6 @@
 # gatekeeper
 
-![Version: 3.7.0-bb.0](https://img.shields.io/badge/Version-3.7.0--bb.0-informational?style=flat-square) ![AppVersion: v3.7.0](https://img.shields.io/badge/AppVersion-v3.7.0-informational?style=flat-square)
+![Version: 3.7.0-bb.1](https://img.shields.io/badge/Version-3.7.0--bb.1-informational?style=flat-square) ![AppVersion: v3.7.0](https://img.shields.io/badge/AppVersion-v3.7.0-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -40,12 +40,15 @@ helm install gatekeeper chart/
 | auditMatchKindOnly | bool | `true` |  |
 | constraintViolationsLimit | int | `1000` |  |
 | auditFromCache | bool | `false` |  |
+| disableMutation | bool | `true` |  |
 | disableValidatingWebhook | bool | `false` |  |
 | validatingWebhookTimeoutSeconds | int | `15` |  |
 | validatingWebhookFailurePolicy | string | `"Ignore"` |  |
 | validatingWebhookCheckIgnoreFailurePolicy | string | `"Fail"` |  |
 | enableDeleteOperations | bool | `false` |  |
-| experimentalEnableMutation | bool | `false` |  |
+| enableExternalData | bool | `false` |  |
+| mutatingWebhookFailurePolicy | string | `"Ignore"` |  |
+| mutatingWebhookTimeoutSeconds | int | `3` |  |
 | auditChunkSize | int | `500` |  |
 | logLevel | string | `"INFO"` |  |
 | logDenies | bool | `true` |  |
@@ -57,16 +60,10 @@ helm install gatekeeper chart/
 | postInstall.labelNamespace.image.tag | string | `"v1.21.5"` |  |
 | postInstall.labelNamespace.image.pullPolicy | string | `"IfNotPresent"` |  |
 | postInstall.labelNamespace.image.pullSecrets | list | `[]` |  |
-| postUpgrade.cleanupCRD.enabled | bool | `true` |  |
-| postUpgrade.cleanupCRD.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes-1.21/kubectl"` |  |
-| postUpgrade.cleanupCRD.image.tag | string | `"v1.21.5"` |  |
-| postUpgrade.cleanupCRD.image.pullPolicy | string | `"IfNotPresent"` |  |
-| postUpgrade.cleanupCRD.image.pullSecrets | list | `[]` |  |
 | image.repository | string | `"registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper"` |  |
 | image.release | string | `"v3.7.0"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.pullSecrets[0].name | string | `"private-registry"` |  |
-| image.crdUpgrade.enabled | bool | `true` |  |
 | image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes-1.21/kubectl"` |  |
 | image.crdRelease | string | `"v1.21.5"` |  |
 | podAnnotations."container.seccomp.security.alpha.kubernetes.io/manager" | string | `"runtime/default"` |  |
@@ -74,7 +71,9 @@ helm install gatekeeper chart/
 | podCountLimit | int | `100` |  |
 | secretAnnotations | object | `{}` |  |
 | controllerManager.exemptNamespaces | list | `[]` |  |
+| controllerManager.exemptNamespacePrefixes | list | `[]` |  |
 | controllerManager.hostNetwork | bool | `false` |  |
+| controllerManager.dnsPolicy | string | `"Default"` |  |
 | controllerManager.port | int | `8443` |  |
 | controllerManager.metricsPort | int | `8888` |  |
 | controllerManager.healthPort | int | `9090` |  |
@@ -91,19 +90,26 @@ helm install gatekeeper chart/
 | controllerManager.resources.requests.cpu | string | `"175m"` |  |
 | controllerManager.resources.requests.memory | string | `"512Mi"` |  |
 | audit.hostNetwork | bool | `false` |  |
+| audit.dnsPolicy | string | `"Default"` |  |
 | audit.metricsPort | int | `8888` |  |
 | audit.healthPort | int | `9090` |  |
 | audit.priorityClassName | string | `"system-cluster-critical"` |  |
 | audit.affinity | object | `{}` |  |
 | audit.tolerations | list | `[]` |  |
 | audit.nodeSelector."kubernetes.io/os" | string | `"linux"` |  |
+| audit.writeToRAMDisk | bool | `false` |  |
 | audit.resources.limits.cpu | float | `1.2` |  |
 | audit.resources.limits.memory | string | `"768Mi"` |  |
 | audit.resources.requests.cpu | float | `1.2` |  |
 | audit.resources.requests.memory | string | `"768Mi"` |  |
+| crds.resources | object | `{}` |  |
 | pdb.controllerManager.minAvailable | int | `1` |  |
 | service | object | `{}` |  |
 | disabledBuiltins | string | `nil` |  |
+| psp.enabled | bool | `true` |  |
+| upgradeCRDs.enabled | bool | `true` |  |
+| cleanupCRDs.enabled | bool | `true` |  |
+| rbac.create | bool | `true` |  |
 | violations.allowedAppArmorProfiles.enabled | bool | `false` |  |
 | violations.allowedAppArmorProfiles.enforcementAction | string | `"dryrun"` |  |
 | violations.allowedAppArmorProfiles.kind | string | `"K8sPSPAppArmor"` |  |

@@ -1,4 +1,4 @@
-{{- if .Values.postUpgrade.cleanupCRD.enabled }}
+{{- if .Values.cleanupCRDs.enabled }}
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -48,15 +48,15 @@ spec:
         app.kubernetes.io/instance: {{ .Release.Name | quote }}
         helm.sh/chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     spec:
-      {{- if .Values.postUpgrade.cleanupCRD.image.pullSecrets }}
+      {{- if .Values.image.pullSecrets }}
       imagePullSecrets:
-      {{- .Values.postUpgrade.cleanupCRD.image.pullSecrets | toYaml | nindent 12 }}
+        {{- toYaml .Values.image.pullSecrets | nindent 8 }}
       {{- end }}
       serviceAccountName: "{{ .Chart.Name }}-crd-cleanup"
       containers:
         - name: crd-delete
-          image: "{{ .Values.postUpgrade.cleanupCRD.image.repository }}:{{ .Values.postUpgrade.cleanupCRD.image.tag }}"
-          imagePullPolicy: {{ .Values.postUpgrade.cleanupCRD.image.pullPolicy }}
+          image: '{{ .Values.image.crdRepository }}:{{ .Values.image.crdRelease }}'
+          imagePullPolicy: '{{ .Values.image.pullPolicy }}'
           command: ['/bin/sh', '/src/crd-cleanup.sh']
           volumeMounts:
             - name: crd-cleanup
