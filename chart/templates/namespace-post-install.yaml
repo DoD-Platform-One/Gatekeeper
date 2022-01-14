@@ -32,13 +32,21 @@ spec:
         - name: kubectl-label
           image: "{{ .Values.postInstall.labelNamespace.image.repository }}:{{ .Values.postInstall.labelNamespace.image.tag }}"
           imagePullPolicy: {{ .Values.postInstall.labelNamespace.image.pullPolicy }}
-          command:
-            - kubectl
+          args:
             - label
             - ns
             - {{ .Release.Namespace }}
             - admission.gatekeeper.sh/ignore=no-self-managing
             - --overwrite
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - all
+            readOnlyRootFilesystem: true
+            runAsGroup: 999
+            runAsNonRoot: true
+            runAsUser: 1000
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -52,6 +60,7 @@ metadata:
     "helm.sh/hook-weight": "-5"
     "helm.sh/hook-delete-policy": hook-succeeded,before-hook-creation
 ---
+{{- if .Values.rbac.create }}
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
@@ -74,7 +83,9 @@ rules:
       - patch
     resourceNames:
       - {{ .Release.Namespace }}
+{{- end }}
 ---
+{{- if .Values.rbac.create }}
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
@@ -94,5 +105,5 @@ subjects:
   - kind: ServiceAccount
     name: gatekeeper-update-namespace-label
     namespace: {{ .Release.Namespace | quote }}
-
+{{- end }}
 {{- end }}
