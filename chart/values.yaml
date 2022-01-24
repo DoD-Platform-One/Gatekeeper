@@ -491,3 +491,19 @@ networkPolicies:
   enabled: false
   # See `kubectl cluster-info` and then resolve to IP
   controlPlaneCidr: 0.0.0.0/0
+
+bbtests:
+  enabled: false
+  scripts:
+    image: registry1.dso.mil/ironbank/opensource/kubernetes-1.21/kubectl:v1.21.1
+    additionalVolumeMounts:
+      - name: "{{ .Chart.Name }}-test-config"
+        mountPath: /yaml
+      - name: "{{ .Chart.Name }}-kube-cache"
+        mountPath: /.kube/cache
+    additionalVolumes:
+      - name: "{{ .Chart.Name }}-test-config"
+        configMap:
+          name: "{{ .Chart.Name }}-test-config"
+      - name: "{{ .Chart.Name }}-kube-cache"
+        emptyDir: {}
