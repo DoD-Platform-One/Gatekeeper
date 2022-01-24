@@ -3,6 +3,10 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [3.7.0-bb.4]
+### Fixed
+- Missing emptyDir in PSP, copied from upstream fix: https://github.com/open-policy-agent/gatekeeper/commit/ae9e7dd1c8c5a23e748f0893468abe18218fa357
+
 ## [3.7.0-bb.3]
 ### Changed
 - Relocated bbtest values
