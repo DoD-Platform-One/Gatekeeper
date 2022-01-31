@@ -17,15 +17,17 @@
       {
         "fileMatch": ["^chart/values\\.yaml$"],
         "matchStrings": [
-           "image:\\s+repository:\\s+[^/]+/(?<depName>.+)\\s+release:\\s+(?<currentValue>.+)"
+          "image:\\s+repository:\\s+[^/]+/(?<depName>.+)\\s+release:\\s+(?<currentValue>.+)"
         ],
         "datasourceTemplate": "docker"
       },
-            {
+      {
         "fileMatch": ["^chart/Chart\\.yaml$"],
         "matchStrings": [
-           "- Gatekeeper:\\s+repository:\\s+[^/]+/(?<depName>.+)\\s+release:\\s+(?<currentValue>.+)"
+        "- Gatekeeper:\\s+(?<currentValue>.+)"
         ],
+        "depNameTemplate": "ironbank/opensource/openpolicyagent/gatekeeper",
+        "registryUrlTemplate": "https://registry1.dso.mil",
         "datasourceTemplate": "docker"
       }
     ]
