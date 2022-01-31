@@ -20,6 +20,13 @@
            "image:\\s+repository:\\s+[^/]+/(?<depName>.+)\\s+release:\\s+(?<currentValue>.+)"
         ],
         "datasourceTemplate": "docker"
+      },
+            {
+        "fileMatch": ["^chart/values\\.yaml$"],
+        "matchStrings": [
+           "- Gatekeeper:\\s+repository:\\s+[^/]+/(?<depName>.+)\\s+release:\\s+(?<currentValue>.+)"
+        ],
+        "datasourceTemplate": "docker"
       }
     ]
   }
