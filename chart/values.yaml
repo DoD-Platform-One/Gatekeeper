@@ -94,7 +94,7 @@ pdb:
 service: {}
 disabledBuiltins:
 psp:
-  enabled: false
+  enabled: true
 upgradeCRDs:
   enabled: true
 cleanupCRDs:

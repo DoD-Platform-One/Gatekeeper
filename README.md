@@ -1,6 +1,6 @@
 # gatekeeper
 
-![Version: 3.7.0-bb.6](https://img.shields.io/badge/Version-3.7.0--bb.6-informational?style=flat-square) ![AppVersion: v3.7.0](https://img.shields.io/badge/AppVersion-v3.7.0-informational?style=flat-square)
+![Version: 3.7.0-bb.7](https://img.shields.io/badge/Version-3.7.0--bb.7-informational?style=flat-square) ![AppVersion: v3.7.0](https://img.shields.io/badge/AppVersion-v3.7.0-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -106,7 +106,7 @@ helm install gatekeeper chart/
 | pdb.controllerManager.minAvailable | int | `1` |  |
 | service | object | `{}` |  |
 | disabledBuiltins | string | `nil` |  |
-| psp.enabled | bool | `false` |  |
+| psp.enabled | bool | `true` |  |
 | upgradeCRDs.enabled | bool | `true` |  |
 | cleanupCRDs.enabled | bool | `true` |  |
 | rbac.create | bool | `true` |  |
