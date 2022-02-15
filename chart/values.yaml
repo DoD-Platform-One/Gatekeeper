@@ -22,8 +22,8 @@ postInstall:
   labelNamespace:
     enabled: true
     image:
-      repository: registry1.dso.mil/ironbank/opensource/kubernetes-1.21/kubectl
-      tag: v1.21.5
+      repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
+      tag: v1.22.2
       pullPolicy: IfNotPresent
       pullSecrets: []
 image:
@@ -32,8 +32,8 @@ image:
   pullPolicy: IfNotPresent
   pullSecrets:
     - name: private-registry
-  crdRepository: registry1.dso.mil/ironbank/opensource/kubernetes-1.21/kubectl
-  crdRelease: v1.21.5
+  crdRepository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
+  crdRelease: v1.22.2
 podAnnotations:
   { container.seccomp.security.alpha.kubernetes.io/manager: runtime/default }
 podLabels: {}
@@ -495,7 +495,7 @@ networkPolicies:
 bbtests:
   enabled: false
   scripts:
-    image: registry1.dso.mil/ironbank/opensource/kubernetes-1.21/kubectl:v1.21.5
+    image: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.22.2
     additionalVolumeMounts:
       - name: "{{ .Chart.Name }}-test-config"
         mountPath: /yaml

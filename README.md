@@ -1,6 +1,6 @@
 # gatekeeper
 
-![Version: 3.7.0-bb.8](https://img.shields.io/badge/Version-3.7.0--bb.8-informational?style=flat-square) ![AppVersion: v3.7.0](https://img.shields.io/badge/AppVersion-v3.7.0-informational?style=flat-square)
+![Version: 3.7.0-bb.9](https://img.shields.io/badge/Version-3.7.0--bb.9-informational?style=flat-square) ![AppVersion: v3.7.0](https://img.shields.io/badge/AppVersion-v3.7.0-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -56,16 +56,16 @@ helm install gatekeeper chart/
 | emitAuditEvents | bool | `false` |  |
 | resourceQuota | bool | `true` |  |
 | postInstall.labelNamespace.enabled | bool | `true` |  |
-| postInstall.labelNamespace.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes-1.21/kubectl"` |  |
-| postInstall.labelNamespace.image.tag | string | `"v1.21.5"` |  |
+| postInstall.labelNamespace.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
+| postInstall.labelNamespace.image.tag | string | `"v1.22.2"` |  |
 | postInstall.labelNamespace.image.pullPolicy | string | `"IfNotPresent"` |  |
 | postInstall.labelNamespace.image.pullSecrets | list | `[]` |  |
 | image.repository | string | `"registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper"` |  |
 | image.release | string | `"v3.7.0"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.pullSecrets[0].name | string | `"private-registry"` |  |
-| image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes-1.21/kubectl"` |  |
-| image.crdRelease | string | `"v1.21.5"` |  |
+| image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
+| image.crdRelease | string | `"v1.22.2"` |  |
 | podAnnotations."container.seccomp.security.alpha.kubernetes.io/manager" | string | `"runtime/default"` |  |
 | podLabels | object | `{}` |  |
 | podCountLimit | int | `100` |  |
@@ -354,7 +354,7 @@ helm install gatekeeper chart/
 | networkPolicies.enabled | bool | `false` |  |
 | networkPolicies.controlPlaneCidr | string | `"0.0.0.0/0"` |  |
 | bbtests.enabled | bool | `false` |  |
-| bbtests.scripts.image | string | `"registry1.dso.mil/ironbank/opensource/kubernetes-1.21/kubectl:v1.21.5"` |  |
+| bbtests.scripts.image | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.22.2"` |  |
 | bbtests.scripts.additionalVolumeMounts[0].name | string | `"{{ .Chart.Name }}-test-config"` |  |
 | bbtests.scripts.additionalVolumeMounts[0].mountPath | string | `"/yaml"` |  |
 | bbtests.scripts.additionalVolumeMounts[1].name | string | `"{{ .Chart.Name }}-kube-cache"` |  |
