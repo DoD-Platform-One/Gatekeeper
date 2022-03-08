@@ -1,6 +1,6 @@
 # gatekeeper
 
-![Version: 3.7.0-bb.9](https://img.shields.io/badge/Version-3.7.0--bb.9-informational?style=flat-square) ![AppVersion: v3.7.0](https://img.shields.io/badge/AppVersion-v3.7.0-informational?style=flat-square)
+![Version: 3.7.1-bb.0](https://img.shields.io/badge/Version-3.7.1--bb.0-informational?style=flat-square) ![AppVersion: v3.7.1](https://img.shields.io/badge/AppVersion-v3.7.1-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -61,7 +61,7 @@ helm install gatekeeper chart/
 | postInstall.labelNamespace.image.pullPolicy | string | `"IfNotPresent"` |  |
 | postInstall.labelNamespace.image.pullSecrets | list | `[]` |  |
 | image.repository | string | `"registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper"` |  |
-| image.release | string | `"v3.7.0"` |  |
+| image.release | string | `"v3.7.1"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.pullSecrets[0].name | string | `"private-registry"` |  |
 | image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
@@ -73,7 +73,7 @@ helm install gatekeeper chart/
 | controllerManager.exemptNamespaces | list | `[]` |  |
 | controllerManager.exemptNamespacePrefixes | list | `[]` |  |
 | controllerManager.hostNetwork | bool | `false` |  |
-| controllerManager.dnsPolicy | string | `"Default"` |  |
+| controllerManager.dnsPolicy | string | `"ClusterFirst"` |  |
 | controllerManager.port | int | `8443` |  |
 | controllerManager.metricsPort | int | `8888` |  |
 | controllerManager.healthPort | int | `9090` |  |
@@ -90,7 +90,7 @@ helm install gatekeeper chart/
 | controllerManager.resources.requests.cpu | string | `"175m"` |  |
 | controllerManager.resources.requests.memory | string | `"512Mi"` |  |
 | audit.hostNetwork | bool | `false` |  |
-| audit.dnsPolicy | string | `"Default"` |  |
+| audit.dnsPolicy | string | `"ClusterFirst"` |  |
 | audit.metricsPort | int | `8888` |  |
 | audit.healthPort | int | `9090` |  |
 | audit.priorityClassName | string | `"system-cluster-critical"` |  |
