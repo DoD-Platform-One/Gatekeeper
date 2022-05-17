@@ -1,0 +1,71 @@
+component-definition:
+  uuid: 558ddfa8-2642-4726-8a89-6b99fc4cbf6e
+  metadata: 
+    title: Gatekeeper Component
+    last-modified: '2021-10-19T12:00:00Z'
+    version: '20211019'
+    oscal-version: 1.0.0
+    parties:
+      # Should be consistent across all of the packages, but where is ground truth?
+    - uuid: 72134592-08C2-4A77-ABAD-C880F109367A 
+      type: organization
+      name: Platform One
+      links:
+      - href: <https://p1.dso.mil>
+        rel: website
+  components:
+  - uuid: 8078c070-2d5b-44b8-8fd1-47797fa12c6d
+    type: software
+    title: OPA Gatekeeper
+    description: |
+      An application which assists in enforcing, monitoring, and remediating policies in Kubernetes while strengthening governance of an environment. 
+    purpose: Monitors existing clusters, detects policy violations, and also acts as a customizable Kubernetes Admission Webhook
+    responsible-roles:
+    - role-id: provider
+      party-uuids:
+        - 72134592-08C2-4A77-ABAD-C880F109367A # matches parties entry for p1
+    control-implementations:
+    - uuid: 5108E5FC-C45F-477B-A542-9C5611A92485
+      source: https://raw.githubusercontent.com/usnistgov/oscal-content/master/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json
+      description:
+        Controls implemented by <component> for inheritance by applications
+      implemented-requirements:
+      - uuid: c89a52f1-4d60-4d4e-9c4c-7c5eb04fe21a
+        control-id: au-2
+        description: >-
+          OPA Gatekeeper provides policy violations events to Cluster Auditor for event logging.  
+          The list of policies being audited is/will be captured by the Policy Document in Gatekeeper's chart
+      - uuid: c38f765f-b706-4810-96b6-2971f37122df
+        control-id: au-3
+        description: >-
+          Gatekeeper provides the policy being violated, the timestamp of when it occured,
+          the location (cluster/namespace), the object causing the violation and whether it was in warn or deny mode. 
+      - uuid: f856dc53-1c3a-428e-83ff-65723c325dac
+        control-id: au-8
+        description: >-
+          Gatekeeper policies have timestamps assoicated to when the violation was found and identified.  
+          By logging policy violations into log messages (via logDenies=true ), 
+          these logs are also available in the logging framework
+      - uuid: 41b6ce08-5827-4e08-8ff4-1a61a2e378f8
+        control-id: au-9
+        description: >-
+          Access to the Gatekeeper violations are managed by/inherited from the Kubernetes cluster
+      - uuid: da7ff1f0-2a16-491c-8854-788cc46cef3c
+        control-id: cm-1
+        description: >-
+          Provides enforcement of configuration management policy
+      - uuid: ffb9f4b5-0bfe-4053-9e12-5657a1ceb0b9
+        control-id: cm-7.5
+        description: >-
+          OPA Gatekeeper can prevent by default unauthorized changes to the system.
+      - uuid: 07a4e16a-944b-4989-a6d8-057b545748d0
+        control-id: cm-11
+        description: >-
+          Gatekeeper can provide the ability for end users to control the policies that allow for the installation of end-user software.
+          It also provides the enforcement and monitoring
+      - uuid: 72d2434e-0dac-4267-8594-d2df5da6b22a
+        control-id: sa-9
+        description: >-
+          Gatekeeper can ensure applications installed on the kubernetes cluster meet policy requirements for manfiests
+
+
