@@ -1,3 +1,7 @@
+
+# Toggles scc needed for openshift
+openshift: false
+
 replicas: 3
 auditInterval: 300
 auditMatchKindOnly: true
