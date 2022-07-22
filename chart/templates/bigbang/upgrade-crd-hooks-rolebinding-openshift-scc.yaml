@@ -1,0 +1,25 @@
+---
+{{- if .Values.upgradeCRDs.enabled }}
+{{- if .Values.openshift }}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  labels:
+    heritage: {{ .Release.Service }}
+    release: {{ .Release.Name }}
+  name: gatekeeper-upgrade-crds-rolebinding-openshift-scc
+  namespace: "{{ .Release.Namespace }}"
+  annotations:
+    helm.sh/hook: pre-install,pre-upgrade
+    helm.sh/hook-delete-policy: "hook-succeeded,before-hook-creation"
+    helm.sh/hook-weight: "0"
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:openshift:scc:anyuid
+subjects:
+  - kind: ServiceAccount
+    name: gatekeeper-admin-upgrade-crds
+    namespace: {{ .Release.Namespace }}
+{{- end }}
+{{- end }}
