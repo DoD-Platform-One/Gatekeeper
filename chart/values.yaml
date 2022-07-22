@@ -155,7 +155,7 @@ pdb:
 service: {}
 disabledBuiltins: ["{http.send}"]
 psp:
-  enabled: true
+  enabled: false
 upgradeCRDs:
   enabled: true
 cleanupCRDs:
