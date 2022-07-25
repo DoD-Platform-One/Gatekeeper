@@ -64,7 +64,7 @@ Containers must be run as one of the specified users and groups.
 ## K8sPSPAllowPrivilegeEscalationContainer
 
 Privilege Escalation
-Containers must not allow escalaton of privileges.
+Containers must not allow escalation of privileges.
 
 ## K8sPSPAppArmor
 
@@ -107,7 +107,7 @@ Container images may only use host ports that are specified.
 
 ## K8sPSPPrivilegedContainer
 
-Privilged Containers
+Privileged Containers
 Containers must not run as privileged.
 
 ## K8sPSPProcMount
@@ -133,7 +133,7 @@ Containers may only use the specified seccomp profiles.
 ## K8sPSPSELinuxV2
 
 SELinux
-Containers may only use the SELnux options specified.
+Containers may only use the SELinux options specified.
 
 ## K8sPSPVolumeTypes
 

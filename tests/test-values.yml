@@ -60,12 +60,6 @@ violations:
   # since all values are mutated to "Default"
   allowedProcMount:
     enabled: false
-    enforcementAction: deny
-    match:
-      namespaces:
-        - default
-        - bad-pod-test-ns
-        - good-pod-test-ns
   allowedSecCompProfiles:
     enforcementAction: deny
     match:
