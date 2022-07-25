@@ -38,7 +38,6 @@ spec:
       securityContext:
         privileged: true
         allowPrivilegeEscalation: true
-        procMount: Invalid
         readOnlyRootFilesystem: false
         capabilities:
           add: ["disallowedcapability"]
@@ -103,8 +102,6 @@ spec:
           port: 9090
           scheme: HTTP
         periodSeconds: 10
-      securityContext:
-        procMount: Unmasked
   tolerations:
   - key: "privileged"
     operator: "Equal"

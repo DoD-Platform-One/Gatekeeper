@@ -3,6 +3,10 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [3.8.1-bb.5] - 2022-07-25
+### Changed
+- Removed `ProcMount` from Helm test to avoid conflicts with `PodSecurityPolicy` in some K8S distributions
+
 ## [3.8.1-bb.4] - 2022-07-22
 ### Changed
 - Fixed PodDisruptionBudget to default to the `v1` API when neither `v1` or `v1beta1` are found.  This should prevent it from being flagged as deprecated.
