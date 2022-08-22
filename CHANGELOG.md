@@ -3,6 +3,10 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [3.9.0-bb.0]
+### Changed
+- Updated application and corresponding helm chart to v3.9.0
+
 ## [3.8.1-bb.5] - 2022-07-25
 ### Changed
 - Removed `ProcMount` from Helm test to avoid conflicts with `PodSecurityPolicy` in some K8S distributions
