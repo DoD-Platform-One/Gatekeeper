@@ -7,6 +7,10 @@ postInstall:
     image:
       pullSecrets:
       - name: private-registry
+  probeWebhook:
+    image:
+      pullSecrets:
+      - name: private-registry
 postUpgrade:
   cleanupCRD:
     image:
