@@ -6,6 +6,7 @@
   "dependencyDashboardTitle": "Renovate: Upgrade OPA Gatekeeper Package Dependencies",
   "draftPR": true,
   "labels": ["opagatekeeper","Big Bang Core","Package Sustainment","kind::maintenance"],
+  "commitMessagePrefix": "SKIP UPDATE CHECK",
   "packageRules": [
     {
       "matchDatasources": ["docker"],
