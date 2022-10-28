@@ -55,7 +55,14 @@ violations:
       - myns
 ```
 
-**Risk**: Any resources in the namespace now have the ability to violate the rule set in the constraint.
+**Risk**: Any resources in the namespace now have the ability to violate the rule set in the constraint. Certain namespaces are excluded by default;
+
+### **kube-system** exclusion
+Kube-system is reserved for the Kubernetes distribution, which would get installed prior to gatekeeper.  We don't have control over security policy on the distro, so we allow it to bypass the policy enforcement.
+
+### **gatekeeper-system** exlusion
+
+We do not want to enforce policies on the enforcer itself because it could potentially prevent us from upgrading to fix bugs or vulnerabilities.  However, we do try to make gatekeeper compliant with best security practices that are present in the policies.
 
 ## Only include specific namespaces
 
