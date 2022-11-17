@@ -62,11 +62,12 @@ spec:
         - --health-addr=:{{ .Values.audit.healthPort }}
         - --prometheus-port={{ .Values.audit.metricsPort }}
         - --enable-external-data={{ .Values.enableExternalData }}
+        - --enable-generator-resource-expansion={{ .Values.enableGeneratorResourceExpansion }}
         
         {{- range .Values.metricsBackends}}
         - --metrics-backend={{ . }}
         {{- end }}
-        - --disable-cert-rotation={{ .Values.audit.disableCertRotation }}
+        - --disable-cert-rotation={{ or .Values.audit.disableCertRotation .Values.externalCertInjection.enabled }}
         command:
         - /manager
         env:
@@ -91,6 +92,7 @@ spec:
           httpGet:
             path: /healthz
             port: {{ .Values.audit.healthPort }}
+          timeoutSeconds: {{ .Values.audit.livenessTimeout }}
         name: manager
         ports:
         - containerPort: {{ .Values.audit.metricsPort }}
@@ -103,6 +105,7 @@ spec:
           httpGet:
             path: /readyz
             port: {{ .Values.audit.healthPort }}
+          timeoutSeconds: {{ .Values.audit.readinessTimeout }}
         resources:
           {{- toYaml .Values.audit.resources | nindent 10 }}
         securityContext:
