@@ -15,3 +15,12 @@ dependencies:
 annotations:
   bigbang.dev/applicationVersions: |
     - Gatekeeper: v3.10.0
+  # kubectl and base images below are conditionally used 
+  # dependent on your configuration of bbtests, postInstall, probeWebhook, preUninstall values
+  helm.sh/images: |
+    - name: gatekeeper
+      image: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper:v3.10.0
+    - name: kubectl
+      image: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.25.4
+    - name: base
+      image: registry1.dso.mil/ironbank/big-bang/base:2.0.0
