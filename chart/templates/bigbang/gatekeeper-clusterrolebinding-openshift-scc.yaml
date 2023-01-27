@@ -1,6 +1,6 @@
 {{- if .Values.openshift }}
 apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
+kind: ClusterRoleBinding
 metadata:
   labels:
     app: '{{ template "gatekeeper.name" . }}'
@@ -8,14 +8,16 @@ metadata:
     gatekeeper.sh/system: "yes"
     heritage: '{{ .Release.Service }}'
     release: '{{ .Release.Name }}'
-  name: gatekeeper-manager-rolebinding-openshift-scc
-  namespace: '{{ .Release.Namespace }}'
+  name: gatekeeper-clusterrolebinding-openshift-scc
+  annotations:
+    helm.sh/hook: pre-install,pre-upgrade
+    helm.sh/hook-weight: "0"
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: 'system:openshift:scc:privileged'
+  name: 'system:openshift:scc:nonroot-v2'
 subjects:
-  - kind: ServiceAccount
-    name: gatekeeper-admin
-    namespace: '{{ .Release.Namespace }}'
+  - apiGroup: rbac.authorization.k8s.io
+    kind: Group
+    name: 'system:serviceaccounts:{{ .Release.Namespace }}'
 {{- end }}
