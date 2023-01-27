@@ -7,8 +7,13 @@ metadata:
     {{- include "gatekeeper.labels" . | nindent 4 }}
 spec:
   match:
-    - excludedNamespaces: ["kube-system", "{{ .Release.Namespace }}"]
-      processes: ["*"]
+    {{- if .Values.openshift }}
+    - excludedNamespaces: [ "kube-*", "{{ .Release.Namespace }}", "openshift*"]
+      processes: [ "*" ]
+    {{- else }}
+    - excludedNamespaces: [ "kube-system", "{{ .Release.Namespace }}" ]
+      processes: [ "*" ]
+    {{- end }}
   sync:
     syncOnly:
       - group: "networking.k8s.io"
