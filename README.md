@@ -1,6 +1,6 @@
 # gatekeeper
 
-![Version: 3.10.0-bb.2](https://img.shields.io/badge/Version-3.10.0--bb.2-informational?style=flat-square) ![AppVersion: v3.10.0](https://img.shields.io/badge/AppVersion-v3.10.0-informational?style=flat-square)
+![Version: 3.11.0-bb.0](https://img.shields.io/badge/Version-3.11.0--bb.0-informational?style=flat-square) ![AppVersion: v3.11.0](https://img.shields.io/badge/AppVersion-v3.11.0-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -52,7 +52,7 @@ helm install gatekeeper chart/
 | validatingWebhookCheckIgnoreFailurePolicy | string | `"Fail"` |  |
 | validatingWebhookCustomRules | object | `{}` |  |
 | enableDeleteOperations | bool | `false` |  |
-| enableExternalData | bool | `false` |  |
+| enableExternalData | bool | `true` |  |
 | enableGeneratorResourceExpansion | bool | `false` |  |
 | enableTLSHealthcheck | bool | `false` |  |
 | maxServingThreads | int | `-1` |  |
@@ -73,7 +73,7 @@ helm install gatekeeper chart/
 | resourceQuota | bool | `true` |  |
 | postUpgrade.labelNamespace.enabled | bool | `false` |  |
 | postUpgrade.labelNamespace.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| postUpgrade.labelNamespace.image.tag | string | `"v1.25.4"` |  |
+| postUpgrade.labelNamespace.image.tag | string | `"v1.25.6"` |  |
 | postUpgrade.labelNamespace.image.pullPolicy | string | `"IfNotPresent"` |  |
 | postUpgrade.labelNamespace.image.pullSecrets | list | `[]` |  |
 | postUpgrade.labelNamespace.extraNamespaces | list | `[]` |  |
@@ -91,7 +91,7 @@ helm install gatekeeper chart/
 | postInstall.labelNamespace.enabled | bool | `true` |  |
 | postInstall.labelNamespace.extraRules | list | `[]` |  |
 | postInstall.labelNamespace.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| postInstall.labelNamespace.image.tag | string | `"v1.25.4"` |  |
+| postInstall.labelNamespace.image.tag | string | `"v1.25.6"` |  |
 | postInstall.labelNamespace.image.pullPolicy | string | `"IfNotPresent"` |  |
 | postInstall.labelNamespace.image.pullSecrets | list | `[]` |  |
 | postInstall.labelNamespace.extraNamespaces | list | `[]` |  |
@@ -116,7 +116,7 @@ helm install gatekeeper chart/
 | preUninstall.deleteWebhookConfigurations.extraRules | list | `[]` |  |
 | preUninstall.deleteWebhookConfigurations.enabled | bool | `false` |  |
 | preUninstall.deleteWebhookConfigurations.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| preUninstall.deleteWebhookConfigurations.image.tag | string | `"v1.25.4"` |  |
+| preUninstall.deleteWebhookConfigurations.image.tag | string | `"v1.25.6"` |  |
 | preUninstall.deleteWebhookConfigurations.image.pullPolicy | string | `"IfNotPresent"` |  |
 | preUninstall.deleteWebhookConfigurations.image.pullSecrets | list | `[]` |  |
 | preUninstall.affinity | object | `{}` |  |
@@ -130,11 +130,11 @@ helm install gatekeeper chart/
 | preUninstall.securityContext.runAsNonRoot | bool | `true` |  |
 | preUninstall.securityContext.runAsUser | int | `1000` |  |
 | image.repository | string | `"registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper"` |  |
-| image.release | string | `"v3.10.0"` |  |
+| image.release | string | `"v3.11.0"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.pullSecrets[0].name | string | `"private-registry"` |  |
 | image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| image.crdRelease | string | `"v1.25.4"` |  |
+| image.crdRelease | string | `"v1.25.6"` |  |
 | podAnnotations."container.seccomp.security.alpha.kubernetes.io/manager" | string | `"runtime/default"` |  |
 | podLabels | object | `{}` |  |
 | podCountLimit | string | `"100"` |  |
@@ -152,6 +152,7 @@ helm install gatekeeper chart/
 | controllerManager.priorityClassName | string | `"system-cluster-critical"` |  |
 | controllerManager.disableCertRotation | bool | `false` |  |
 | controllerManager.tlsMinVersion | float | `1.3` |  |
+| controllerManager.clientCertName | string | `""` |  |
 | controllerManager.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution[0].podAffinityTerm.labelSelector.matchExpressions[0].key | string | `"gatekeeper.sh/operation"` |  |
 | controllerManager.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution[0].podAffinityTerm.labelSelector.matchExpressions[0].operator | string | `"In"` |  |
 | controllerManager.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution[0].podAffinityTerm.labelSelector.matchExpressions[0].values[0] | string | `"webhook"` |  |
@@ -462,7 +463,7 @@ helm install gatekeeper chart/
 | networkPolicies.enabled | bool | `false` |  |
 | networkPolicies.controlPlaneCidr | string | `"0.0.0.0/0"` |  |
 | bbtests.enabled | bool | `false` |  |
-| bbtests.scripts.image | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.25.4"` |  |
+| bbtests.scripts.image | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.25.6"` |  |
 | bbtests.scripts.additionalVolumeMounts[0].name | string | `"{{ .Chart.Name }}-test-config"` |  |
 | bbtests.scripts.additionalVolumeMounts[0].mountPath | string | `"/yaml"` |  |
 | bbtests.scripts.additionalVolumeMounts[1].name | string | `"{{ .Chart.Name }}-kube-cache"` |  |

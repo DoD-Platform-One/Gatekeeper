@@ -3,6 +3,12 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [3.10.0-bb.3]
+### Changed
+- Updated ironbank/opensource/openpolicyagent/gatekeeper v3.10.0 -> v3.11.0.
+- Updated registry1.dso.mil/ironbank/opensource/kubernetes/kubectl v1.25.4 -> v1.25.6
+- Updated registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper v3.10.0 -> v3.11.0
+
 ## [3.10.0-bb.2]
 ### Changed
 - Updated to work on OpenShift out of the box
