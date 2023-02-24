@@ -3,7 +3,7 @@ description: A Helm chart for Gatekeeper
 name: gatekeeper
 keywords:
   - open policy agent
-version: 3.11.0-bb.0
+version: 3.11.0-bb.1
 home: https://github.com/open-policy-agent/gatekeeper
 sources:
   - https://github.com/open-policy-agent/gatekeeper.git
@@ -21,6 +21,6 @@ annotations:
     - name: gatekeeper
       image: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper:v3.11.0
     - name: kubectl
-      image: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.25.6
+      image: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.26.1
     - name: base
       image: registry1.dso.mil/ironbank/big-bang/base:2.0.0
