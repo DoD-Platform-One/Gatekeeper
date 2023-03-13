@@ -3,6 +3,11 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [3.11.0-bb.2] 2022-03-09
+### Changed
+- Updated registry1.dso.mil/ironbank/opensource/kubernetes/kubectl v1.26.1 -> v1.26.2
+- Updated to latest gluon 0.3.2
+
 ## [3.11.0-bb.1] 2022-02-23
 ### Changed
 - Updated registry1.dso.mil/ironbank/opensource/kubernetes/kubectl v1.25.6 -> v1.26.1
