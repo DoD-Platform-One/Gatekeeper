@@ -10,6 +10,7 @@ constraintViolationsLimit: 1000
 auditFromCache: false
 disableMutation: true
 disableValidatingWebhook: false
+validatingWebhookName: gatekeeper-validating-webhook-configuration
 validatingWebhookTimeoutSeconds: 15
 validatingWebhookFailurePolicy: Ignore
 validatingWebhookAnnotations: {}
@@ -22,6 +23,7 @@ enableExternalData: true
 enableGeneratorResourceExpansion: false
 enableTLSHealthcheck: false
 maxServingThreads: -1
+mutatingWebhookName: gatekeeper-mutating-webhook-configuration
 mutatingWebhookFailurePolicy: Ignore
 mutatingWebhookReinvocationPolicy: Never
 mutatingWebhookAnnotations: {}
@@ -36,17 +38,42 @@ logDenies: true
 logMutations: true
 emitAdmissionEvents: false
 emitAuditEvents: false
+admissionEventsInvolvedNamespace: false
+auditEventsInvolvedNamespace: false
 resourceQuota: true
+image:
+  repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
+  release: v3.12.0
+  pullPolicy: IfNotPresent
+  pullSecrets:
+    - name: private-registry
+  crdRepository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
+  crdRelease: v1.26.4
+preInstall:
+  crdRepository:
+    image:
+      repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
+      tag: v1.26.4
+  securityContext:
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop:
+      - ALL
+    readOnlyRootFilesystem: true
+    runAsGroup: 999
+    runAsNonRoot: true
+    runAsUser: 1000
 postUpgrade:
   labelNamespace:
     enabled: false
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.26.3
+      tag: v1.26.4
       pullPolicy: IfNotPresent
       pullSecrets: []
     extraNamespaces: []
     podSecurity: []
+    extraAnnotations: {}
   affinity: {}
   tolerations: []
   nodeSelector: {kubernetes.io/os: linux}
@@ -66,11 +93,12 @@ postInstall:
     extraRules: []
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.26.3
+      tag: v1.26.4
       pullPolicy: IfNotPresent
       pullSecrets: []
     extraNamespaces: []
     podSecurity: []
+    extraAnnotations: {}
   probeWebhook:
     enabled: true
     image:
@@ -99,7 +127,7 @@ preUninstall:
     enabled: false
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.26.3
+      tag: v1.26.4
       pullPolicy: IfNotPresent
       pullSecrets: []
   affinity: {}
@@ -117,12 +145,12 @@ preUninstall:
     runAsUser: 1000
 image:
   repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
-  release: v3.11.0
+  release: v3.12.0
   pullPolicy: IfNotPresent
   pullSecrets:
     - name: private-registry
   crdRepository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-  crdRelease: v1.26.3
+  crdRelease: v1.26.4
 podAnnotations:
   {container.seccomp.security.alpha.kubernetes.io/manager: runtime/default}
 podLabels: {}
@@ -179,6 +207,12 @@ controllerManager:
     supplementalGroups:
       - 999
   extraRules: []
+  networkPolicy:
+    enabled: false
+    ingress: { }
+      # - from:
+      #   - ipBlock:
+      #       cidr: 0.0.0.0/0
 audit:
   hostNetwork: false
   dnsPolicy: ClusterFirst
@@ -636,9 +670,18 @@ networkPolicies:
   controlPlaneCidr: 0.0.0.0/0
 
 bbtests:
-  enabled: false
+  enabled: true
   scripts:
-    image: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.26.3
+    image: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.26.4
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsGroup: 999
+      runAsNonRoot: true
+      runAsUser: 1000
     additionalVolumeMounts:
       - name: "{{ .Chart.Name }}-test-config"
         mountPath: /yaml

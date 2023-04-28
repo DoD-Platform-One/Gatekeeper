@@ -5,8 +5,8 @@ metadata:
     {{- include "gatekeeper.labels" . | nindent 4 }}
 {{- end }}
 ---
-{{- include "gluon.tests.script-runner.overrides" (list . "gatekeeper-test.script-runner") -}}
-{{- define "gatekeeper-test.script-runner" -}}
+{{ include "gluon.tests.script-runner.overrides" (list . "gatekeeper-test.script-runner") }}
+{{- define "gatekeeper-test.script-runner" }}
 metadata:
   labels:
     {{- include "gatekeeper.labels" . | nindent 4 }}
