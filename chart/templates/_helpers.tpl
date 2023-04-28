@@ -58,7 +58,8 @@ Output post install webhook probe container entry
 - name: webhook-probe-post
   image: "{{ .Values.postInstall.probeWebhook.image.repository }}:{{ .Values.postInstall.probeWebhook.image.tag }}"
   imagePullPolicy: {{ .Values.postInstall.probeWebhook.image.pullPolicy }}
-  command: ["curl"]
+  command:
+    - "curl"
   args:
     - "--retry"
     - "99999"

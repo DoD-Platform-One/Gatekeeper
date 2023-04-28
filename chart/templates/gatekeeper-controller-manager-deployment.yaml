@@ -58,7 +58,8 @@ spec:
         - --logtostderr
         - --log-denies={{ .Values.logDenies }}
         - --emit-admission-events={{ .Values.emitAdmissionEvents }}
-        - --log-level={{ .Values.logLevel }}
+        - --admission-events-involved-namespace={{ .Values.admissionEventsInvolvedNamespace }}
+        - --log-level={{ (.Values.controllerManager.logLevel | empty | not) | ternary .Values.controllerManager.logLevel .Values.logLevel }}
         - --exempt-namespace={{ .Release.Namespace }}
         - --operation=webhook
         - --enable-external-data={{ .Values.enableExternalData }}
@@ -86,6 +87,14 @@ spec:
         
         {{- range .Values.controllerManager.exemptNamespacePrefixes}}
         - --exempt-namespace-prefix={{ . }}
+        {{- end }}
+        
+        {{- range .Values.controllerManager.exemptNamespaceSuffixes}}
+        - --exempt-namespace-suffix={{ . }}
+        {{- end }}
+        
+        {{- if .Values.controllerManager.logFile}}
+        - --log-file={{ .Values.controllerManager.logFile }}
         {{- end }}
         command:
         - /manager
