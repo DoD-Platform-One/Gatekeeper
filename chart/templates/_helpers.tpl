@@ -63,6 +63,7 @@ Output post install webhook probe container entry
   args:
     - "--retry"
     - "99999"
+    - "--retry-connrefused"
     - "--retry-max-time"
     - "{{ .Values.postInstall.probeWebhook.waitTimeout }}"
     - "--retry-delay"
