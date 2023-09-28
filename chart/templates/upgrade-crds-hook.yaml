@@ -71,7 +71,7 @@ metadata:
     helm.sh/hook-weight: "1"
     helm.sh/hook-delete-policy: "hook-succeeded,before-hook-creation"
 spec:
-  backoffLimit: 0
+  backoffLimit: 3
   template:
     metadata:
       name: gatekeeper-update-crds-hook
@@ -90,6 +90,9 @@ spec:
       {{- if .Values.image.pullSecrets }}
       imagePullSecrets:
         {{- toYaml .Values.image.pullSecrets | nindent 8 }}
+      {{- end }}
+      {{- if .Values.upgradeCRDs.priorityClassName }}
+      priorityClassName: {{ .Values.upgradeCRDs.priorityClassName }}
       {{- end }}
       containers:
       - name: crds-upgrade
