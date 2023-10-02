@@ -1,6 +1,6 @@
 # gatekeeper
 
-![Version: 3.13.0-bb.0](https://img.shields.io/badge/Version-3.13.0--bb.0-informational?style=flat-square) ![AppVersion: v3.12.0](https://img.shields.io/badge/AppVersion-v3.12.0-informational?style=flat-square)
+![Version: 3.13.0-bb.1](https://img.shields.io/badge/Version-3.13.0--bb.1-informational?style=flat-square) ![AppVersion: v3.12.0](https://img.shields.io/badge/AppVersion-v3.12.0-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -247,6 +247,7 @@ helm install gatekeeper chart/
 | upgradeCRDs.enabled | bool | `true` |  |
 | upgradeCRDs.extraRules | list | `[]` |  |
 | upgradeCRDs.priorityClassName | string | `""` |  |
+| cleanupCRDs.enabled | bool | `true` |  |
 | rbac.create | bool | `true` |  |
 | externalCertInjection.enabled | bool | `false` |  |
 | externalCertInjection.secretName | string | `"gatekeeper-webhook-server-cert"` |  |
