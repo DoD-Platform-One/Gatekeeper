@@ -39,6 +39,12 @@ spec:
       {{- .Values.postInstall.labelNamespace.image.pullSecrets | toYaml | nindent 12 }}
       {{- end }}
       serviceAccount: gatekeeper-update-namespace-label
+      {{/* start BB addition 
+      This is set to true because this post-install job relies on info queried from the K8s API
+      Namely, it needs to get/update/patch "namespace" resources
+      */}}
+      automountServiceAccountToken: true
+      {{/* end BB addition */}}
       {{- if .Values.postInstall.probeWebhook.enabled }}
       volumes:
       {{- include "gatekeeper.postInstallWebhookProbeVolume" . | nindent 8 }}
@@ -108,6 +114,12 @@ metadata:
     "helm.sh/hook": post-install
     "helm.sh/hook-weight": "-5"
     "helm.sh/hook-delete-policy": hook-succeeded,before-hook-creation
+{{/* start BB addition 
+If false, a K8s API token will not be mounted in Pods utilizing this ServiceAccount, unless overriden at the Pod spec-level
+In this case, this behavior -is- overriden at the Pod spec-level due to app requirements
+*/}}
+automountServiceAccountToken: false
+{{/* end BB addition */}}
 ---
 {{- if .Values.rbac.create }}
 apiVersion: rbac.authorization.k8s.io/v1
