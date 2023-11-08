@@ -3,7 +3,8 @@
 openshift: false
 
 replicas: 3
-auditInterval: 300
+revisionHistoryLimit: 10
+auditInterval: 60
 metricsBackends: ["prometheus"]
 auditMatchKindOnly: true
 constraintViolationsLimit: 1000
@@ -43,9 +44,10 @@ emitAuditEvents: false
 admissionEventsInvolvedNamespace: false
 auditEventsInvolvedNamespace: false
 resourceQuota: true
+externaldataProviderResponseCacheTTL: 3m
 image:
   repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
-  release: v3.13.3
+  release: v3.14.0
   pullPolicy: IfNotPresent
   pullSecrets:
     - name: private-registry
@@ -107,7 +109,7 @@ postInstall:
     enabled: true
     image:
       repository: registry1.dso.mil/ironbank/big-bang/base
-      tag: 2.0.0
+      tag: 2.1.0
       pullPolicy: IfNotPresent
       pullSecrets: []
     waitTimeout: 60
@@ -151,7 +153,7 @@ preUninstall:
     runAsUser: 1000
 image:
   repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
-  release: v3.13.3
+  release: v3.14.0
   pullPolicy: IfNotPresent
   pullSecrets:
     - name: private-registry
@@ -230,7 +232,7 @@ audit:
   readinessTimeout: 1
   livenessTimeout: 1
   priorityClassName: system-cluster-critical
-  disableCertRotation: true
+  disableCertRotation: false
   affinity: {}
   tolerations: []
   nodeSelector: {kubernetes.io/os: linux}
