@@ -3,6 +3,12 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [3.14.0-bb.0] 2023-11-08
+### Changed
+- Updated ironbank/opensource/openpolicyagent/gatekeeper v3.13.3 -> v3.14.0
+- Updated registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper v3.13.3 -> v3.14.0
+- Updated registry1.dso.mil/ironbank/big-bang/base 2.0.0 -> 2.1.0
+
 ## [3.13.3-bb.3] 2023-11-02
 ### Changed
 - Hardened `gatekeeper-admin` ServiceAccount with `automountServiceAccountToken: false` (overriden at Pod spec-level due to app requirements)

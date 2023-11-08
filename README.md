@@ -1,6 +1,6 @@
 # gatekeeper
 
-![Version: 3.13.3-bb.3](https://img.shields.io/badge/Version-3.13.3--bb.3-informational?style=flat-square) ![AppVersion: v3.13.3](https://img.shields.io/badge/AppVersion-v3.13.3-informational?style=flat-square)
+![Version: 3.14.0-bb.0](https://img.shields.io/badge/Version-3.14.0--bb.0-informational?style=flat-square) ![AppVersion: v3.13.3](https://img.shields.io/badge/AppVersion-v3.13.3-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -37,7 +37,8 @@ helm install gatekeeper chart/
 |-----|------|---------|-------------|
 | openshift | bool | `false` |  |
 | replicas | int | `3` |  |
-| auditInterval | int | `300` |  |
+| revisionHistoryLimit | int | `10` |  |
+| auditInterval | int | `60` |  |
 | metricsBackends[0] | string | `"prometheus"` |  |
 | auditMatchKindOnly | bool | `true` |  |
 | constraintViolationsLimit | int | `1000` |  |
@@ -77,8 +78,9 @@ helm install gatekeeper chart/
 | admissionEventsInvolvedNamespace | bool | `false` |  |
 | auditEventsInvolvedNamespace | bool | `false` |  |
 | resourceQuota | bool | `true` |  |
+| externaldataProviderResponseCacheTTL | string | `"3m"` |  |
 | image.repository | string | `"registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper"` |  |
-| image.release | string | `"v3.13.3"` |  |
+| image.release | string | `"v3.14.0"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.pullSecrets[0].name | string | `"private-registry"` |  |
 | image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
@@ -122,7 +124,7 @@ helm install gatekeeper chart/
 | postInstall.labelNamespace.priorityClassName | string | `""` |  |
 | postInstall.probeWebhook.enabled | bool | `true` |  |
 | postInstall.probeWebhook.image.repository | string | `"registry1.dso.mil/ironbank/big-bang/base"` |  |
-| postInstall.probeWebhook.image.tag | string | `"2.0.0"` |  |
+| postInstall.probeWebhook.image.tag | string | `"2.1.0"` |  |
 | postInstall.probeWebhook.image.pullPolicy | string | `"IfNotPresent"` |  |
 | postInstall.probeWebhook.image.pullSecrets | list | `[]` |  |
 | postInstall.probeWebhook.waitTimeout | int | `60` |  |
@@ -156,7 +158,7 @@ helm install gatekeeper chart/
 | preUninstall.securityContext.runAsNonRoot | bool | `true` |  |
 | preUninstall.securityContext.runAsUser | int | `1000` |  |
 | image.repository | string | `"registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper"` |  |
-| image.release | string | `"v3.13.3"` |  |
+| image.release | string | `"v3.14.0"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.pullSecrets[0].name | string | `"private-registry"` |  |
 | image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
@@ -212,7 +214,7 @@ helm install gatekeeper chart/
 | audit.readinessTimeout | int | `1` |  |
 | audit.livenessTimeout | int | `1` |  |
 | audit.priorityClassName | string | `"system-cluster-critical"` |  |
-| audit.disableCertRotation | bool | `true` |  |
+| audit.disableCertRotation | bool | `false` |  |
 | audit.affinity | object | `{}` |  |
 | audit.tolerations | list | `[]` |  |
 | audit.nodeSelector."kubernetes.io/os" | string | `"linux"` |  |
