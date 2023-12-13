@@ -3,9 +3,13 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [3.14.0-bb.2] 2023-12-11
+### Changed
+- Updating OSCAL Component File.
+
 ## [3.14.0-bb.1] 2023-11-28
-### Updated
-registry1.dso.mil/ironbank/opensource/kubernetes/kubectl v1.28.3 -> v1.28.4
+### Changed
+- updated registry1.dso.mil/ironbank/opensource/kubernetes/kubectl v1.28.3 -> v1.28.4
 
 ## [3.14.0-bb.0] 2023-11-08
 ### Changed
