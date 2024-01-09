@@ -3,15 +3,15 @@ description: A Helm chart for Gatekeeper
 name: gatekeeper
 keywords:
   - open policy agent
-version: 3.14.0-bb.2
+version: 3.14.0-bb.3
 home: https://github.com/open-policy-agent/gatekeeper
 sources:
   - https://github.com/open-policy-agent/gatekeeper.git
-appVersion: v3.13.3
+appVersion: v3.14.0
 dependencies:
   - name: gluon
-    version: 0.4.4
-    repository: oci://registry1.dso.mil/bigbang 
+    version: 0.4.6
+    repository: oci://registry1.dso.mil/bigbang
 annotations:
   bigbang.dev/applicationVersions: |
     - Gatekeeper: v3.14.0
