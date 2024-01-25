@@ -1,6 +1,6 @@
 # gatekeeper
 
-![Version: 3.14.0-bb.5](https://img.shields.io/badge/Version-3.14.0--bb.5-informational?style=flat-square) ![AppVersion: v3.14.0](https://img.shields.io/badge/AppVersion-v3.14.0-informational?style=flat-square)
+![Version: 3.14.0-bb.6](https://img.shields.io/badge/Version-3.14.0--bb.6-informational?style=flat-square) ![AppVersion: v3.14.0](https://img.shields.io/badge/AppVersion-v3.14.0-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -250,6 +250,18 @@ helm install gatekeeper chart/
 | upgradeCRDs.extraRules | list | `[]` |  |
 | upgradeCRDs.priorityClassName | string | `""` |  |
 | cleanupCRDs.enabled | bool | `true` |  |
+| cleanupCRDs.containerSecurityContext.allowPrivilegeEscalation | bool | `false` |  |
+| cleanupCRDs.containerSecurityContext.capabilities.drop[0] | string | `"ALL"` |  |
+| cleanupCRDs.containerSecurityContext.readOnlyRootFilesystem | bool | `true` |  |
+| cleanupCRDs.containerSecurityContext.runAsGroup | int | `999` |  |
+| cleanupCRDs.containerSecurityContext.runAsNonRoot | bool | `true` |  |
+| cleanupCRDs.containerSecurityContext.runAsUser | int | `1000` |  |
+| cleanupCRDs.securityContext.readOnlyRootFilesystem | bool | `true` |  |
+| cleanupCRDs.securityContext.runAsGroup | int | `999` |  |
+| cleanupCRDs.securityContext.runAsNonRoot | bool | `true` |  |
+| cleanupCRDs.securityContext.runAsUser | int | `1000` |  |
+| cleanupCRDs.securityContext.fsGroup | int | `999` |  |
+| cleanupCRDs.securityContext.supplementalGroups[0] | int | `999` |  |
 | rbac.create | bool | `true` |  |
 | externalCertInjection.enabled | bool | `false` |  |
 | externalCertInjection.secretName | string | `"gatekeeper-webhook-server-cert"` |  |

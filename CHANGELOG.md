@@ -3,6 +3,10 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [3.14.0-bb.6] 2024-01-24
+### Changed
+- Added non-root securityContext to crd-cleanup containers
+
 ## [3.14.0-bb.5] 2024-01-22
 ### Changed
 - Updated registry1.dso.mil/ironbank/opensource/kubernetes/kubectl v1.28.5 -> v1.28.6

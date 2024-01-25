@@ -69,6 +69,14 @@ spec:
               mountPath: /src
             - mountPath: /.kube/cache
               name: gatekeeper-kube-cache
+          securityContext:
+            {{- if .Values.enableRuntimeDefaultSeccompProfile }}
+            seccompProfile:
+              type: RuntimeDefault
+            {{- end }}
+            {{- toYaml .Values.cleanupCRDs.containerSecurityContext | nindent 12 }}
+      securityContext:
+        {{- toYaml .Values.cleanupCRDs.securityContext | nindent 8 }}
       restartPolicy: Never
       volumes:
         - name: crd-cleanup

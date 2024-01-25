@@ -285,6 +285,23 @@ upgradeCRDs:
   priorityClassName: ""
 cleanupCRDs:
   enabled: true
+  containerSecurityContext:
+    allowPrivilegeEscalation: false
+    capabilities:
+      drop:
+      - ALL
+    readOnlyRootFilesystem: true
+    runAsGroup: 999
+    runAsNonRoot: true
+    runAsUser: 1000
+  securityContext:
+    readOnlyRootFilesystem: true
+    runAsGroup: 999
+    runAsNonRoot: true
+    runAsUser: 1000
+    fsGroup: 999
+    supplementalGroups:
+      - 999
 rbac:
   create: true
 externalCertInjection:
