@@ -151,14 +151,6 @@ preUninstall:
     runAsGroup: 999
     runAsNonRoot: true
     runAsUser: 1000
-image:
-  repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
-  release: v3.14.0
-  pullPolicy: IfNotPresent
-  pullSecrets:
-    - name: private-registry
-  crdRepository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-  crdRelease: v1.28.6
 podAnnotations:
   {container.seccomp.security.alpha.kubernetes.io/manager: runtime/default}
 auditPodAnnotations: {}
@@ -659,7 +651,11 @@ violations:
     name: selinux-policy
     match: {}
     parameters:
-      allowedSELinuxOptions: []
+      allowedSELinuxOptions: 
+        - level: ~
+          role: ~
+          type: ~
+          user: ~
       excludedResources: []
       # - namespace/container   # Applies if SELinux is violated at the container level
       # - namespace/pod         # Applies if SELinux is violated at the pod level
