@@ -3,6 +3,11 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [3.14.0-bb.7] 2024-01-29
+### Changed
+- Added keys to `allowedSELinuxOptions` to fix policy violation on empty `seLinuxOptions` in `values.yaml`
+- Removed duplicate `image` property in `values.yaml`
+
 ## [3.14.0-bb.6] 2024-01-24
 ### Changed
 - Added non-root securityContext to crd-cleanup containers

@@ -1,6 +1,6 @@
 # gatekeeper
 
-![Version: 3.14.0-bb.6](https://img.shields.io/badge/Version-3.14.0--bb.6-informational?style=flat-square) ![AppVersion: v3.14.0](https://img.shields.io/badge/AppVersion-v3.14.0-informational?style=flat-square)
+![Version: 3.14.0-bb.7](https://img.shields.io/badge/Version-3.14.0--bb.7-informational?style=flat-square) ![AppVersion: v3.14.0](https://img.shields.io/badge/AppVersion-v3.14.0-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -157,12 +157,6 @@ helm install gatekeeper chart/
 | preUninstall.securityContext.runAsGroup | int | `999` |  |
 | preUninstall.securityContext.runAsNonRoot | bool | `true` |  |
 | preUninstall.securityContext.runAsUser | int | `1000` |  |
-| image.repository | string | `"registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper"` |  |
-| image.release | string | `"v3.14.0"` |  |
-| image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.pullSecrets[0].name | string | `"private-registry"` |  |
-| image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| image.crdRelease | string | `"v1.28.6"` |  |
 | podAnnotations."container.seccomp.security.alpha.kubernetes.io/manager" | string | `"runtime/default"` |  |
 | auditPodAnnotations | object | `{}` |  |
 | podLabels | object | `{}` |  |
@@ -485,7 +479,10 @@ helm install gatekeeper chart/
 | violations.selinuxPolicy.kind | string | `"K8sPSPSELinuxV2"` |  |
 | violations.selinuxPolicy.name | string | `"selinux-policy"` |  |
 | violations.selinuxPolicy.match | object | `{}` |  |
-| violations.selinuxPolicy.parameters.allowedSELinuxOptions | list | `[]` |  |
+| violations.selinuxPolicy.parameters.allowedSELinuxOptions[0].level | string | `nil` |  |
+| violations.selinuxPolicy.parameters.allowedSELinuxOptions[0].role | string | `nil` |  |
+| violations.selinuxPolicy.parameters.allowedSELinuxOptions[0].type | string | `nil` |  |
+| violations.selinuxPolicy.parameters.allowedSELinuxOptions[0].user | string | `nil` |  |
 | violations.selinuxPolicy.parameters.excludedResources | list | `[]` |  |
 | violations.uniqueIngressHost.enabled | bool | `true` |  |
 | violations.uniqueIngressHost.enforcementAction | string | `"deny"` |  |
