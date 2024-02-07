@@ -47,7 +47,7 @@ resourceQuota: true
 externaldataProviderResponseCacheTTL: 3m
 image:
   repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
-  release: v3.14.0
+  release: v3.15.0
   pullPolicy: IfNotPresent
   pullSecrets:
     - name: private-registry
@@ -407,7 +407,7 @@ violations:
     match: {}
     parameters:
       allowedProfiles:
-      - "runtime/default"
+      - runtime/default
       excludedResources: []
       # - namespace/container
   allowedUsers:

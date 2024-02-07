@@ -3,6 +3,11 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [3.15.0-bb.0] 2024-02-07
+### Changed
+- Updated gluon 0.4.7 -> 0.4.8
+- Updated ironbank/opensource/openpolicyagent/gatekeeper v3.14.0 -> v3.15.0
+
 ## [3.14.0-bb.8] 2024-01-31
 ### Changed
 - Updated `K8sPSPSeccomp` constraint to check for `spec.securityContext.seccompProfile.type` instead of `seccomp.security.alpha.kubernetes.io/pod` & `container.seccomp.security.alpha.kubernetes.io/[name]` as they were removed in Kubernetes 1.25
