@@ -3,6 +3,10 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [3.15.0-bb.1] 2024-03-025
+### Changed
+- Updated `K8sPSPSELinuxV2.yaml` and `selinux-policy` violation.
+
 ## [3.15.0-bb.0] 2024-02-07
 ### Changed
 - Updated gluon 0.4.7 -> 0.4.8
