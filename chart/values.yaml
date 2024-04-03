@@ -656,7 +656,9 @@ violations:
           role: ~
           type: ~
           user: ~
-      exemptImages: []
+      excludedResources: []
+      # - namespace/container   # Applies if SELinux is violated at the container level
+      # - namespace/pod         # Applies if SELinux is violated at the pod level
   uniqueIngressHost:
     enabled: true
     enforcementAction: deny
