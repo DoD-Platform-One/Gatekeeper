@@ -1,6 +1,6 @@
 # gatekeeper
 
-![Version: 3.15.0-bb.3](https://img.shields.io/badge/Version-3.15.0--bb.3-informational?style=flat-square) ![AppVersion: v3.15.0](https://img.shields.io/badge/AppVersion-v3.15.0-informational?style=flat-square)
+![Version: 3.15.0-bb.4](https://img.shields.io/badge/Version-3.15.0--bb.4-informational?style=flat-square) ![AppVersion: v3.15.0](https://img.shields.io/badge/AppVersion-v3.15.0-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 

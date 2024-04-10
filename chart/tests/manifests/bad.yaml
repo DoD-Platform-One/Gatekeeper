@@ -4,7 +4,6 @@ metadata:
   name: bad-test-pod-1
   annotations:
     sidecar.istio.io/inject: "false"
-    seccomp.security.alpha.kubernetes.io/pod: runtime/default
     container.apparmor.security.beta.kubernetes.io/opa: unconfined
 spec:
   hostPID: true
@@ -16,8 +15,8 @@ spec:
     runAsGroup: 250
     supplementalGroups: [250]
     sysctls:
-      - name: kernel.msgmax
-        value: "65536"
+      - name: vm.swappiness
+        value: "10"
   containers:
     - name: opa
       image: openpolicyagent/opa:latest
@@ -36,6 +35,8 @@ spec:
           scheme: HTTP
         periodSeconds: 10
       securityContext:
+        seccompProfile:
+          type: RuntimeDefault      
         privileged: true
         allowPrivilegeEscalation: true
         readOnlyRootFilesystem: false
