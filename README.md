@@ -1,6 +1,6 @@
 # gatekeeper
 
-![Version: 3.15.0-bb.4](https://img.shields.io/badge/Version-3.15.0--bb.4-informational?style=flat-square) ![AppVersion: v3.15.0](https://img.shields.io/badge/AppVersion-v3.15.0-informational?style=flat-square)
+![Version: 3.15.0-bb.5](https://img.shields.io/badge/Version-3.15.0--bb.5-informational?style=flat-square) ![AppVersion: v3.15.1](https://img.shields.io/badge/AppVersion-v3.15.1-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -80,7 +80,7 @@ helm install gatekeeper chart/
 | resourceQuota | bool | `true` |  |
 | externaldataProviderResponseCacheTTL | string | `"3m"` |  |
 | image.repository | string | `"registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper"` |  |
-| image.release | string | `"v3.15.0"` |  |
+| image.release | string | `"v3.15.1"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.pullSecrets[0].name | string | `"private-registry"` |  |
 | image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |

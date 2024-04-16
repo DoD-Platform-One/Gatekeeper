@@ -3,6 +3,11 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [3.15.0-bb.5] 2024-04-16
+### Changed
+- Updated registry1.dso.mil/ironbank/opensource/kubernetes/kubectl v1.28.6 -> v1.28.7
+- Updated ironbank/opensource/openpolicyagent/gatekeeper v3.15.0 -> v3.15.1
+
 ## [3.15.0-bb.4] 2024-04-10
 ### Changed
 - Changed cypress test yaml files for k8s 1.29 compliance
