@@ -1,6 +1,6 @@
 # gatekeeper
 
-![Version: 3.15.0-bb.6](https://img.shields.io/badge/Version-3.15.0--bb.6-informational?style=flat-square) ![AppVersion: v3.15.1](https://img.shields.io/badge/AppVersion-v3.15.1-informational?style=flat-square)
+![Version: 3.15.0-bb.7](https://img.shields.io/badge/Version-3.15.0--bb.6-informational?style=flat-square) ![AppVersion: v3.15.1](https://img.shields.io/badge/AppVersion-v3.15.1-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -505,6 +505,7 @@ helm install gatekeeper chart/
 | monitoring.enabled | bool | `false` |  |
 | networkPolicies.enabled | bool | `false` |  |
 | networkPolicies.controlPlaneCidr | string | `"0.0.0.0/0"` |  |
+| networkPolicies.additionalPolicies | list | `[]` |  |
 | bbtests.enabled | bool | `true` |  |
 | bbtests.scripts.image | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.29.3"` |  |
 | bbtests.scripts.securityContext.allowPrivilegeEscalation | bool | `false` |  |
