@@ -690,9 +690,25 @@ violations:
 monitoring:
   enabled: false
 networkPolicies:
-  enabled: false
+  enabled: true
   # See `kubectl cluster-info` and then resolve to IP
-  controlPlaneCidr: 0.0.0.0/0
+  controlPlaneCidr: "0.0.0.0/0"
+  additionalPolicies: [] # section for additional custom network policies
+    # Example usage:
+    # - name: example-network-policy
+    #   spec:
+    #     podSelector: {}
+    #     policyTypes:
+    #       - Egress
+    #     egress:
+    #       - to:
+    #           - ipBlock:
+    #               cidr: "0.0.0.0/0"
+    #               except:
+    #               # Block requests to AWS cloud metadata IP
+    #               - 169.254.169.254/32
+    #               # Block requests to controlPlane if CIDR not 0.0.0.0/0
+    #               - '{{ .Values.networkPolicies.controlPlaneCidr }}'
 
 bbtests:
   enabled: true
