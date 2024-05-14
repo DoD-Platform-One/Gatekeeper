@@ -1,7 +1,7 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.5",
-  "serialNumber": "urn:uuid:e76ad133-1b8a-434f-9f9f-4152ceccd6e5",
+  "serialNumber": "urn:uuid:a7962213-68c9-4a68-bf8f-a94a9969f40b",
   "version": 1,
   "metadata": {
     "tools": null,
@@ -26199,7 +26199,7 @@
     },
     {
       "type": "container",
-      "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:b80c84fd74a6b175",
+      "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:c00395a15539c176",
       "name": "registry1.dso.mil/ironbank/big-bang/base",
       "version": "2.1.0",
       "components": [
@@ -26229,7 +26229,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -26275,7 +26275,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -26325,7 +26325,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -26375,7 +26375,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -26425,7 +26425,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -26475,7 +26475,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -26521,7 +26521,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -26567,7 +26567,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -26621,7 +26621,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -26699,7 +26699,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -26753,7 +26753,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -26807,7 +26807,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -26885,7 +26885,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -26963,7 +26963,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -27041,7 +27041,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -27119,7 +27119,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -27213,7 +27213,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -27291,7 +27291,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -27385,7 +27385,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -27479,7 +27479,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -27557,7 +27557,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -27611,7 +27611,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -27689,7 +27689,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -27743,7 +27743,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -27797,7 +27797,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -27879,7 +27879,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -27937,7 +27937,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28015,7 +28015,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28065,7 +28065,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28087,7 +28087,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/a8m/envsubst@v1.4.2?package-id=58b02e86395a85bb",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/a8m/envsubst@v1.4.2?package-id=a84ba5b09d5ce153",
           "name": "github.com/a8m/envsubst",
           "version": "v1.4.2",
           "cpe": "cpe:2.3:a:a8m:envsubst:v1.4.2:*:*:*:*:*:*:*",
@@ -28111,7 +28111,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28123,7 +28123,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -28137,7 +28137,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/alecthomas/participle@v2.1.1?package-id=9f71e8e429f611e3#v2",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/alecthomas/participle@v2.1.1?package-id=36c1eb5ede18fe91#v2",
           "name": "github.com/alecthomas/participle/v2",
           "version": "v2.1.1",
           "cpe": "cpe:2.3:a:alecthomas:participle\\/v2:v2.1.1:*:*:*:*:*:*:*",
@@ -28161,7 +28161,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28173,7 +28173,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -28211,7 +28211,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28257,7 +28257,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28303,7 +28303,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28353,7 +28353,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28403,7 +28403,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28453,7 +28453,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28475,7 +28475,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/dimchansky/utfbom@v1.1.1?package-id=2c6688f12e97c7d0",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/dimchansky/utfbom@v1.1.1?package-id=e02f44d3cb06aa91",
           "name": "github.com/dimchansky/utfbom",
           "version": "v1.1.1",
           "cpe": "cpe:2.3:a:dimchansky:utfbom:v1.1.1:*:*:*:*:*:*:*",
@@ -28499,7 +28499,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28511,7 +28511,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -28549,7 +28549,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28571,7 +28571,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/elliotchance/orderedmap@v1.5.1?package-id=5cb538b608e4d76b",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/elliotchance/orderedmap@v1.5.1?package-id=fa92d78ddd7619f1",
           "name": "github.com/elliotchance/orderedmap",
           "version": "v1.5.1",
           "cpe": "cpe:2.3:a:elliotchance:orderedmap:v1.5.1:*:*:*:*:*:*:*",
@@ -28595,7 +28595,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28607,7 +28607,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -28649,7 +28649,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28699,7 +28699,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28753,7 +28753,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28799,7 +28799,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28821,7 +28821,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/fatih/color@v1.16.0?package-id=d447c0fb5e3a2935",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/fatih/color@v1.16.0?package-id=df09874ad539e543",
           "name": "github.com/fatih/color",
           "version": "v1.16.0",
           "cpe": "cpe:2.3:a:fatih:color:v1.16.0:*:*:*:*:*:*:*",
@@ -28845,7 +28845,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28857,7 +28857,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -28895,7 +28895,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -28949,7 +28949,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29003,7 +29003,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29057,7 +29057,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29111,7 +29111,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29165,7 +29165,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29187,7 +29187,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/goccy/go-json@v0.10.2?package-id=200a953263f6a939",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/goccy/go-json@v0.10.2?package-id=f09a28902bcd69e7",
           "name": "github.com/goccy/go-json",
           "version": "v0.10.2",
           "cpe": "cpe:2.3:a:goccy:go-json:v0.10.2:*:*:*:*:*:*:*",
@@ -29215,7 +29215,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29227,7 +29227,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -29241,7 +29241,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/goccy/go-yaml@v1.11.3?package-id=1d7771042851b1f1",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/goccy/go-yaml@v1.11.3?package-id=2ed18570929fb407",
           "name": "github.com/goccy/go-yaml",
           "version": "v1.11.3",
           "cpe": "cpe:2.3:a:goccy:go-yaml:v1.11.3:*:*:*:*:*:*:*",
@@ -29269,7 +29269,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29281,7 +29281,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -29319,7 +29319,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29365,7 +29365,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29411,7 +29411,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29461,7 +29461,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29511,7 +29511,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29557,7 +29557,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29603,7 +29603,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29649,7 +29649,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29695,7 +29695,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29741,7 +29741,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29763,7 +29763,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/jinzhu/copier@v0.4.0?package-id=6b49b5af7d487379",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/jinzhu/copier@v0.4.0?package-id=56e580efbc55ee4b",
           "name": "github.com/jinzhu/copier",
           "version": "v0.4.0",
           "cpe": "cpe:2.3:a:jinzhu:copier:v0.4.0:*:*:*:*:*:*:*",
@@ -29787,7 +29787,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29799,7 +29799,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -29837,7 +29837,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29883,7 +29883,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29937,7 +29937,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -29983,7 +29983,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30029,7 +30029,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30051,7 +30051,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/magiconair/properties@v1.8.7?package-id=e965c55ddccdc96b",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/magiconair/properties@v1.8.7?package-id=ac75a1530c479d1b",
           "name": "github.com/magiconair/properties",
           "version": "v1.8.7",
           "cpe": "cpe:2.3:a:magiconair:properties:v1.8.7:*:*:*:*:*:*:*",
@@ -30075,7 +30075,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30087,7 +30087,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -30125,7 +30125,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30147,7 +30147,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/mattn/go-colorable@v0.1.13?package-id=fdfbee8775bc499c",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/mattn/go-colorable@v0.1.13?package-id=a8941cddcbae185e",
           "name": "github.com/mattn/go-colorable",
           "version": "v0.1.13",
           "cpe": "cpe:2.3:a:mattn:go-colorable:v0.1.13:*:*:*:*:*:*:*",
@@ -30175,7 +30175,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30187,7 +30187,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -30201,7 +30201,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/mattn/go-isatty@v0.0.20?package-id=1208bf6d87cc42f8",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/mattn/go-isatty@v0.0.20?package-id=cb1919961122f90a",
           "name": "github.com/mattn/go-isatty",
           "version": "v0.0.20",
           "cpe": "cpe:2.3:a:mattn:go-isatty:v0.0.20:*:*:*:*:*:*:*",
@@ -30229,7 +30229,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30241,7 +30241,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -30283,7 +30283,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30305,11 +30305,11 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/mikefarah/yq@v0.0.0-20240323235414-c35ec752e38e?package-id=c1f2af0448b13759#v4",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/mikefarah/yq@v0.0.0-20240512022739-557dcb87b8ef?package-id=2ecfc2af9d6eda26#v4",
           "name": "github.com/mikefarah/yq/v4",
-          "version": "v0.0.0-20240323235414-c35ec752e38e",
-          "cpe": "cpe:2.3:a:mikefarah:yq\\/v4:v0.0.0-20240323235414-c35ec752e38e:*:*:*:*:*:*:*",
-          "purl": "pkg:golang/github.com/mikefarah/yq@v0.0.0-20240323235414-c35ec752e38e#v4",
+          "version": "v0.0.0-20240512022739-557dcb87b8ef",
+          "cpe": "cpe:2.3:a:mikefarah:yq\\/v4:v0.0.0-20240512022739-557dcb87b8ef:*:*:*:*:*:*:*",
+          "purl": "pkg:golang/github.com/mikefarah/yq@v0.0.0-20240512022739-557dcb87b8ef#v4",
           "properties": [
             {
               "name": "syft:package:foundBy",
@@ -30329,7 +30329,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30341,7 +30341,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:mainModule",
@@ -30379,7 +30379,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30425,7 +30425,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30471,7 +30471,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30525,7 +30525,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30579,7 +30579,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30629,7 +30629,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30675,7 +30675,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30725,7 +30725,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30775,7 +30775,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30797,11 +30797,11 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/pelletier/go-toml@v2.2.0?package-id=cc4dc949ef5d3139#v2",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/pelletier/go-toml@v2.2.2?package-id=0e08e94440ba4009#v2",
           "name": "github.com/pelletier/go-toml/v2",
-          "version": "v2.2.0",
-          "cpe": "cpe:2.3:a:pelletier:go-toml\\/v2:v2.2.0:*:*:*:*:*:*:*",
-          "purl": "pkg:golang/github.com/pelletier/go-toml@v2.2.0#v2",
+          "version": "v2.2.2",
+          "cpe": "cpe:2.3:a:pelletier:go-toml\\/v2:v2.2.2:*:*:*:*:*:*:*",
+          "purl": "pkg:golang/github.com/pelletier/go-toml@v2.2.2#v2",
           "properties": [
             {
               "name": "syft:package:foundBy",
@@ -30821,11 +30821,11 @@
             },
             {
               "name": "syft:cpe23",
-              "value": "cpe:2.3:a:pelletier:go_toml\\/v2:v2.2.0:*:*:*:*:*:*:*"
+              "value": "cpe:2.3:a:pelletier:go_toml\\/v2:v2.2.2:*:*:*:*:*:*:*"
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30837,11 +30837,11 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
-              "value": "h1:QLgLl2yMN7N\u002Bruc31VynXs1vhMZa7CeHHejIeBAsoHo="
+              "value": "h1:aYUidT7k73Pcl9nb2gScu7NSrKCSHIDE89b3\u002B6Wq\u002BLM="
             },
             {
               "name": "syft:metadata:mainModule",
@@ -30875,7 +30875,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30921,7 +30921,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -30971,7 +30971,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31021,7 +31021,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31067,7 +31067,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31113,7 +31113,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31159,7 +31159,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31205,7 +31205,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31227,7 +31227,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/spf13/cobra@v1.8.0?package-id=93283c903cb027a9",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/spf13/cobra@v1.8.0?package-id=0f88d59a8b2ee3e2",
           "name": "github.com/spf13/cobra",
           "version": "v1.8.0",
           "cpe": "cpe:2.3:a:spf13:cobra:v1.8.0:*:*:*:*:*:*:*",
@@ -31251,7 +31251,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31263,7 +31263,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -31301,7 +31301,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31323,7 +31323,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/spf13/pflag@v1.0.5?package-id=af6ff157bcc6879b",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/spf13/pflag@v1.0.5?package-id=54625d9e6a9873bc",
           "name": "github.com/spf13/pflag",
           "version": "v1.0.5",
           "cpe": "cpe:2.3:a:spf13:pflag:v1.0.5:*:*:*:*:*:*:*",
@@ -31347,7 +31347,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31359,7 +31359,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -31397,7 +31397,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31419,7 +31419,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/yuin/gopher-lua@v1.1.1?package-id=23698abf425900f6",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/github.com/yuin/gopher-lua@v1.1.1?package-id=529449fa3367c8ca",
           "name": "github.com/yuin/gopher-lua",
           "version": "v1.1.1",
           "cpe": "cpe:2.3:a:yuin:gopher-lua:v1.1.1:*:*:*:*:*:*:*",
@@ -31447,7 +31447,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31459,7 +31459,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -31505,7 +31505,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31559,7 +31559,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31637,7 +31637,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31731,7 +31731,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31785,7 +31785,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31843,7 +31843,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31897,7 +31897,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -31975,7 +31975,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32053,7 +32053,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32098,7 +32098,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32176,7 +32176,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32222,7 +32222,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32244,11 +32244,11 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/golang.org/x/net@v0.22.0?package-id=a844fc6e1dc8b90d",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/golang.org/x/net@v0.24.0?package-id=3155b05a78623be9",
           "name": "golang.org/x/net",
-          "version": "v0.22.0",
-          "cpe": "cpe:2.3:a:golang:networking:v0.22.0:*:*:*:*:go:*:*",
-          "purl": "pkg:golang/golang.org/x/net@v0.22.0",
+          "version": "v0.24.0",
+          "cpe": "cpe:2.3:a:golang:networking:v0.24.0:*:*:*:*:go:*:*",
+          "purl": "pkg:golang/golang.org/x/net@v0.24.0",
           "properties": [
             {
               "name": "syft:package:foundBy",
@@ -32268,7 +32268,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32280,11 +32280,11 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
-              "value": "h1:9sGLhx7iRIHEiX0oAJ3MRZMUCElJgy7Br1nO\u002BAMN3Tc="
+              "value": "h1:1PcaxkF854Fu3\u002BlvBIx5SYn9wRlBzzcnHZSiaFFAb0w="
             },
             {
               "name": "syft:metadata:mainModule",
@@ -32318,7 +32318,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32364,7 +32364,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32410,7 +32410,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32432,11 +32432,11 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/golang.org/x/sys@v0.18.0?package-id=ae99b05df813adcd",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/golang.org/x/sys@v0.19.0?package-id=86bd068fbb834e41",
           "name": "golang.org/x/sys",
-          "version": "v0.18.0",
-          "cpe": "cpe:2.3:a:golang:x\\/sys:v0.18.0:*:*:*:*:*:*:*",
-          "purl": "pkg:golang/golang.org/x/sys@v0.18.0",
+          "version": "v0.19.0",
+          "cpe": "cpe:2.3:a:golang:x\\/sys:v0.19.0:*:*:*:*:*:*:*",
+          "purl": "pkg:golang/golang.org/x/sys@v0.19.0",
           "properties": [
             {
               "name": "syft:package:foundBy",
@@ -32456,7 +32456,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32468,11 +32468,11 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
-              "value": "h1:DBdB3niSjOA/O0blCZBqDefyWNYveAYMNF1Wum0DYQ4="
+              "value": "h1:q5f1RH2jigJ1MoAWp2KTp3gm5zAGFUTarQZ5U386\u002B4o="
             },
             {
               "name": "syft:metadata:mainModule",
@@ -32506,7 +32506,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32552,7 +32552,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32574,11 +32574,11 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/golang.org/x/text@v0.14.0?package-id=46186169bcd70cc1",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/golang.org/x/text@v0.15.0?package-id=4714c55efe0436a5",
           "name": "golang.org/x/text",
-          "version": "v0.14.0",
-          "cpe": "cpe:2.3:a:golang:text:v0.14.0:*:*:*:*:*:*:*",
-          "purl": "pkg:golang/golang.org/x/text@v0.14.0",
+          "version": "v0.15.0",
+          "cpe": "cpe:2.3:a:golang:text:v0.15.0:*:*:*:*:*:*:*",
+          "purl": "pkg:golang/golang.org/x/text@v0.15.0",
           "properties": [
             {
               "name": "syft:package:foundBy",
@@ -32598,7 +32598,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32610,11 +32610,11 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
-              "value": "h1:ScX5w1eTa3QqT8oi6\u002BziP7dTV1S2\u002BALU0bI\u002B0zXKWiQ="
+              "value": "h1:h1V/4gjBv8v9cjcR6\u002BAR5\u002B/cIYK5N/WAgiv4xlsEtAk="
             },
             {
               "name": "syft:metadata:mainModule",
@@ -32648,7 +32648,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32670,7 +32670,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/golang.org/x/xerrors@v0.0.0-20220907171357-04be3eba64a2?package-id=4fe550230caaa1f7",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/golang.org/x/xerrors@v0.0.0-20220907171357-04be3eba64a2?package-id=e3b2cee62ac2a9db",
           "name": "golang.org/x/xerrors",
           "version": "v0.0.0-20220907171357-04be3eba64a2",
           "cpe": "cpe:2.3:a:golang:x\\/xerrors:v0.0.0-20220907171357-04be3eba64a2:*:*:*:*:*:*:*",
@@ -32694,7 +32694,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32706,7 +32706,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -32744,7 +32744,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32789,7 +32789,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32811,7 +32811,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/gopkg.in/op/go-logging.v1@v1.0.0-20160211212156-b2cb9fa56473?package-id=abd4c8e6d44af508",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/gopkg.in/op/go-logging.v1@v1.0.0-20160211212156-b2cb9fa56473?package-id=90c1ad600ad6700c",
           "name": "gopkg.in/op/go-logging.v1",
           "version": "v1.0.0-20160211212156-b2cb9fa56473",
           "purl": "pkg:golang/gopkg.in/op/go-logging.v1@v1.0.0-20160211212156-b2cb9fa56473",
@@ -32834,7 +32834,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32846,7 +32846,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -32883,7 +32883,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32929,7 +32929,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32951,7 +32951,7 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/gopkg.in/yaml.v3@v3.0.1?package-id=ae5e04c0c4fe9f10",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/gopkg.in/yaml.v3@v3.0.1?package-id=354d20a97f1234dc",
           "name": "gopkg.in/yaml.v3",
           "version": "v3.0.1",
           "cpe": "cpe:2.3:a:yaml_project:yaml:v3.0.1:*:*:*:*:go:*:*",
@@ -32975,7 +32975,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -32987,7 +32987,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             },
             {
               "name": "syft:metadata:h1Digest",
@@ -33048,7 +33048,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -33113,7 +33113,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -33163,7 +33163,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -33217,7 +33217,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -33271,7 +33271,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -33349,7 +33349,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -33427,7 +33427,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -33473,7 +33473,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -33518,7 +33518,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -33563,7 +33563,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -33608,7 +33608,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -33686,7 +33686,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -33764,7 +33764,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -33858,7 +33858,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -33968,7 +33968,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -34046,7 +34046,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -34100,7 +34100,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -34154,7 +34154,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -34208,7 +34208,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -34262,7 +34262,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -34316,7 +34316,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -34370,7 +34370,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -34448,7 +34448,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -34526,7 +34526,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -34604,7 +34604,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -34658,7 +34658,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -34712,7 +34712,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -34766,7 +34766,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -34820,7 +34820,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -34874,7 +34874,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -34952,7 +34952,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35006,7 +35006,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35060,7 +35060,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35114,7 +35114,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35168,7 +35168,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35222,7 +35222,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35276,7 +35276,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35330,7 +35330,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35408,7 +35408,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35462,7 +35462,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35516,7 +35516,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35570,7 +35570,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35624,7 +35624,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35678,7 +35678,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35732,7 +35732,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35786,7 +35786,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35840,7 +35840,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35894,7 +35894,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -35948,7 +35948,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36002,7 +36002,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36056,7 +36056,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36110,7 +36110,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36164,7 +36164,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36218,7 +36218,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36296,7 +36296,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36350,7 +36350,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36404,7 +36404,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36458,7 +36458,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36536,7 +36536,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36614,7 +36614,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36668,7 +36668,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36722,7 +36722,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36800,7 +36800,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36878,7 +36878,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36932,7 +36932,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -36986,7 +36986,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -37040,7 +37040,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -37094,7 +37094,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -37188,7 +37188,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -37266,7 +37266,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -37348,7 +37348,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -37442,7 +37442,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -37496,7 +37496,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -37550,7 +37550,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -37628,7 +37628,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -37682,7 +37682,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -37736,7 +37736,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -37814,7 +37814,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -37908,7 +37908,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -37962,7 +37962,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -38040,7 +38040,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -38134,7 +38134,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -38228,7 +38228,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -38282,7 +38282,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -38352,7 +38352,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -38406,7 +38406,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -38460,7 +38460,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -38538,7 +38538,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -38592,7 +38592,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -38646,7 +38646,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -38724,7 +38724,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -38773,7 +38773,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -38819,7 +38819,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -38865,7 +38865,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -38911,7 +38911,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -38973,7 +38973,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -39018,7 +39018,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -39096,7 +39096,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -39145,7 +39145,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -39159,9 +39159,9 @@
         },
         {
           "type": "library",
-          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/stdlib@1.22.1?package-id=d0193cba7b3191ec",
+          "bom-ref": "registry1.dso.mil/ironbank/big-bang/base@2.1.0:pkg:golang/stdlib@1.22.3?package-id=5f18d7e628da4bd0",
           "name": "stdlib",
-          "version": "go1.22.1",
+          "version": "go1.22.3",
           "licenses": [
             {
               "license": {
@@ -39169,8 +39169,8 @@
               }
             }
           ],
-          "cpe": "cpe:2.3:a:golang:go:1.22.1:-:*:*:*:*:*:*",
-          "purl": "pkg:golang/stdlib@1.22.1",
+          "cpe": "cpe:2.3:a:golang:go:1.22.3:-:*:*:*:*:*:*",
+          "purl": "pkg:golang/stdlib@1.22.3",
           "properties": [
             {
               "name": "syft:package:language",
@@ -39186,7 +39186,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -39194,7 +39194,7 @@
             },
             {
               "name": "syft:metadata:goCompiledVersion",
-              "value": "go1.22.1"
+              "value": "go1.22.3"
             }
           ]
         },
@@ -39256,7 +39256,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -39310,7 +39310,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -39388,7 +39388,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -39442,7 +39442,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -39520,7 +39520,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -39574,7 +39574,7 @@
             },
             {
               "name": "syft:location:0:layerID",
-              "value": "sha256:dba78ec94611b3986f4b3e14dd39794ad3b9a582041a7893d6b0f3cfd0469544"
+              "value": "sha256:a119ea08e5c5c80b2c14b23c96467a25b847defdbae6c69a1cda5281d519b696"
             },
             {
               "name": "syft:location:0:path",
@@ -39646,7 +39646,7 @@
       "dependsOn": [
         "registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper@v3.15.1:7a33db9e639e0b93",
         "registry1.dso.mil/ironbank/opensource/kubernetes/kubectl@v1.29.3:ae85c3e6f19d29fb",
-        "registry1.dso.mil/ironbank/big-bang/base@2.1.0:b80c84fd74a6b175"
+        "registry1.dso.mil/ironbank/big-bang/base@2.1.0:c00395a15539c176"
       ]
     }
   ]
