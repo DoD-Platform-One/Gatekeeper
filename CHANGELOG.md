@@ -3,6 +3,13 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [3.16.0-bb.0] 2024-05-14
+### Changed
+- Updated registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper `v3.15.1` -> `v3.16.0`
+- Updated ironbank/opensource/openpolicyagent/gatekeeper `v3.15.1` -> `v3.16.0`
+- Updated to latest gluon `0.4.9` -> `0.5.0`
+- Updated registry1.dso.mil/ironbank/opensource/kubernetes/kubectl `v1.29.3` -> `v1.29.4`
+
 ## [3.15.0-bb.7] 2024-04-26
 ### Added
 - Add support for additional custom network policies through the values yaml
