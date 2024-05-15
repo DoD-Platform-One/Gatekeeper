@@ -8,4 +8,4 @@ upstream:
     commit: 3350319f76d3e2d78df0b972c63258cba7c7915f
     repo: https://github.com/open-policy-agent/gatekeeper
     directory: /charts/gatekeeper
-    ref: v3.15.1
+    ref: v3.16.0
