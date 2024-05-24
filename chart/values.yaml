@@ -47,17 +47,17 @@ resourceQuota: true
 externaldataProviderResponseCacheTTL: 3m
 image:
   repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
-  release: v3.16.0
+  release: v3.16.2
   pullPolicy: IfNotPresent
   pullSecrets:
     - name: private-registry
   crdRepository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-  crdRelease: v1.29.4
+  crdRelease: v1.29.5
 preInstall:
   crdRepository:
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.29.4
+      tag: v1.29.5
   securityContext:
     allowPrivilegeEscalation: false
     capabilities:
@@ -72,7 +72,7 @@ postUpgrade:
     enabled: false
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.29.4
+      tag: v1.29.5
       pullPolicy: IfNotPresent
       pullSecrets: []
     extraNamespaces: []
@@ -98,7 +98,7 @@ postInstall:
     extraRules: []
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.29.4
+      tag: v1.29.5
       pullPolicy: IfNotPresent
       pullSecrets: []
     extraNamespaces: []
@@ -134,7 +134,7 @@ preUninstall:
     enabled: false
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.29.4
+      tag: v1.29.5
       pullPolicy: IfNotPresent
       pullSecrets: []
     priorityClassName: ""
@@ -713,7 +713,7 @@ networkPolicies:
 bbtests:
   enabled: true
   scripts:
-    image: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.29.4
+    image: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.29.5
     securityContext:
       allowPrivilegeEscalation: false
       capabilities:
