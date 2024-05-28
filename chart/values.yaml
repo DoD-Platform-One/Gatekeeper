@@ -10,6 +10,7 @@ auditMatchKindOnly: true
 constraintViolationsLimit: 1000
 auditFromCache: false
 disableMutation: true
+disableAudit: true
 disableValidatingWebhook: false
 validatingWebhookName: gatekeeper-validating-webhook-configuration
 validatingWebhookTimeoutSeconds: 15
@@ -17,6 +18,7 @@ validatingWebhookFailurePolicy: Ignore
 validatingWebhookAnnotations: {}
 validatingWebhookExemptNamespacesLabels: {}
 validatingWebhookObjectSelector: {}
+validatingWebhookMatchConditions: []
 validatingWebhookCheckIgnoreFailurePolicy: Fail
 validatingWebhookCustomRules: {}
 validatingWebhookURL: null
@@ -31,6 +33,7 @@ mutatingWebhookReinvocationPolicy: Never
 mutatingWebhookAnnotations: {}
 mutatingWebhookExemptNamespacesLabels: {}
 mutatingWebhookObjectSelector: {}
+mutatingWebhookMatchConditions: []
 mutatingWebhookTimeoutSeconds: 1
 mutatingWebhookCustomRules: {}
 mutatingWebhookURL: null
@@ -45,6 +48,8 @@ admissionEventsInvolvedNamespace: false
 auditEventsInvolvedNamespace: false
 resourceQuota: true
 externaldataProviderResponseCacheTTL: 3m
+enableK8sNativeValidation: false
+vapEnforcement: GATEKEEPER_DEFAULT
 image:
   repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
   release: v3.16.2
@@ -651,7 +656,7 @@ violations:
     name: selinux-policy
     match: {}
     parameters:
-      allowedSELinuxOptions: 
+      allowedSELinuxOptions:
         - level: ~
           role: ~
           type: ~

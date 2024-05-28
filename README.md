@@ -1,6 +1,6 @@
 # gatekeeper
 
-![Version: 3.16.0-bb.1](https://img.shields.io/badge/Version-3.16.0--bb.1-informational?style=flat-square) ![AppVersion: v3.16.2](https://img.shields.io/badge/AppVersion-v3.16.2-informational?style=flat-square)
+![Version: 3.16.2-bb.0](https://img.shields.io/badge/Version-3.16.2--bb.0-informational?style=flat-square) ![AppVersion: v3.16.2](https://img.shields.io/badge/AppVersion-v3.16.2-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -44,6 +44,7 @@ helm install gatekeeper chart/
 | constraintViolationsLimit | int | `1000` |  |
 | auditFromCache | bool | `false` |  |
 | disableMutation | bool | `true` |  |
+| disableAudit | bool | `true` |  |
 | disableValidatingWebhook | bool | `false` |  |
 | validatingWebhookName | string | `"gatekeeper-validating-webhook-configuration"` |  |
 | validatingWebhookTimeoutSeconds | int | `15` |  |
@@ -51,6 +52,7 @@ helm install gatekeeper chart/
 | validatingWebhookAnnotations | object | `{}` |  |
 | validatingWebhookExemptNamespacesLabels | object | `{}` |  |
 | validatingWebhookObjectSelector | object | `{}` |  |
+| validatingWebhookMatchConditions | list | `[]` |  |
 | validatingWebhookCheckIgnoreFailurePolicy | string | `"Fail"` |  |
 | validatingWebhookCustomRules | object | `{}` |  |
 | validatingWebhookURL | string | `nil` |  |
@@ -65,6 +67,7 @@ helm install gatekeeper chart/
 | mutatingWebhookAnnotations | object | `{}` |  |
 | mutatingWebhookExemptNamespacesLabels | object | `{}` |  |
 | mutatingWebhookObjectSelector | object | `{}` |  |
+| mutatingWebhookMatchConditions | list | `[]` |  |
 | mutatingWebhookTimeoutSeconds | int | `1` |  |
 | mutatingWebhookCustomRules | object | `{}` |  |
 | mutatingWebhookURL | string | `nil` |  |
@@ -79,6 +82,8 @@ helm install gatekeeper chart/
 | auditEventsInvolvedNamespace | bool | `false` |  |
 | resourceQuota | bool | `true` |  |
 | externaldataProviderResponseCacheTTL | string | `"3m"` |  |
+| enableK8sNativeValidation | bool | `false` |  |
+| vapEnforcement | string | `"GATEKEEPER_DEFAULT"` |  |
 | image.repository | string | `"registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper"` |  |
 | image.release | string | `"v3.16.2"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
