@@ -10,7 +10,7 @@ auditMatchKindOnly: true
 constraintViolationsLimit: 1000
 auditFromCache: false
 disableMutation: true
-disableAudit: true
+disableAudit: false
 disableValidatingWebhook: false
 validatingWebhookName: gatekeeper-validating-webhook-configuration
 validatingWebhookTimeoutSeconds: 15
