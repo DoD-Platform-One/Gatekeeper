@@ -52,7 +52,7 @@ enableK8sNativeValidation: false
 vapEnforcement: GATEKEEPER_DEFAULT
 image:
   repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
-  release: v3.16.2
+  release: v3.16.3
   pullPolicy: IfNotPresent
   pullSecrets:
     - name: private-registry

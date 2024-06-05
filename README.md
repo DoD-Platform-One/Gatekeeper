@@ -1,6 +1,6 @@
 # gatekeeper
 
-![Version: 3.16.2-bb.1](https://img.shields.io/badge/Version-3.16.2--bb.1-informational?style=flat-square) ![AppVersion: v3.16.2](https://img.shields.io/badge/AppVersion-v3.16.2-informational?style=flat-square)
+![Version: 3.16.3-bb.0](https://img.shields.io/badge/Version-3.16.3--bb.0-informational?style=flat-square) ![AppVersion: v3.16.3](https://img.shields.io/badge/AppVersion-v3.16.3-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -85,7 +85,7 @@ helm install gatekeeper chart/
 | enableK8sNativeValidation | bool | `false` |  |
 | vapEnforcement | string | `"GATEKEEPER_DEFAULT"` |  |
 | image.repository | string | `"registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper"` |  |
-| image.release | string | `"v3.16.2"` |  |
+| image.release | string | `"v3.16.3"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.pullSecrets[0].name | string | `"private-registry"` |  |
 | image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
