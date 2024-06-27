@@ -2,7 +2,6 @@
   "baseBranches": ["main"],
   "configWarningReuseIssue": false,
   "dependencyDashboard": true,
-  "dependencyDashboardHeader": "- [ ] Sync upstream helm chart version with updated dependencies.",
   "dependencyDashboardTitle": "Renovate: Upgrade OPA Gatekeeper Package Dependencies",
   "draftPR": true,
   "labels": ["opagatekeeper","Big Bang Core","Package Sustainment","kind::maintenance"],
