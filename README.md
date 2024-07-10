@@ -5,11 +5,13 @@
 A Helm chart for Gatekeeper
 
 ## Upstream References
+
 * <https://github.com/open-policy-agent/gatekeeper>
 
 * <https://github.com/open-policy-agent/gatekeeper.git>
 
 ## Learn More
+
 * [Application Overview](docs/overview.md)
 * [Other Documentation](docs/)
 
@@ -21,12 +23,13 @@ A Helm chart for Gatekeeper
 
 Install Helm
 
-https://helm.sh/docs/intro/install/
+<https://helm.sh/docs/intro/install/>
 
 ## Deployment
 
 * Clone down the repository
 * cd into directory
+
 ```bash
 helm install gatekeeper chart/
 ```
