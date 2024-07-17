@@ -6,6 +6,7 @@
   "draftPR": true,
   "labels": ["opagatekeeper","Big Bang Core","Package Sustainment","kind::maintenance"],
   "commitMessagePrefix": "SKIP UPDATE CHECK",
+  "postUpdateOptions": ["helmUpdateSubChartArchives"],
   "packageRules": [
     {
       "matchDatasources": ["docker"],
