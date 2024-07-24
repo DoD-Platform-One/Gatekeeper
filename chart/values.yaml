@@ -57,12 +57,12 @@ image:
   pullSecrets:
     - name: private-registry
   crdRepository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-  crdRelease: v1.29.5
+  crdRelease: v1.29.6
 preInstall:
   crdRepository:
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.29.5
+      tag: v1.29.6
   securityContext:
     allowPrivilegeEscalation: false
     capabilities:
@@ -77,7 +77,7 @@ postUpgrade:
     enabled: false
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.29.5
+      tag: v1.29.6
       pullPolicy: IfNotPresent
       pullSecrets: []
     extraNamespaces: []
@@ -103,7 +103,7 @@ postInstall:
     extraRules: []
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.29.5
+      tag: v1.29.6
       pullPolicy: IfNotPresent
       pullSecrets: []
     extraNamespaces: []
@@ -139,7 +139,7 @@ preUninstall:
     enabled: false
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.29.5
+      tag: v1.29.6
       pullPolicy: IfNotPresent
       pullSecrets: []
     priorityClassName: ""
@@ -718,7 +718,7 @@ networkPolicies:
 bbtests:
   enabled: true
   scripts:
-    image: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.29.5
+    image: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.29.6
     securityContext:
       allowPrivilegeEscalation: false
       capabilities:

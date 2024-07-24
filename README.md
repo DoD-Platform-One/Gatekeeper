@@ -1,6 +1,6 @@
 # gatekeeper
 
-![Version: 3.16.3-bb.0](https://img.shields.io/badge/Version-3.16.3--bb.0-informational?style=flat-square) ![AppVersion: v3.16.3](https://img.shields.io/badge/AppVersion-v3.16.3-informational?style=flat-square)
+![Version: 3.16.3-bb.1](https://img.shields.io/badge/Version-3.16.3--bb.1-informational?style=flat-square) ![AppVersion: v3.16.3](https://img.shields.io/badge/AppVersion-v3.16.3-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -92,9 +92,9 @@ helm install gatekeeper chart/
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.pullSecrets[0].name | string | `"private-registry"` |  |
 | image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| image.crdRelease | string | `"v1.29.5"` |  |
+| image.crdRelease | string | `"v1.29.6"` |  |
 | preInstall.crdRepository.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| preInstall.crdRepository.image.tag | string | `"v1.29.5"` |  |
+| preInstall.crdRepository.image.tag | string | `"v1.29.6"` |  |
 | preInstall.securityContext.allowPrivilegeEscalation | bool | `false` |  |
 | preInstall.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
 | preInstall.securityContext.readOnlyRootFilesystem | bool | `true` |  |
@@ -103,7 +103,7 @@ helm install gatekeeper chart/
 | preInstall.securityContext.runAsUser | int | `1000` |  |
 | postUpgrade.labelNamespace.enabled | bool | `false` |  |
 | postUpgrade.labelNamespace.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| postUpgrade.labelNamespace.image.tag | string | `"v1.29.5"` |  |
+| postUpgrade.labelNamespace.image.tag | string | `"v1.29.6"` |  |
 | postUpgrade.labelNamespace.image.pullPolicy | string | `"IfNotPresent"` |  |
 | postUpgrade.labelNamespace.image.pullSecrets | list | `[]` |  |
 | postUpgrade.labelNamespace.extraNamespaces | list | `[]` |  |
@@ -123,7 +123,7 @@ helm install gatekeeper chart/
 | postInstall.labelNamespace.enabled | bool | `true` |  |
 | postInstall.labelNamespace.extraRules | list | `[]` |  |
 | postInstall.labelNamespace.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| postInstall.labelNamespace.image.tag | string | `"v1.29.5"` |  |
+| postInstall.labelNamespace.image.tag | string | `"v1.29.6"` |  |
 | postInstall.labelNamespace.image.pullPolicy | string | `"IfNotPresent"` |  |
 | postInstall.labelNamespace.image.pullSecrets | list | `[]` |  |
 | postInstall.labelNamespace.extraNamespaces | list | `[]` |  |
@@ -151,7 +151,7 @@ helm install gatekeeper chart/
 | preUninstall.deleteWebhookConfigurations.extraRules | list | `[]` |  |
 | preUninstall.deleteWebhookConfigurations.enabled | bool | `false` |  |
 | preUninstall.deleteWebhookConfigurations.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| preUninstall.deleteWebhookConfigurations.image.tag | string | `"v1.29.5"` |  |
+| preUninstall.deleteWebhookConfigurations.image.tag | string | `"v1.29.6"` |  |
 | preUninstall.deleteWebhookConfigurations.image.pullPolicy | string | `"IfNotPresent"` |  |
 | preUninstall.deleteWebhookConfigurations.image.pullSecrets | list | `[]` |  |
 | preUninstall.deleteWebhookConfigurations.priorityClassName | string | `""` |  |
@@ -515,7 +515,7 @@ helm install gatekeeper chart/
 | networkPolicies.controlPlaneCidr | string | `"0.0.0.0/0"` |  |
 | networkPolicies.additionalPolicies | list | `[]` |  |
 | bbtests.enabled | bool | `true` |  |
-| bbtests.scripts.image | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.29.5"` |  |
+| bbtests.scripts.image | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.29.6"` |  |
 | bbtests.scripts.securityContext.allowPrivilegeEscalation | bool | `false` |  |
 | bbtests.scripts.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
 | bbtests.scripts.securityContext.readOnlyRootFilesystem | bool | `true` |  |
