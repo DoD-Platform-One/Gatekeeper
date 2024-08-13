@@ -39,6 +39,7 @@
     {
       "fileMatch": ["^chart/Chart\\.yaml$"],
       "matchStrings": [
+      "appVersion:[^\\S\\r\\n]+(?<currentValue>.+)",
       "- Gatekeeper:\\s+(?<currentValue>.+)"
       ],
       "depNameTemplate": "ironbank/opensource/openpolicyagent/gatekeeper",
