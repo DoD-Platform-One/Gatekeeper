@@ -1,17 +1,27 @@
+<!-- Warning: Do not manually edit this file. See notes on gluon + helm-docs at the end of this file for more information. -->
 # gatekeeper
 
-![Version: 3.16.3-bb.1](https://img.shields.io/badge/Version-3.16.3--bb.1-informational?style=flat-square) ![AppVersion: v3.16.3](https://img.shields.io/badge/AppVersion-v3.16.3-informational?style=flat-square)
+![Version: 3.17.0-bb.0](https://img.shields.io/badge/Version-3.17.0--bb.0-informational?style=flat-square) ![AppVersion: v3.17.0](https://img.shields.io/badge/AppVersion-v3.17.0-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
 ## Upstream References
-
 * <https://github.com/open-policy-agent/gatekeeper>
 
 * <https://github.com/open-policy-agent/gatekeeper.git>
 
-## Learn More
+### Upstream Release Notes
 
+This package has no upstream release note links on file. Please add some to [chart/Chart.yaml](chart/Chart.yaml) under `annotations.bigbang.dev/upstreamReleaseNotesMarkdown`.
+Example:
+```yaml
+annotations:
+  bigbang.dev/upstreamReleaseNotesMarkdown: |
+    - [Find our upstream chart's CHANGELOG here](https://link-goes-here/CHANGELOG.md)
+    - [and our upstream application release notes here](https://another-link-here/RELEASE_NOTES.md)
+```
+
+## Learn More
 * [Application Overview](docs/overview.md)
 * [Other Documentation](docs/)
 
@@ -23,13 +33,12 @@ A Helm chart for Gatekeeper
 
 Install Helm
 
-<https://helm.sh/docs/intro/install/>
+https://helm.sh/docs/intro/install/
 
 ## Deployment
 
 * Clone down the repository
 * cd into directory
-
 ```bash
 helm install gatekeeper chart/
 ```
@@ -60,6 +69,7 @@ helm install gatekeeper chart/
 | validatingWebhookCustomRules | object | `{}` |  |
 | validatingWebhookURL | string | `nil` |  |
 | enableDeleteOperations | bool | `false` |  |
+| enableConnectOperations | bool | `false` |  |
 | enableExternalData | bool | `true` |  |
 | enableGeneratorResourceExpansion | bool | `true` |  |
 | enableTLSHealthcheck | bool | `false` |  |
@@ -85,25 +95,26 @@ helm install gatekeeper chart/
 | auditEventsInvolvedNamespace | bool | `false` |  |
 | resourceQuota | bool | `true` |  |
 | externaldataProviderResponseCacheTTL | string | `"3m"` |  |
-| enableK8sNativeValidation | bool | `false` |  |
-| vapEnforcement | string | `"GATEKEEPER_DEFAULT"` |  |
+| enableK8sNativeValidation | bool | `true` |  |
 | image.repository | string | `"registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper"` |  |
-| image.release | string | `"v3.16.3"` |  |
+| image.release | string | `"v3.17.0"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.pullSecrets[0].name | string | `"private-registry"` |  |
 | image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| image.crdRelease | string | `"v1.29.6"` |  |
+| image.crdRelease | string | `"v1.29.8"` |  |
 | preInstall.crdRepository.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| preInstall.crdRepository.image.tag | string | `"v1.29.6"` |  |
+| preInstall.crdRepository.image.tag | string | `"v1.29.8"` |  |
 | preInstall.securityContext.allowPrivilegeEscalation | bool | `false` |  |
 | preInstall.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
 | preInstall.securityContext.readOnlyRootFilesystem | bool | `true` |  |
 | preInstall.securityContext.runAsGroup | int | `999` |  |
 | preInstall.securityContext.runAsNonRoot | bool | `true` |  |
 | preInstall.securityContext.runAsUser | int | `1000` |  |
+| postUpgrade.labelNamespace.serviceAccount.name | string | `"gatekeeper-update-namespace-label-post-upgrade"` |  |
+| postUpgrade.labelNamespace.serviceAccount.create | bool | `true` |  |
 | postUpgrade.labelNamespace.enabled | bool | `false` |  |
 | postUpgrade.labelNamespace.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| postUpgrade.labelNamespace.image.tag | string | `"v1.29.6"` |  |
+| postUpgrade.labelNamespace.image.tag | string | `"v1.29.8"` |  |
 | postUpgrade.labelNamespace.image.pullPolicy | string | `"IfNotPresent"` |  |
 | postUpgrade.labelNamespace.image.pullSecrets | list | `[]` |  |
 | postUpgrade.labelNamespace.extraNamespaces | list | `[]` |  |
@@ -120,10 +131,12 @@ helm install gatekeeper chart/
 | postUpgrade.securityContext.runAsGroup | int | `999` |  |
 | postUpgrade.securityContext.runAsNonRoot | bool | `true` |  |
 | postUpgrade.securityContext.runAsUser | int | `1000` |  |
+| postInstall.labelNamespace.serviceAccount.name | string | `"gatekeeper-update-namespace-label"` |  |
+| postInstall.labelNamespace.serviceAccount.create | bool | `true` |  |
 | postInstall.labelNamespace.enabled | bool | `true` |  |
 | postInstall.labelNamespace.extraRules | list | `[]` |  |
 | postInstall.labelNamespace.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| postInstall.labelNamespace.image.tag | string | `"v1.29.6"` |  |
+| postInstall.labelNamespace.image.tag | string | `"v1.29.8"` |  |
 | postInstall.labelNamespace.image.pullPolicy | string | `"IfNotPresent"` |  |
 | postInstall.labelNamespace.image.pullSecrets | list | `[]` |  |
 | postInstall.labelNamespace.extraNamespaces | list | `[]` |  |
@@ -148,10 +161,12 @@ helm install gatekeeper chart/
 | postInstall.securityContext.runAsGroup | int | `999` |  |
 | postInstall.securityContext.runAsNonRoot | bool | `true` |  |
 | postInstall.securityContext.runAsUser | int | `1000` |  |
+| preUninstall.deleteWebhookConfigurations.serviceAccount.name | string | `"gatekeeper-delete-webhook-configs"` |  |
+| preUninstall.deleteWebhookConfigurations.serviceAccount.create | bool | `true` |  |
 | preUninstall.deleteWebhookConfigurations.extraRules | list | `[]` |  |
 | preUninstall.deleteWebhookConfigurations.enabled | bool | `false` |  |
 | preUninstall.deleteWebhookConfigurations.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| preUninstall.deleteWebhookConfigurations.image.tag | string | `"v1.29.6"` |  |
+| preUninstall.deleteWebhookConfigurations.image.tag | string | `"v1.29.8"` |  |
 | preUninstall.deleteWebhookConfigurations.image.pullPolicy | string | `"IfNotPresent"` |  |
 | preUninstall.deleteWebhookConfigurations.image.pullSecrets | list | `[]` |  |
 | preUninstall.deleteWebhookConfigurations.priorityClassName | string | `""` |  |
@@ -171,6 +186,7 @@ helm install gatekeeper chart/
 | podCountLimit | string | `"100"` |  |
 | secretAnnotations | object | `{}` |  |
 | enableRuntimeDefaultSeccompProfile | bool | `true` |  |
+| controllerManager.serviceAccount.name | string | `"gatekeeper-admin"` |  |
 | controllerManager.exemptNamespaces | list | `[]` |  |
 | controllerManager.exemptNamespacePrefixes | list | `[]` |  |
 | controllerManager.hostNetwork | bool | `false` |  |
@@ -185,6 +201,8 @@ helm install gatekeeper chart/
 | controllerManager.tlsMinVersion | float | `1.3` |  |
 | controllerManager.clientCertName | string | `""` |  |
 | controllerManager.strategyType | string | `"RollingUpdate"` |  |
+| controllerManager.strategyRollingUpdate | object | `{}` |  |
+| controllerManager.podLabels | object | `{}` |  |
 | controllerManager.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution[0].podAffinityTerm.labelSelector.matchExpressions[0].key | string | `"gatekeeper.sh/operation"` |  |
 | controllerManager.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution[0].podAffinityTerm.labelSelector.matchExpressions[0].operator | string | `"In"` |  |
 | controllerManager.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution[0].podAffinityTerm.labelSelector.matchExpressions[0].values[0] | string | `"webhook"` |  |
@@ -208,6 +226,7 @@ helm install gatekeeper chart/
 | controllerManager.extraRules | list | `[]` |  |
 | controllerManager.networkPolicy.enabled | bool | `false` |  |
 | controllerManager.networkPolicy.ingress | object | `{}` |  |
+| audit.serviceAccount.name | string | `"gatekeeper-admin"` |  |
 | audit.enablePubsub | bool | `false` |  |
 | audit.hostNetwork | bool | `false` |  |
 | audit.dnsPolicy | string | `"ClusterFirst"` |  |
@@ -217,6 +236,7 @@ helm install gatekeeper chart/
 | audit.livenessTimeout | int | `1` |  |
 | audit.priorityClassName | string | `"system-cluster-critical"` |  |
 | audit.disableCertRotation | bool | `false` |  |
+| audit.podLabels | object | `{}` |  |
 | audit.affinity | object | `{}` |  |
 | audit.tolerations | list | `[]` |  |
 | audit.nodeSelector."kubernetes.io/os" | string | `"linux"` |  |
@@ -248,6 +268,8 @@ helm install gatekeeper chart/
 | service | object | `{}` |  |
 | disabledBuiltins[0] | string | `"{http.send}"` |  |
 | psp.enabled | bool | `false` |  |
+| upgradeCRDs.serviceAccount.create | bool | `true` |  |
+| upgradeCRDs.serviceAccount.name | string | `"gatekeeper-admin-upgrade-crds"` |  |
 | upgradeCRDs.enabled | bool | `true` |  |
 | upgradeCRDs.extraRules | list | `[]` |  |
 | upgradeCRDs.priorityClassName | string | `""` |  |
@@ -534,3 +556,8 @@ helm install gatekeeper chart/
 ## Contributing
 
 Please see the [contributing guide](./CONTRIBUTING.md) if you are interested in contributing.
+
+---
+
+_This file is programatically generated using `helm-docs` and some BigBang-specific templates. The `gluon` repository has [instructions for regenerating package READMEs](https://repo1.dso.mil/big-bang/product/packages/gluon/-/blob/master/docs/bb-package-readme.md)._
+

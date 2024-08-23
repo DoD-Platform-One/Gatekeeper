@@ -1,4 +1,5 @@
 {{- if .Values.postInstall.labelNamespace.enabled }}
+---
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -30,7 +31,7 @@ spec:
       {{- end }}
       {{- if .Values.postInstall.labelNamespace.image.pullSecrets }}
       imagePullSecrets:
-      {{- .Values.postInstall.labelNamespace.image.pullSecrets | toYaml | nindent 12 }}
+        {{- .Values.postInstall.labelNamespace.image.pullSecrets | toYaml | nindent 12 }}
       {{- end }}
       serviceAccount: gatekeeper-update-namespace-label
       {{/* start BB addition 
@@ -41,9 +42,9 @@ spec:
       {{/* end BB addition */}}
       {{- if .Values.postInstall.probeWebhook.enabled }}
       volumes:
-      {{- include "gatekeeper.postInstallWebhookProbeVolume" . | nindent 8 }}
+        {{- include "gatekeeper.postInstallWebhookProbeVolume" . | nindent 8 }}
       initContainers:
-      {{- include "gatekeeper.postInstallWebhookProbeContainer" . | nindent 8 }}
+        {{- include "gatekeeper.postInstallWebhookProbeContainer" . | nindent 8 }}
       {{- end }}
       containers:
         - name: kubectl-label
@@ -95,11 +96,13 @@ spec:
       tolerations:
         {{- toYaml .tolerations | nindent 8 }}
       {{- end }}
+{{- end }}
 ---
+{{- if .Values.postInstall.labelNamespace.serviceAccount.create }}
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: gatekeeper-update-namespace-label
+  name: {{ .Values.postInstall.labelNamespace.serviceAccount.name }}
   namespace: {{ .Release.Namespace | quote }}
   labels:
     {{- include "gatekeeper.commonLabels" . | nindent 4 }}
@@ -110,11 +113,12 @@ metadata:
     "helm.sh/hook-weight": "-5"
     "helm.sh/hook-delete-policy": hook-succeeded,before-hook-creation
 {{/* start BB addition 
-If false, a K8s API token will not be mounted in Pods utilizing this ServiceAccount, unless overriden at the Pod spec-level
-In this case, this behavior -is- overriden at the Pod spec-level due to app requirements
+If false, a K8s API token will not be mounted in Pods utilizing this ServiceAccount, unless overridden at the Pod spec-level
+In this case, this behavior -is- overridden at the Pod spec-level due to app requirements
 */}}
 automountServiceAccountToken: false
 {{/* end BB addition */}}
+{{- end }}
 ---
 {{- if .Values.rbac.create }}
 apiVersion: rbac.authorization.k8s.io/v1
@@ -143,9 +147,9 @@ rules:
       {{- range .Values.postInstall.labelNamespace.extraNamespaces }}
       - {{ . }}
       {{- end }}
-{{- with .Values.postInstall.labelNamespace.extraRules }}
+  {{- with .Values.postInstall.labelNamespace.extraRules }}
   {{- toYaml . | nindent 2 }}
-{{- end }}
+  {{- end }}
 {{- end }}
 ---
 {{- if .Values.rbac.create }}
@@ -167,7 +171,6 @@ roleRef:
   name: gatekeeper-update-namespace-label
 subjects:
   - kind: ServiceAccount
-    name: gatekeeper-update-namespace-label
+    name: {{ .Values.postInstall.labelNamespace.serviceAccount.name }}
     namespace: {{ .Release.Namespace | quote }}
-{{- end }}
 {{- end }}
