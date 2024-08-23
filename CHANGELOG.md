@@ -3,6 +3,16 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+
+## [3.17.0-bb.0] 2024-08-22
+
+### Changed
+
+- Updated ironbank/opensource/openpolicyagent/gatekeeper v3.16.3 -> v3.17.0
+- Updated registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper v3.16.3 -> v3.17.0
+- updated registry1.dso.mil/ironbank/opensource/kubernetes/kubectl from v1.29.6 -> v1.29.8
+- Update gluon from 0.50 to 0.5.3
+
 ## [3.16.3-bb.1] 2024-07-11
 ### Changed
 - Updated registry1.dso.mil/ironbank/opensource/kubernetes/kubectl v1.29.5 -> v1.29.6
