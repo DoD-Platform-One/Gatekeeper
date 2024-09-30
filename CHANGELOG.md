@@ -4,6 +4,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [3.17.1-bb.0] 2024-09-27
+
+### Changed
+
+- Updated ironbank/opensource/openpolicyagent/gatekeeper v3.17.0 -> 3.17.1
+- Updated registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper v3.17.0 -> 3.17.1
+- Updated gluon from 0.5.3 to 0.5.4
+
+
 ## [3.17.0-bb.0] 2024-08-22
 
 ### Changed

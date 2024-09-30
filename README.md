@@ -1,7 +1,7 @@
 <!-- Warning: Do not manually edit this file. See notes on gluon + helm-docs at the end of this file for more information. -->
 # gatekeeper
 
-![Version: 3.17.0-bb.0](https://img.shields.io/badge/Version-3.17.0--bb.0-informational?style=flat-square) ![AppVersion: v3.17.0](https://img.shields.io/badge/AppVersion-v3.17.0-informational?style=flat-square)
+![Version: 3.17.1-bb.0](https://img.shields.io/badge/Version-3.17.1--bb.0-informational?style=flat-square) ![AppVersion: v3.17.1](https://img.shields.io/badge/AppVersion-v3.17.1-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -97,7 +97,7 @@ helm install gatekeeper chart/
 | externaldataProviderResponseCacheTTL | string | `"3m"` |  |
 | enableK8sNativeValidation | bool | `true` |  |
 | image.repository | string | `"registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper"` |  |
-| image.release | string | `"v3.17.0"` |  |
+| image.release | string | `"v3.17.1"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.pullSecrets[0].name | string | `"private-registry"` |  |
 | image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
@@ -552,6 +552,7 @@ helm install gatekeeper chart/
 | bbtests.scripts.additionalVolumes[0].configMap.name | string | `"{{ .Chart.Name }}-test-config"` |  |
 | bbtests.scripts.additionalVolumes[1].name | string | `"{{ .Chart.Name }}-kube-cache"` |  |
 | bbtests.scripts.additionalVolumes[1].emptyDir | object | `{}` |  |
+| serviceAccount.gatekeeperAdmin.create | bool | `true` |  |
 
 ## Contributing
 
