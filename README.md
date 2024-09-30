@@ -6,6 +6,7 @@
 A Helm chart for Gatekeeper
 
 ## Upstream References
+
 * <https://github.com/open-policy-agent/gatekeeper>
 
 * <https://github.com/open-policy-agent/gatekeeper.git>
@@ -14,6 +15,7 @@ A Helm chart for Gatekeeper
 
 This package has no upstream release note links on file. Please add some to [chart/Chart.yaml](chart/Chart.yaml) under `annotations.bigbang.dev/upstreamReleaseNotesMarkdown`.
 Example:
+
 ```yaml
 annotations:
   bigbang.dev/upstreamReleaseNotesMarkdown: |
@@ -22,6 +24,7 @@ annotations:
 ```
 
 ## Learn More
+
 * [Application Overview](docs/overview.md)
 * [Other Documentation](docs/)
 
@@ -33,12 +36,13 @@ annotations:
 
 Install Helm
 
-https://helm.sh/docs/intro/install/
+<https://helm.sh/docs/intro/install/>
 
 ## Deployment
 
 * Clone down the repository
 * cd into directory
+
 ```bash
 helm install gatekeeper chart/
 ```
@@ -561,4 +565,3 @@ Please see the [contributing guide](./CONTRIBUTING.md) if you are interested in 
 ---
 
 _This file is programatically generated using `helm-docs` and some BigBang-specific templates. The `gluon` repository has [instructions for regenerating package READMEs](https://repo1.dso.mil/big-bang/product/packages/gluon/-/blob/master/docs/bb-package-readme.md)._
-
