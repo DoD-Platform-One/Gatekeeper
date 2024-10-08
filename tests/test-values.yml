@@ -1,7 +1,4 @@
 replicas: 1
-image:
-  pullSecrets:
-  - name: private-registry
 postInstall:
   labelNamespace:
     image:
@@ -33,28 +30,24 @@ violations:
         - bad-pod-test-ns
         - good-pod-test-ns
   allowedDockerRegistries:
-    enforcementAction: deny
     match:
       namespaces:
         - default
         - bad-pod-test-ns
         - good-pod-test-ns
   allowedFlexVolumes:
-    enforcementAction: deny
     match:
       namespaces:
         - default
         - bad-pod-test-ns
         - good-pod-test-ns
   allowedHostFilesystem:
-    enforcementAction: deny
     match:
       namespaces:
         - default
         - bad-pod-test-ns
         - good-pod-test-ns
   allowedIPs:
-    enforcementAction: deny
     match:
       namespaces:
         - default
@@ -79,7 +72,6 @@ violations:
         - bad-pod-test-ns
         - good-pod-test-ns
   bannedImageTags:
-    enforcementAction: deny
     match:
       namespaces:
         - default
@@ -100,7 +92,6 @@ violations:
         - bad-pod-test-ns
         - good-pod-test-ns
   hostNetworking:
-    enforcementAction: deny
     match:
       namespaces:
         - default
@@ -110,7 +101,6 @@ violations:
       min: 8080
       max: 8080
   httpsOnly:
-    enforcementAction: deny
     match:
       namespaces:
         - default
@@ -138,14 +128,12 @@ violations:
         - bad-pod-test-ns
         - good-pod-test-ns
   noHostNamespace:
-    enforcementAction: deny
     match:
       namespaces:
         - default
         - bad-pod-test-ns
         - good-pod-test-ns
   noPrivilegedContainers:
-    enforcementAction: deny
     match:
       namespaces:
         - default
@@ -166,7 +154,6 @@ violations:
         - bad-pod-test-ns
         - good-pod-test-ns
   noSysctls:
-    enforcementAction: deny
     match:
       namespaces:
         - default
@@ -201,36 +188,29 @@ violations:
         - bad-pod-test-ns
         - good-pod-test-ns
   restrictedTaint:
-    enforcementAction: deny
     match:
       namespaces:
         - default
         - bad-pod-test-ns
         - good-pod-test-ns
   selinuxPolicy:
-    enforcementAction: deny
     match:
       namespaces:
         - default
         - bad-pod-test-ns
         - good-pod-test-ns
   uniqueIngressHost:
-    enforcementAction: deny
     match:
       namespaces:
         - default
         - bad-pod-test-ns
         - good-pod-test-ns
   volumeTypes:
-    enforcementAction: deny
     match:
       namespaces:
         - default
         - bad-pod-test-ns
         - good-pod-test-ns
-
-bbtests:
-  enabled: true
 
 networkPolicies:
   enabled: true
