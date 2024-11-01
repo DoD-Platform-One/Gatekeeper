@@ -10,7 +10,7 @@ metadata:
   name: good-test-pod
   namespace: default
   annotations:
-    container.apparmor.security.beta.kubernetes.io/opa: runtime/default
+    securityContext.appArmorProfile/opa: runtime/default
   labels:
     app.kubernetes.io/name: good-test-name
     helm.sh/chart: good-test-chart
