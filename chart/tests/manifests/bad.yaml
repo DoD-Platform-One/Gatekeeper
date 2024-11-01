@@ -2,9 +2,10 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: bad-test-pod-1
+  namespace: default
   annotations:
     sidecar.istio.io/inject: "false"
-    container.apparmor.security.beta.kubernetes.io/opa: unconfined
+    securityContext.appArmorProfile/opa: unconfined
 spec:
   hostPID: true
   hostIPC: true
@@ -35,8 +36,8 @@ spec:
           scheme: HTTP
         periodSeconds: 10
       securityContext:
-        seccompProfile:
-          type: RuntimeDefault      
+        appArmorProfile:
+          type: Unconfined      
         privileged: true
         allowPrivilegeEscalation: true
         readOnlyRootFilesystem: false
@@ -74,6 +75,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: bad-test-pod-2
+  namespace: default
 spec:
   securityContext:
     seLinuxOptions:
@@ -113,6 +115,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: bad-pod-test-ns
+  namespace: default
   labels:
     istio-injection: "disabled"
 ---

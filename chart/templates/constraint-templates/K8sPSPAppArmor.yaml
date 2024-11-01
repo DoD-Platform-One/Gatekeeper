@@ -44,7 +44,7 @@ spec:
 
       input_apparmor_allowed(container, metadata) {
           metadata.annotations[key] == input.parameters.allowedProfiles[_]
-          key == sprintf("container.apparmor.security.beta.kubernetes.io/%v", [container.name])
+          key == sprintf("securityContext.appArmorProfile/%v", [container.name])
       }
 
       input_containers[c] {

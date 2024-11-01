@@ -1,17 +1,17 @@
 <!-- Warning: Do not manually edit this file. See notes on gluon + helm-docs at the end of this file for more information. -->
 # gatekeeper
 
-![Version: 3.17.1-bb.0](https://img.shields.io/badge/Version-3.17.1--bb.0-informational?style=flat-square) ![AppVersion: v3.17.1](https://img.shields.io/badge/AppVersion-v3.17.1-informational?style=flat-square)
+![Version: 3.17.1-bb.2](https://img.shields.io/badge/Version-3.17.1--bb.2-informational?style=flat-square) ![AppVersion: v3.17.1](https://img.shields.io/badge/AppVersion-v3.17.1-informational?style=flat-square)
 
 A Helm chart for Gatekeeper
 
 ## Upstream References
 
-* <https://github.com/open-policy-agent/gatekeeper>
+- <https://github.com/open-policy-agent/gatekeeper>
 
-* <https://github.com/open-policy-agent/gatekeeper.git>
+- <https://github.com/open-policy-agent/gatekeeper.git>
 
-### Upstream Release Notes
+## Upstream Release Notes
 
 This package has no upstream release note links on file. Please add some to [chart/Chart.yaml](chart/Chart.yaml) under `annotations.bigbang.dev/upstreamReleaseNotesMarkdown`.
 Example:
@@ -25,14 +25,14 @@ annotations:
 
 ## Learn More
 
-* [Application Overview](docs/overview.md)
-* [Other Documentation](docs/)
+- [Application Overview](docs/overview.md)
+- [Other Documentation](docs/)
 
 ## Pre-Requisites
 
-* Kubernetes Cluster deployed
-* Kubernetes config installed in `~/.kube/config`
-* Helm installed
+- Kubernetes Cluster deployed
+- Kubernetes config installed in `~/.kube/config`
+- Helm installed
 
 Install Helm
 
@@ -40,8 +40,8 @@ Install Helm
 
 ## Deployment
 
-* Clone down the repository
-* cd into directory
+- Clone down the repository
+- cd into directory
 
 ```bash
 helm install gatekeeper chart/

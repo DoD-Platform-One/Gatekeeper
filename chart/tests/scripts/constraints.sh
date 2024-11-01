@@ -29,6 +29,7 @@ if [[ $missing_violation == "true"  ]]; then
 else
   echo "Test 1: Passed"
 fi
+
 echo "*Delete created k8s objects*"
 kubectl delete -n default -f /yaml/bad.yaml || true
 
