@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - `container.apparmor.security.beta.kubernetes.io` annotations are now deprecated replaced by the `securityContext.appArmorProfile` field for pods and containers
+- Added the maintenance track annotation and badge
 
 ## [3.17.1-bb.1] 2024-09-27
 
