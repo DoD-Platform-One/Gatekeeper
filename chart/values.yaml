@@ -52,7 +52,7 @@ externaldataProviderResponseCacheTTL: 3m
 enableK8sNativeValidation: true
 image:
   repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
-  release: v3.17.1
+  release: v3.18.1
   pullPolicy: IfNotPresent
   pullSecrets:
     - name: private-registry
@@ -229,7 +229,7 @@ controllerManager:
   extraRules: []
   networkPolicy:
     enabled: false
-    ingress: { }
+    ingress: []
       # - from:
       #   - ipBlock:
       #       cidr: 0.0.0.0/0

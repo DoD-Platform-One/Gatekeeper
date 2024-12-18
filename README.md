@@ -1,14 +1,14 @@
 <!-- Warning: Do not manually edit this file. See notes on gluon + helm-docs at the end of this file for more information. -->
 # gatekeeper
 
-![Version: 3.17.1-bb.2](https://img.shields.io/badge/Version-3.17.1--bb.2-informational?style=flat-square) ![AppVersion: v3.17.1](https://img.shields.io/badge/AppVersion-v3.17.1-informational?style=flat-square) ![Maintenance Track: bb_integrated](https://img.shields.io/badge/Maintenance_Track-bb_integrated-green?style=flat-square)
+![Version: 3.18.1-bb.0](https://img.shields.io/badge/Version-3.18.1--bb.0-informational?style=flat-square) ![AppVersion: v3.18.1](https://img.shields.io/badge/AppVersion-v3.18.1-informational?style=flat-square) ![Maintenance Track: bb_integrated](https://img.shields.io/badge/Maintenance_Track-bb_integrated-green?style=flat-square)
 
 A Helm chart for Gatekeeper
 
 ## Upstream References
 - <https://github.com/open-policy-agent/gatekeeper>
 
-* <https://github.com/open-policy-agent/gatekeeper.git>
+- <https://github.com/open-policy-agent/gatekeeper.git>
 
 ## Upstream Release Notes
 
@@ -99,7 +99,7 @@ helm install gatekeeper chart/
 | externaldataProviderResponseCacheTTL | string | `"3m"` |  |
 | enableK8sNativeValidation | bool | `true` |  |
 | image.repository | string | `"registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper"` |  |
-| image.release | string | `"v3.17.1"` |  |
+| image.release | string | `"v3.18.1"` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.pullSecrets[0].name | string | `"private-registry"` |  |
 | image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
@@ -227,7 +227,7 @@ helm install gatekeeper chart/
 | controllerManager.podSecurityContext.supplementalGroups[0] | int | `999` |  |
 | controllerManager.extraRules | list | `[]` |  |
 | controllerManager.networkPolicy.enabled | bool | `false` |  |
-| controllerManager.networkPolicy.ingress | object | `{}` |  |
+| controllerManager.networkPolicy.ingress | list | `[]` |  |
 | audit.serviceAccount.name | string | `"gatekeeper-admin"` |  |
 | audit.enablePubsub | bool | `false` |  |
 | audit.hostNetwork | bool | `false` |  |

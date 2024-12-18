@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [3.18.1-bb.0] 2024-12-17
+
+### Changed
+
+- Synced upstream chart changes to address missing labels
+- Updated registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper v3.17.1 -> 3.18.1
+- Updated gluon from 0.5.4 to 0.5.12
+
 ## [3.17.1-bb.2] 2024-10-21
 
 ### Changed
