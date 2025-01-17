@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [3.18.2-bb.0] 2025-01-13
+
+### Changed
+
+- Updated ironbank/opensource/openpolicyagent/gatekeeper v3.18.1 -> 3.18.2
+- Updated registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper v3.18.1 -> 3.18.2
+- updated registry1.dso.mil/ironbank/opensource/kubernetes/kubectl from v1.29.8 -> v1.29.12
+
 ## [3.18.1-bb.0] 2024-12-17
 
 ### Changed
