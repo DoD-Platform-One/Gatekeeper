@@ -4,6 +4,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [3.18.2-bb.2] 2025-03-07
+
+### Changed
+
+- migrate renovate config
+
 ## [3.18.2-bb.1] 2025-02-21
 
 ### Changed
