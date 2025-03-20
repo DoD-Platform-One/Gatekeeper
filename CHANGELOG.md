@@ -4,6 +4,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [3.18.2-bb.4] 2025-03-20
+
+### Changed
+
+- updating chart/README.md
+
 ## [3.18.2-bb.3] 2025-03-20
 
 ### Changed
