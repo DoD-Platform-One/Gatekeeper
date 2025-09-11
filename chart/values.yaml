@@ -21,7 +21,9 @@ validatingWebhookObjectSelector: {}
 validatingWebhookMatchConditions: []
 validatingWebhookCheckIgnoreFailurePolicy: Fail
 validatingWebhookCustomRules: {}
+validatingWebhookSubResources: ['pods/ephemeralcontainers', 'pods/exec', 'pods/log', 'pods/eviction', 'pods/portforward', 'pods/proxy', 'pods/attach', 'pods/binding', 'pods/resize', 'deployments/scale', 'replicasets/scale', 'statefulsets/scale', 'replicationcontrollers/scale', 'services/proxy', 'nodes/proxy', 'services/status']
 validatingWebhookURL: null
+validatingWebhookScope: '*'
 enableDeleteOperations: false
 enableConnectOperations: false
 enableExternalData: true
@@ -37,7 +39,9 @@ mutatingWebhookObjectSelector: {}
 mutatingWebhookMatchConditions: []
 mutatingWebhookTimeoutSeconds: 1
 mutatingWebhookCustomRules: {}
+mutatingWebhookSubResources: ['pods/ephemeralcontainers', 'pods/exec', 'pods/log', 'pods/eviction', 'pods/portforward', 'pods/proxy', 'pods/attach', 'pods/binding', 'deployments/scale', 'replicasets/scale', 'statefulsets/scale', 'replicationcontrollers/scale', 'services/proxy', 'nodes/proxy', 'services/status']
 mutatingWebhookURL: null
+mutatingWebhookScope: '*'
 mutationAnnotations: false
 auditChunkSize: 500
 logLevel: INFO
@@ -52,17 +56,17 @@ externaldataProviderResponseCacheTTL: 3m
 enableK8sNativeValidation: true
 image:
   repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
-  release: v3.19.1
+  release: v3.20.0
   pullPolicy: IfNotPresent
   pullSecrets:
     - name: private-registry
   crdRepository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-  crdRelease: v1.32.4
+  crdRelease: v1.32.8
 preInstall:
   crdRepository:
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.32.4
+      tag: v1.32.8
   securityContext:
     allowPrivilegeEscalation: false
     capabilities:
@@ -80,7 +84,7 @@ postUpgrade:
     enabled: false
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.32.4
+      tag: v1.32.8
       pullPolicy: IfNotPresent
       pullSecrets: []
     extraNamespaces: []
@@ -109,7 +113,7 @@ postInstall:
     extraRules: []
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.32.4
+      tag: v1.32.8
       pullPolicy: IfNotPresent
       pullSecrets: []
     extraNamespaces: []
@@ -148,7 +152,7 @@ preUninstall:
     enabled: false
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.32.4
+      tag: v1.32.8
       pullPolicy: IfNotPresent
       pullSecrets: []
     priorityClassName: ""
@@ -234,7 +238,36 @@ controllerManager:
       # - from:
       #   - ipBlock:
       #       cidr: 0.0.0.0/0
+  disableWebhookOperation: false
+  disableGenerateOperation: true
+exportBackend: ""
 audit:
+  exportConnection:
+    path: /tmp/violations/topics
+    maxAuditResults: 3
+  exportVolumeMount:
+    path: /tmp/violations
+  exportVolume:
+    name: tmp-violations
+    emptyDir: {}
+  exportSidecar:
+    name: reader
+    image: ghcr.io/open-policy-agent/fake-reader:latest
+    imagePullPolicy: Always
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsGroup: 999
+      runAsNonRoot: true
+      runAsUser: 1000
+      seccompProfile:
+        type: RuntimeDefault
+    volumeMounts:
+    - mountPath: /tmp/violations
+      name: tmp-violations
   serviceAccount:
     name: gatekeeper-admin
   enablePubsub: false
@@ -273,6 +306,9 @@ audit:
       - 999
   writeToRAMDisk: false
   extraRules: []
+  disableGenerateOperation: false
+  disableAuditOperation: false
+  disableStatusOperation: false
 crds:
   affinity: {}
   tolerations: []
