@@ -1,0 +1,15 @@
+{{- if .Values.bbtests.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "{{ .Chart.Name }}-test-config"
+  annotations:
+    "helm.sh/hook": test-success
+    "helm.sh/hook-weight": "-5"
+    sidecar.istio.io/inject: "false"
+  labels:
+    helm-test: enabled
+  namespace: '{{ .Release.Namespace }}'
+data:
+  {{ (.Files.Glob "tests/manifests/*").AsConfig | nindent 2 }}
+{{- end }}
