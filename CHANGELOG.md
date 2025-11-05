@@ -4,11 +4,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [3.20.1-bb.0] (2025-11-03)
+
+### Changed
+
+- gluon 0.9.0 -> 0.9.6
+- registry1.dso.mil/ironbank/opensource/kubernetes/kubectl  v1.32.8 -> v1.33
+- registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper v3.20.0 -> v3.20.1
+
 ## [3.20.0-bb.0] (2025-08-26)
 
 ### Changed
 
-- gluon 0.5.19 -> 0.7.0
+- gluon 0.5.19 -> 0.9.0
 - registry1.dso.mil/ironbank/opensource/kubernetes/kubectl v1.32.4 -> v1.32.8
 - registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper v3.19.1 -> v3.20.0
 
