@@ -1,7 +1,7 @@
 <!-- Warning: Do not manually edit this file. See notes on gluon + helm-docs at the end of this file for more information. -->
 # gatekeeper
 
-![Version: 3.20.1-bb.1](https://img.shields.io/badge/Version-3.20.1--bb.1-informational?style=flat-square) ![AppVersion: v3.20.1](https://img.shields.io/badge/AppVersion-v3.20.1-informational?style=flat-square) ![Maintenance Track: bb_integrated](https://img.shields.io/badge/Maintenance_Track-bb_integrated-green?style=flat-square)
+![Version: 3.21.0-beta.0-bb.0](https://img.shields.io/badge/Version-3.21.0--beta.0--bb.0-informational?style=flat-square) ![AppVersion: v3.21.0-beta.0](https://img.shields.io/badge/AppVersion-v3.21.0--beta.0-informational?style=flat-square) ![Maintenance Track: bb_integrated](https://img.shields.io/badge/Maintenance_Track-bb_integrated-green?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -595,7 +595,6 @@ helm install gatekeeper chart/
 | monitoring.enabled | bool | `false` |  |
 | networkPolicies.enabled | bool | `false` |  |
 | networkPolicies.controlPlaneCidr | string | `"0.0.0.0/0"` |  |
-| networkPolicies.vpcCidr | string | `"0.0.0.0/0"` |  |
 | networkPolicies.additionalPolicies | list | `[]` |  |
 | bbtests.enabled | bool | `true` |  |
 | bbtests.scripts.image | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.33"` |  |

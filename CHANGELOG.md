@@ -4,11 +4,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
-## [3.20.1-bb.1] (2025-11-13)
+## [3.21.0-beta.0-bb.0] (2025-11-06)
 
 ### Changed
 
-- Update the egress api network policy to add `vpcCidr`
+- Moved to passthrough pattern
 
 ## [3.20.1-bb.0] (2025-11-03)
 
