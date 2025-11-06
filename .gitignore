@@ -1,0 +1,53 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (vendor/ is kept in this project)
+# vendor/
+
+# Go workspace file
+go.work
+
+# Helm chart dependencies
+**/charts/*.tgz
+**/charts/*.prov
+
+# Helm release information
+*.tgz
+*.prov
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
