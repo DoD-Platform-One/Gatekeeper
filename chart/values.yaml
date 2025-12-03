@@ -778,6 +778,15 @@ cleanupCRDs:
     supplementalGroups:
       - 999
 
+# Image settings used by Big Bang helper hooks (e.g., crd-cleanup).
+image:
+  repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
+  pullPolicy: IfNotPresent
+  pullSecrets:
+    - name: private-registry
+  crdRepository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
+  crdRelease: v1.33
+
 monitoring:
   enabled: false
 networkPolicies:
