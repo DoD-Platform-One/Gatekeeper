@@ -21,7 +21,7 @@ annotations:
   bigbang.dev/maintenanceTrack: bb_integrated
   bigbang.dev/applicationVersions: |
     - Gatekeeper: v3.21.0-beta.0
-  # kubectl and base images below are conditionally used 
+  # kubectl and base images below are conditionally used
   # dependent on your configuration of bbtests, postInstall, probeWebhook, preUninstall values
   helm.sh/images: |
     - name: gatekeeper

@@ -56,3 +56,13 @@ kubectl get all -n gatekeeper-system
 ```
 kubectl get events -n gatekeeper-system
 ```
+
+## Helm unit tests
+
+Chart assertions live under `chart/unittests/`. After installing the [helm-unittest plugin](https://github.com/helm-unittest/helm-unittest) (`helm plugin install https://github.com/helm-unittest/helm-unittest`), run the suite from the chart directory:
+
+```
+cd chart && helm unittest . -f "unittests/**/*_test.yaml"
+```
+
+Run these tests locally before opening an MR so we continuously verify Big Bang’s wrapper behavior against the upstream dependency.
