@@ -54,9 +54,12 @@ auditEventsInvolvedNamespace: false
 resourceQuota: true
 externaldataProviderResponseCacheTTL: 3m
 enableK8sNativeValidation: true
+commonAnnotations: {}
+extraVolumeMounts: []
+extraVolumes: []
 image:
   repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
-  release: v3.20.1
+  release: v3.21.0
   pullPolicy: IfNotPresent
   pullSecrets:
     - name: private-registry
@@ -66,7 +69,7 @@ preInstall:
   crdRepository:
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.33
+      tag: v1.34.2
   securityContext:
     allowPrivilegeEscalation: false
     capabilities:
@@ -84,7 +87,7 @@ postUpgrade:
     enabled: false
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.33
+      tag: v1.34.2
       pullPolicy: IfNotPresent
       pullSecrets: []
     extraNamespaces: []
@@ -113,7 +116,7 @@ postInstall:
     extraRules: []
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.33
+      tag: v1.34.2
       pullPolicy: IfNotPresent
       pullSecrets: []
     extraNamespaces: []
@@ -152,7 +155,7 @@ preUninstall:
     enabled: false
     image:
       repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-      tag: v1.33
+      tag: v1.34.2
       pullPolicy: IfNotPresent
       pullSecrets: []
     priorityClassName: ""
@@ -179,6 +182,7 @@ enableRuntimeDefaultSeccompProfile: true
 controllerManager:
   serviceAccount:
     name: gatekeeper-admin
+    automountServiceAccountToken: true
   containerName: manager
   exemptNamespaces: []
   exemptNamespacePrefixes: []
@@ -270,7 +274,7 @@ audit:
       name: tmp-violations
   serviceAccount:
     name: gatekeeper-admin
-  enablePubsub: false
+    automountServiceAccountToken: true
   containerName: manager
   hostNetwork: false
   dnsPolicy: ClusterFirst
@@ -328,8 +332,6 @@ pdb:
     minAvailable: 1
 service: {}
 disabledBuiltins: ["{http.send}"]
-psp:
-  enabled: false
 upgradeCRDs:
   serviceAccount:
     create: true

@@ -26,7 +26,7 @@ spec:
       imagePullSecrets:
       {{- .Values.preUninstall.deleteWebhookConfigurations.image.pullSecrets | toYaml | nindent 12 }}
       {{- end }}
-      serviceAccount: gatekeeper-delete-webhook-configs
+      serviceAccount: {{ .Values.preUninstall.deleteWebhookConfigurations.serviceAccount.name }}
       {{/* start BB addition 
       This is set to true because this pre-delete job relies on info queried from the K8s API
       Namely, it needs to delete "webhook" resources
@@ -65,10 +65,11 @@ spec:
         {{- toYaml .tolerations | nindent 8 }}
       {{- end }}
 ---
+{{- if .Values.preUninstall.deleteWebhookConfigurations.serviceAccount.create }}
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: gatekeeper-delete-webhook-configs
+  name: {{ .Values.preUninstall.deleteWebhookConfigurations.serviceAccount.name }}
   namespace: {{ .Release.Namespace | quote }}
   labels:
     {{- include "gatekeeper.commonLabels" . | nindent 4 }}
@@ -84,6 +85,7 @@ In this case, this behavior -is- overriden at the Pod spec-level due to app requ
 */}}
 automountServiceAccountToken: false
 {{/* end BB addition */}}
+{{- end }}
 ---
 {{- if .Values.rbac.create }}
 apiVersion: rbac.authorization.k8s.io/v1
@@ -143,7 +145,7 @@ roleRef:
   name: gatekeeper-delete-webhook-configs
 subjects:
   - kind: ServiceAccount
-    name: gatekeeper-delete-webhook-configs
+    name: {{ .Values.preUninstall.deleteWebhookConfigurations.name }}
     namespace: {{ .Release.Namespace | quote }}
 {{- end }}
 {{- end }}
