@@ -843,7 +843,7 @@ bbtests:
 ## BB specific changes to enable our versions
 serviceAccount:
   gatekeeperAdmin:
-    create: true
+    create: false
 
 postInstall:
   labelNamespace:
