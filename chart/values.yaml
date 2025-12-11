@@ -60,7 +60,7 @@ upstream:
   enableK8sNativeValidation: true
   image:
     repository: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper
-    release: v3.20.1
+    release: v3.21.0
     pullPolicy: IfNotPresent
     pullSecrets:
       - name: private-registry
