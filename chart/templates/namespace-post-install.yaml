@@ -1,5 +1,4 @@
 {{- if .Values.postInstall.labelNamespace.enabled }}
----
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -31,9 +30,9 @@ spec:
       {{- end }}
       {{- if .Values.postInstall.labelNamespace.image.pullSecrets }}
       imagePullSecrets:
-        {{- .Values.postInstall.labelNamespace.image.pullSecrets | toYaml | nindent 12 }}
+      {{- .Values.postInstall.labelNamespace.image.pullSecrets | toYaml | nindent 12 }}
       {{- end }}
-      serviceAccount: gatekeeper-update-namespace-label
+      serviceAccount: {{ .Values.postInstall.labelNamespace.serviceAccount.name }}
       {{/* start BB addition 
       This is set to true because this post-install job relies on info queried from the K8s API
       Namely, it needs to get/update/patch "namespace" resources
@@ -42,9 +41,9 @@ spec:
       {{/* end BB addition */}}
       {{- if .Values.postInstall.probeWebhook.enabled }}
       volumes:
-        {{- include "gatekeeper.postInstallWebhookProbeVolume" . | nindent 8 }}
+      {{- include "gatekeeper.postInstallWebhookProbeVolume" . | nindent 8 }}
       initContainers:
-        {{- include "gatekeeper.postInstallWebhookProbeContainer" . | nindent 8 }}
+      {{- include "gatekeeper.postInstallWebhookProbeContainer" . | nindent 8 }}
       {{- end }}
       containers:
         - name: kubectl-label
@@ -96,7 +95,6 @@ spec:
       tolerations:
         {{- toYaml .tolerations | nindent 8 }}
       {{- end }}
-{{- end }}
 ---
 {{- if .Values.postInstall.labelNamespace.serviceAccount.create }}
 apiVersion: v1
@@ -147,9 +145,9 @@ rules:
       {{- range .Values.postInstall.labelNamespace.extraNamespaces }}
       - {{ . }}
       {{- end }}
-  {{- with .Values.postInstall.labelNamespace.extraRules }}
+{{- with .Values.postInstall.labelNamespace.extraRules }}
   {{- toYaml . | nindent 2 }}
-  {{- end }}
+{{- end }}
 {{- end }}
 ---
 {{- if .Values.rbac.create }}
@@ -173,4 +171,5 @@ subjects:
   - kind: ServiceAccount
     name: {{ .Values.postInstall.labelNamespace.serviceAccount.name }}
     namespace: {{ .Release.Namespace | quote }}
+{{- end }}
 {{- end }}

@@ -5,7 +5,7 @@ metadata:
 upstream:
   type: git
   git:
-    commit: c51b78eab16e0006b0ae3cf3f995de2a3a69a54a
+    commit: a50c1a23a392d3e976e2e849ae0965309d4b711e
     repo: https://github.com/open-policy-agent/gatekeeper
     directory: /charts/gatekeeper
-    ref: v3.20.1
+    ref: v3.21.0

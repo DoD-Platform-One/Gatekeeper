@@ -1,5 +1,4 @@
 {{- if .Values.postUpgrade.labelNamespace.enabled }}
----
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -26,9 +25,9 @@ spec:
       restartPolicy: OnFailure
       {{- if .Values.postUpgrade.labelNamespace.image.pullSecrets }}
       imagePullSecrets:
-        {{- .Values.postUpgrade.labelNamespace.image.pullSecrets | toYaml | nindent 12 }}
+      {{- .Values.postUpgrade.labelNamespace.image.pullSecrets | toYaml | nindent 12 }}
       {{- end }}
-      serviceAccount: gatekeeper-update-namespace-label-post-upgrade
+      serviceAccount: {{ .Values.postUpgrade.labelNamespace.serviceAccount.name }}
       {{/* start BB addition 
       This is set to true because this post-upgrade job relies on info queried from the K8s API
       Namely, it needs to get/update/patch "namespace" resources
@@ -88,7 +87,6 @@ spec:
       nodeSelector:
         {{- toYaml .nodeSelector | nindent 8 }}
       {{- end }}
-{{- end }}
 ---
 {{- if .Values.postUpgrade.labelNamespace.serviceAccount.create }}
 apiVersion: v1
@@ -162,4 +160,4 @@ subjects:
     name: {{ .Values.postUpgrade.labelNamespace.serviceAccount.name }}
     namespace: {{ .Release.Namespace | quote }}
 {{- end }}
-
+{{- end }}
