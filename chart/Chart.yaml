@@ -11,7 +11,7 @@ sources:
 appVersion: v3.21.0
 dependencies:
   - name: gluon
-    version: 0.9.6
+    version: 0.9.7
     repository: oci://registry1.dso.mil/bigbang
   - name: gatekeeper
     version: 3.21.0
@@ -27,6 +27,6 @@ annotations:
     - name: gatekeeper
       image: registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper:v3.21.0
     - name: kubectl
-      image: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.33
+      image: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.34.2
     - name: base
       image: registry1.dso.mil/ironbank/big-bang/base:2.1.0

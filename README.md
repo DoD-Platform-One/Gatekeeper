@@ -1,651 +1,176 @@
-<!-- Warning: Do not manually edit this file. See notes on gluon + helm-docs at the end of this file for more information. -->
-# gatekeeper
+<!DOCTYPE html>
+<html class="gl-system" lang="en">
+<head>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Not Found</title>
+<script>
+//<![CDATA[
+const root = document.documentElement;
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  root.classList.add('gl-dark');
+}
 
-![Version: 3.21.0-bb.1](https://img.shields.io/badge/Version-3.21.0--bb.1-informational?style=flat-square) ![AppVersion: v3.21.0](https://img.shields.io/badge/AppVersion-v3.21.0-informational?style=flat-square) ![Maintenance Track: bb_integrated](https://img.shields.io/badge/Maintenance_Track-bb_integrated-green?style=flat-square)
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+  if (e.matches) {
+    root.classList.add('gl-dark');
+  } else {
+    root.classList.remove('gl-dark');
+  }
+});
 
-A Helm chart for Gatekeeper
+//]]>
+</script>
+<link rel="stylesheet" href="/assets/errors-da6ddabaeb13fcb2888a809070c09224870006ad468df6625e84a7e6ebfb262d.css" />
+<link rel="stylesheet" href="/assets/application-28b2d5543e88f1014ab7196ad14dc0875032f7da8748709487e3b27453307101.css" />
+<link rel="stylesheet" href="/assets/fonts-deb7ad1d55ca77c0172d8538d53442af63604ff490c74acc2859db295c125bdb.css" />
+<link rel="stylesheet" href="/assets/tailwind-d9903dd17fc673b7790a9a7cd84da90157c94b5bc00c137ddf1273b63114f00b.css" />
+</head>
+<body>
+<div class="page-container">
+<div class="error-container">
+<img alt="404" src="/assets/illustrations/error/error-404-lg-9dfb20cc79e1fe8104e0adb122a710283a187b075b15187e2f184d936a16349c.svg" />
+<h1>
+404: Page not found
+</h1>
+<p>
+Make sure the address is correct and the page has not moved.
+Please contact your GitLab administrator if you think this is a mistake.
+</p>
+<div class="action-container">
+<form class="form-inline-flex" action="/search" accept-charset="UTF-8" method="get"><div class="field">
+<input type="search" name="search" id="search" value="" placeholder="Search for projects, issues, etc." class="form-control" />
+</div>
+<button type="submit" class="gl-button btn btn-md btn-confirm "><span class="gl-button-text">
+Search
 
-## Upstream References
+</span>
 
-- <https://github.com/open-policy-agent/gatekeeper>
-- <https://github.com/open-policy-agent/gatekeeper.git>
+</button></form></div>
+<nav>
+<ul class="error-nav">
+<li>
+<a href="/">Home</a>
+</li>
+<li>
+<a href="/users/sign_in?redirect_to_referer=yes">Sign In / Register</a>
+</li>
+<li>
+<a href="/help">Help</a>
+</li>
+</ul>
+</nav>
 
-## Upstream Release Notes
+</div>
 
-This package has no upstream release note links on file. Please add some to [chart/Chart.yaml](chart/Chart.yaml) under `annotations.bigbang.dev/upstreamReleaseNotesMarkdown`.
-Example:
-```yaml
-annotations:
-  bigbang.dev/upstreamReleaseNotesMarkdown: |
-    - [Find our upstream chart's CHANGELOG here](https://link-goes-here/CHANGELOG.md)
-    - [and our upstream application release notes here](https://another-link-here/RELEASE_NOTES.md)
-```
+</div>
+<script>
+//<![CDATA[
+(function(){
+  var goBackElement = document.querySelector('.js-go-back');
 
-## Learn More
+  if (goBackElement && history.length > 1) {
+    goBackElement.removeAttribute('hidden');
 
-- [Application Overview](docs/overview.md)
-- [Other Documentation](docs/)
+    goBackElement.querySelector('button').addEventListener('click', function() {
+      history.back();
+    });
+  }
 
-## Pre-Requisites
+  // We do not have rails_ujs here, so we're manually making a link trigger a form submit.
+  document.querySelector('.js-sign-out-link')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('.js-sign-out-form')?.submit();
+  });
+}());
 
-- Kubernetes Cluster deployed
-- Kubernetes config installed in `~/.kube/config`
-- Helm installed
+//]]>
+</script></body>
+</html>
+<!DOCTYPE html>
+<html class="gl-system" lang="en">
+<head>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Not Found</title>
+<script>
+//<![CDATA[
+const root = document.documentElement;
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  root.classList.add('gl-dark');
+}
 
-Install Helm
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+  if (e.matches) {
+    root.classList.add('gl-dark');
+  } else {
+    root.classList.remove('gl-dark');
+  }
+});
 
-https://helm.sh/docs/intro/install/
+//]]>
+</script>
+<link rel="stylesheet" href="/assets/errors-da6ddabaeb13fcb2888a809070c09224870006ad468df6625e84a7e6ebfb262d.css" />
+<link rel="stylesheet" href="/assets/application-28b2d5543e88f1014ab7196ad14dc0875032f7da8748709487e3b27453307101.css" />
+<link rel="stylesheet" href="/assets/fonts-deb7ad1d55ca77c0172d8538d53442af63604ff490c74acc2859db295c125bdb.css" />
+<link rel="stylesheet" href="/assets/tailwind-d9903dd17fc673b7790a9a7cd84da90157c94b5bc00c137ddf1273b63114f00b.css" />
+</head>
+<body>
+<div class="page-container">
+<div class="error-container">
+<img alt="404" src="/assets/illustrations/error/error-404-lg-9dfb20cc79e1fe8104e0adb122a710283a187b075b15187e2f184d936a16349c.svg" />
+<h1>
+404: Page not found
+</h1>
+<p>
+Make sure the address is correct and the page has not moved.
+Please contact your GitLab administrator if you think this is a mistake.
+</p>
+<div class="action-container">
+<form class="form-inline-flex" action="/search" accept-charset="UTF-8" method="get"><div class="field">
+<input type="search" name="search" id="search" value="" placeholder="Search for projects, issues, etc." class="form-control" />
+</div>
+<button type="submit" class="gl-button btn btn-md btn-confirm "><span class="gl-button-text">
+Search
 
-## Deployment
+</span>
 
-- Clone down the repository
-- cd into directory
+</button></form></div>
+<nav>
+<ul class="error-nav">
+<li>
+<a href="/">Home</a>
+</li>
+<li>
+<a href="/users/sign_in?redirect_to_referer=yes">Sign In / Register</a>
+</li>
+<li>
+<a href="/help">Help</a>
+</li>
+</ul>
+</nav>
 
-```bash
-helm install gatekeeper chart/
-```
+</div>
 
-## Values
+</div>
+<script>
+//<![CDATA[
+(function(){
+  var goBackElement = document.querySelector('.js-go-back');
 
-| Key | Type | Default | Description |
-|-----|------|---------|-------------|
-| upstream.replicas | int | `3` |  |
-| upstream.revisionHistoryLimit | int | `10` |  |
-| upstream.auditInterval | int | `60` |  |
-| upstream.metricsBackends[0] | string | `"prometheus"` |  |
-| upstream.auditMatchKindOnly | bool | `true` |  |
-| upstream.constraintViolationsLimit | int | `1000` |  |
-| upstream.auditFromCache | bool | `false` |  |
-| upstream.disableMutation | bool | `true` |  |
-| upstream.disableAudit | bool | `false` |  |
-| upstream.disableValidatingWebhook | bool | `false` |  |
-| upstream.validatingWebhookName | string | `"gatekeeper-validating-webhook-configuration"` |  |
-| upstream.validatingWebhookTimeoutSeconds | int | `15` |  |
-| upstream.validatingWebhookFailurePolicy | string | `"Ignore"` |  |
-| upstream.validatingWebhookAnnotations | object | `{}` |  |
-| upstream.validatingWebhookExemptNamespacesLabels | object | `{}` |  |
-| upstream.validatingWebhookObjectSelector | object | `{}` |  |
-| upstream.validatingWebhookMatchConditions | list | `[]` |  |
-| upstream.validatingWebhookCheckIgnoreFailurePolicy | string | `"Fail"` |  |
-| upstream.validatingWebhookCustomRules | object | `{}` |  |
-| upstream.validatingWebhookSubResources[0] | string | `"pods/ephemeralcontainers"` |  |
-| upstream.validatingWebhookSubResources[1] | string | `"pods/exec"` |  |
-| upstream.validatingWebhookSubResources[2] | string | `"pods/log"` |  |
-| upstream.validatingWebhookSubResources[3] | string | `"pods/eviction"` |  |
-| upstream.validatingWebhookSubResources[4] | string | `"pods/portforward"` |  |
-| upstream.validatingWebhookSubResources[5] | string | `"pods/proxy"` |  |
-| upstream.validatingWebhookSubResources[6] | string | `"pods/attach"` |  |
-| upstream.validatingWebhookSubResources[7] | string | `"pods/binding"` |  |
-| upstream.validatingWebhookSubResources[8] | string | `"pods/resize"` |  |
-| upstream.validatingWebhookSubResources[9] | string | `"deployments/scale"` |  |
-| upstream.validatingWebhookSubResources[10] | string | `"replicasets/scale"` |  |
-| upstream.validatingWebhookSubResources[11] | string | `"statefulsets/scale"` |  |
-| upstream.validatingWebhookSubResources[12] | string | `"replicationcontrollers/scale"` |  |
-| upstream.validatingWebhookSubResources[13] | string | `"services/proxy"` |  |
-| upstream.validatingWebhookSubResources[14] | string | `"nodes/proxy"` |  |
-| upstream.validatingWebhookSubResources[15] | string | `"services/status"` |  |
-| upstream.validatingWebhookURL | string | `nil` |  |
-| upstream.validatingWebhookScope | string | `"*"` |  |
-| upstream.enableDeleteOperations | bool | `false` |  |
-| upstream.enableConnectOperations | bool | `false` |  |
-| upstream.enableExternalData | bool | `true` |  |
-| upstream.enableGeneratorResourceExpansion | bool | `true` |  |
-| upstream.enableTLSHealthcheck | bool | `false` |  |
-| upstream.maxServingThreads | int | `-1` |  |
-| upstream.mutatingWebhookName | string | `"gatekeeper-mutating-webhook-configuration"` |  |
-| upstream.mutatingWebhookFailurePolicy | string | `"Ignore"` |  |
-| upstream.mutatingWebhookReinvocationPolicy | string | `"Never"` |  |
-| upstream.mutatingWebhookAnnotations | object | `{}` |  |
-| upstream.mutatingWebhookExemptNamespacesLabels | object | `{}` |  |
-| upstream.mutatingWebhookObjectSelector | object | `{}` |  |
-| upstream.mutatingWebhookMatchConditions | list | `[]` |  |
-| upstream.mutatingWebhookTimeoutSeconds | int | `1` |  |
-| upstream.mutatingWebhookCustomRules | object | `{}` |  |
-| upstream.mutatingWebhookSubResources[0] | string | `"pods/ephemeralcontainers"` |  |
-| upstream.mutatingWebhookSubResources[1] | string | `"pods/exec"` |  |
-| upstream.mutatingWebhookSubResources[2] | string | `"pods/log"` |  |
-| upstream.mutatingWebhookSubResources[3] | string | `"pods/eviction"` |  |
-| upstream.mutatingWebhookSubResources[4] | string | `"pods/portforward"` |  |
-| upstream.mutatingWebhookSubResources[5] | string | `"pods/proxy"` |  |
-| upstream.mutatingWebhookSubResources[6] | string | `"pods/attach"` |  |
-| upstream.mutatingWebhookSubResources[7] | string | `"pods/binding"` |  |
-| upstream.mutatingWebhookSubResources[8] | string | `"deployments/scale"` |  |
-| upstream.mutatingWebhookSubResources[9] | string | `"replicasets/scale"` |  |
-| upstream.mutatingWebhookSubResources[10] | string | `"statefulsets/scale"` |  |
-| upstream.mutatingWebhookSubResources[11] | string | `"replicationcontrollers/scale"` |  |
-| upstream.mutatingWebhookSubResources[12] | string | `"services/proxy"` |  |
-| upstream.mutatingWebhookSubResources[13] | string | `"nodes/proxy"` |  |
-| upstream.mutatingWebhookSubResources[14] | string | `"services/status"` |  |
-| upstream.mutatingWebhookURL | string | `nil` |  |
-| upstream.mutatingWebhookScope | string | `"*"` |  |
-| upstream.mutationAnnotations | bool | `false` |  |
-| upstream.auditChunkSize | int | `500` |  |
-| upstream.logLevel | string | `"INFO"` |  |
-| upstream.logDenies | bool | `true` |  |
-| upstream.logMutations | bool | `true` |  |
-| upstream.emitAdmissionEvents | bool | `false` |  |
-| upstream.emitAuditEvents | bool | `false` |  |
-| upstream.admissionEventsInvolvedNamespace | bool | `false` |  |
-| upstream.auditEventsInvolvedNamespace | bool | `false` |  |
-| upstream.resourceQuota | bool | `true` |  |
-| upstream.externaldataProviderResponseCacheTTL | string | `"3m"` |  |
-| upstream.enableK8sNativeValidation | bool | `true` |  |
-| upstream.image.repository | string | `"registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper"` |  |
-| upstream.image.release | string | `"v3.21.0"` |  |
-| upstream.image.pullPolicy | string | `"IfNotPresent"` |  |
-| upstream.image.pullSecrets[0].name | string | `"private-registry"` |  |
-| upstream.image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| upstream.image.crdRelease | string | `"v1.33"` |  |
-| upstream.preInstall.crdRepository.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| upstream.preInstall.crdRepository.image.tag | string | `"v1.33"` |  |
-| upstream.preInstall.securityContext.allowPrivilegeEscalation | bool | `false` |  |
-| upstream.preInstall.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
-| upstream.preInstall.securityContext.readOnlyRootFilesystem | bool | `true` |  |
-| upstream.preInstall.securityContext.runAsGroup | int | `999` |  |
-| upstream.preInstall.securityContext.runAsNonRoot | bool | `true` |  |
-| upstream.preInstall.securityContext.runAsUser | int | `1000` |  |
-| upstream.postUpgrade.labelNamespace.serviceAccount.name | string | `"gatekeeper-update-namespace-label-post-upgrade"` |  |
-| upstream.postUpgrade.labelNamespace.serviceAccount.create | bool | `false` |  |
-| upstream.postUpgrade.labelNamespace.enabled | bool | `false` |  |
-| upstream.postUpgrade.labelNamespace.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| upstream.postUpgrade.labelNamespace.image.tag | string | `"v1.33"` |  |
-| upstream.postUpgrade.labelNamespace.image.pullPolicy | string | `"IfNotPresent"` |  |
-| upstream.postUpgrade.labelNamespace.image.pullSecrets | list | `[]` |  |
-| upstream.postUpgrade.labelNamespace.extraNamespaces | list | `[]` |  |
-| upstream.postUpgrade.labelNamespace.podSecurity | list | `[]` |  |
-| upstream.postUpgrade.labelNamespace.extraAnnotations | object | `{}` |  |
-| upstream.postUpgrade.labelNamespace.priorityClassName | string | `""` |  |
-| upstream.postUpgrade.affinity | object | `{}` |  |
-| upstream.postUpgrade.tolerations | list | `[]` |  |
-| upstream.postUpgrade.nodeSelector."kubernetes.io/os" | string | `"linux"` |  |
-| upstream.postUpgrade.resources | object | `{}` |  |
-| upstream.postUpgrade.securityContext.allowPrivilegeEscalation | bool | `false` |  |
-| upstream.postUpgrade.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
-| upstream.postUpgrade.securityContext.readOnlyRootFilesystem | bool | `true` |  |
-| upstream.postUpgrade.securityContext.runAsGroup | int | `999` |  |
-| upstream.postUpgrade.securityContext.runAsNonRoot | bool | `true` |  |
-| upstream.postUpgrade.securityContext.runAsUser | int | `1000` |  |
-| upstream.postInstall.labelNamespace.serviceAccount.name | string | `"gatekeeper-update-namespace-label"` |  |
-| upstream.postInstall.labelNamespace.serviceAccount.create | bool | `false` |  |
-| upstream.postInstall.labelNamespace.enabled | bool | `false` |  |
-| upstream.postInstall.labelNamespace.extraRules | list | `[]` |  |
-| upstream.postInstall.labelNamespace.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| upstream.postInstall.labelNamespace.image.tag | string | `"v1.33"` |  |
-| upstream.postInstall.labelNamespace.image.pullPolicy | string | `"IfNotPresent"` |  |
-| upstream.postInstall.labelNamespace.image.pullSecrets | list | `[]` |  |
-| upstream.postInstall.labelNamespace.extraNamespaces | list | `[]` |  |
-| upstream.postInstall.labelNamespace.podSecurity | list | `[]` |  |
-| upstream.postInstall.labelNamespace.extraAnnotations | object | `{}` |  |
-| upstream.postInstall.labelNamespace.priorityClassName | string | `""` |  |
-| upstream.postInstall.probeWebhook.enabled | bool | `true` |  |
-| upstream.postInstall.probeWebhook.image.repository | string | `"registry1.dso.mil/ironbank/big-bang/base"` |  |
-| upstream.postInstall.probeWebhook.image.tag | string | `"2.1.0"` |  |
-| upstream.postInstall.probeWebhook.image.pullPolicy | string | `"IfNotPresent"` |  |
-| upstream.postInstall.probeWebhook.image.pullSecrets | list | `[]` |  |
-| upstream.postInstall.probeWebhook.waitTimeout | int | `60` |  |
-| upstream.postInstall.probeWebhook.httpTimeout | int | `2` |  |
-| upstream.postInstall.probeWebhook.insecureHTTPS | bool | `false` |  |
-| upstream.postInstall.probeWebhook.priorityClassName | string | `""` |  |
-| upstream.postInstall.affinity | object | `{}` |  |
-| upstream.postInstall.tolerations | list | `[]` |  |
-| upstream.postInstall.nodeSelector."kubernetes.io/os" | string | `"linux"` |  |
-| upstream.postInstall.securityContext.allowPrivilegeEscalation | bool | `false` |  |
-| upstream.postInstall.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
-| upstream.postInstall.securityContext.readOnlyRootFilesystem | bool | `true` |  |
-| upstream.postInstall.securityContext.runAsGroup | int | `999` |  |
-| upstream.postInstall.securityContext.runAsNonRoot | bool | `true` |  |
-| upstream.postInstall.securityContext.runAsUser | int | `1000` |  |
-| upstream.preUninstall.deleteWebhookConfigurations.serviceAccount.name | string | `"gatekeeper-delete-webhook-configs"` |  |
-| upstream.preUninstall.deleteWebhookConfigurations.serviceAccount.create | bool | `true` |  |
-| upstream.preUninstall.deleteWebhookConfigurations.extraRules | list | `[]` |  |
-| upstream.preUninstall.deleteWebhookConfigurations.enabled | bool | `false` |  |
-| upstream.preUninstall.deleteWebhookConfigurations.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| upstream.preUninstall.deleteWebhookConfigurations.image.tag | string | `"v1.33"` |  |
-| upstream.preUninstall.deleteWebhookConfigurations.image.pullPolicy | string | `"IfNotPresent"` |  |
-| upstream.preUninstall.deleteWebhookConfigurations.image.pullSecrets | list | `[]` |  |
-| upstream.preUninstall.deleteWebhookConfigurations.priorityClassName | string | `""` |  |
-| upstream.preUninstall.affinity | object | `{}` |  |
-| upstream.preUninstall.tolerations | list | `[]` |  |
-| upstream.preUninstall.nodeSelector."kubernetes.io/os" | string | `"linux"` |  |
-| upstream.preUninstall.resources | object | `{}` |  |
-| upstream.preUninstall.securityContext.allowPrivilegeEscalation | bool | `false` |  |
-| upstream.preUninstall.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
-| upstream.preUninstall.securityContext.readOnlyRootFilesystem | bool | `true` |  |
-| upstream.preUninstall.securityContext.runAsGroup | int | `999` |  |
-| upstream.preUninstall.securityContext.runAsNonRoot | bool | `true` |  |
-| upstream.preUninstall.securityContext.runAsUser | int | `1000` |  |
-| upstream.podAnnotations."container.seccomp.security.alpha.kubernetes.io/manager" | string | `"runtime/default"` |  |
-| upstream.auditPodAnnotations | object | `{}` |  |
-| upstream.podLabels | object | `{}` |  |
-| upstream.podCountLimit | string | `"100"` |  |
-| upstream.secretAnnotations | object | `{}` |  |
-| upstream.enableRuntimeDefaultSeccompProfile | bool | `true` |  |
-| upstream.controllerManager.serviceAccount.name | string | `"gatekeeper-admin"` |  |
-| upstream.controllerManager.containerName | string | `"manager"` |  |
-| upstream.controllerManager.exemptNamespaces | list | `[]` |  |
-| upstream.controllerManager.exemptNamespacePrefixes | list | `[]` |  |
-| upstream.controllerManager.hostNetwork | bool | `false` |  |
-| upstream.controllerManager.dnsPolicy | string | `"ClusterFirst"` |  |
-| upstream.controllerManager.port | int | `8443` |  |
-| upstream.controllerManager.metricsPort | int | `8888` |  |
-| upstream.controllerManager.healthPort | int | `9090` |  |
-| upstream.controllerManager.readinessTimeout | int | `1` |  |
-| upstream.controllerManager.livenessTimeout | int | `1` |  |
-| upstream.controllerManager.priorityClassName | string | `"system-cluster-critical"` |  |
-| upstream.controllerManager.disableCertRotation | bool | `false` |  |
-| upstream.controllerManager.tlsMinVersion | float | `1.3` |  |
-| upstream.controllerManager.clientCertName | string | `""` |  |
-| upstream.controllerManager.strategyType | string | `"RollingUpdate"` |  |
-| upstream.controllerManager.strategyRollingUpdate | object | `{}` |  |
-| upstream.controllerManager.podLabels | object | `{}` |  |
-| upstream.controllerManager.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution[0].podAffinityTerm.labelSelector.matchExpressions[0].key | string | `"gatekeeper.sh/operation"` |  |
-| upstream.controllerManager.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution[0].podAffinityTerm.labelSelector.matchExpressions[0].operator | string | `"In"` |  |
-| upstream.controllerManager.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution[0].podAffinityTerm.labelSelector.matchExpressions[0].values[0] | string | `"webhook"` |  |
-| upstream.controllerManager.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution[0].podAffinityTerm.topologyKey | string | `"kubernetes.io/hostname"` |  |
-| upstream.controllerManager.affinity.podAntiAffinity.preferredDuringSchedulingIgnoredDuringExecution[0].weight | int | `100` |  |
-| upstream.controllerManager.topologySpreadConstraints | list | `[]` |  |
-| upstream.controllerManager.tolerations | list | `[]` |  |
-| upstream.controllerManager.nodeSelector."kubernetes.io/os" | string | `"linux"` |  |
-| upstream.controllerManager.resources.limits.cpu | string | `"175m"` |  |
-| upstream.controllerManager.resources.limits.memory | string | `"512Mi"` |  |
-| upstream.controllerManager.resources.requests.cpu | string | `"175m"` |  |
-| upstream.controllerManager.resources.requests.memory | string | `"512Mi"` |  |
-| upstream.controllerManager.securityContext.allowPrivilegeEscalation | bool | `false` |  |
-| upstream.controllerManager.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
-| upstream.controllerManager.securityContext.readOnlyRootFilesystem | bool | `true` |  |
-| upstream.controllerManager.securityContext.runAsGroup | int | `999` |  |
-| upstream.controllerManager.securityContext.runAsNonRoot | bool | `true` |  |
-| upstream.controllerManager.securityContext.runAsUser | int | `1000` |  |
-| upstream.controllerManager.podSecurityContext.fsGroup | int | `999` |  |
-| upstream.controllerManager.podSecurityContext.supplementalGroups[0] | int | `999` |  |
-| upstream.controllerManager.extraRules | list | `[]` |  |
-| upstream.controllerManager.networkPolicy.enabled | bool | `false` |  |
-| upstream.controllerManager.networkPolicy.ingress | list | `[]` |  |
-| upstream.controllerManager.disableWebhookOperation | bool | `false` |  |
-| upstream.controllerManager.disableGenerateOperation | bool | `true` |  |
-| upstream.exportBackend | string | `""` |  |
-| upstream.audit.exportConnection.path | string | `"/tmp/violations/topics"` |  |
-| upstream.audit.exportConnection.maxAuditResults | int | `3` |  |
-| upstream.audit.exportVolumeMount.path | string | `"/tmp/violations"` |  |
-| upstream.audit.exportVolume.name | string | `"tmp-violations"` |  |
-| upstream.audit.exportVolume.emptyDir | object | `{}` |  |
-| upstream.audit.exportSidecar.name | string | `"reader"` |  |
-| upstream.audit.exportSidecar.image | string | `"ghcr.io/open-policy-agent/fake-reader:latest"` |  |
-| upstream.audit.exportSidecar.imagePullPolicy | string | `"Always"` |  |
-| upstream.audit.exportSidecar.securityContext.allowPrivilegeEscalation | bool | `false` |  |
-| upstream.audit.exportSidecar.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
-| upstream.audit.exportSidecar.securityContext.readOnlyRootFilesystem | bool | `true` |  |
-| upstream.audit.exportSidecar.securityContext.runAsGroup | int | `999` |  |
-| upstream.audit.exportSidecar.securityContext.runAsNonRoot | bool | `true` |  |
-| upstream.audit.exportSidecar.securityContext.runAsUser | int | `1000` |  |
-| upstream.audit.exportSidecar.securityContext.seccompProfile.type | string | `"RuntimeDefault"` |  |
-| upstream.audit.exportSidecar.volumeMounts[0].mountPath | string | `"/tmp/violations"` |  |
-| upstream.audit.exportSidecar.volumeMounts[0].name | string | `"tmp-violations"` |  |
-| upstream.audit.serviceAccount.name | string | `"gatekeeper-admin"` |  |
-| upstream.audit.enablePubsub | bool | `false` |  |
-| upstream.audit.containerName | string | `"manager"` |  |
-| upstream.audit.hostNetwork | bool | `false` |  |
-| upstream.audit.dnsPolicy | string | `"ClusterFirst"` |  |
-| upstream.audit.metricsPort | int | `8888` |  |
-| upstream.audit.healthPort | int | `9090` |  |
-| upstream.audit.readinessTimeout | int | `1` |  |
-| upstream.audit.livenessTimeout | int | `1` |  |
-| upstream.audit.priorityClassName | string | `"system-cluster-critical"` |  |
-| upstream.audit.disableCertRotation | bool | `false` |  |
-| upstream.audit.podLabels | object | `{}` |  |
-| upstream.audit.affinity | object | `{}` |  |
-| upstream.audit.tolerations | list | `[]` |  |
-| upstream.audit.nodeSelector."kubernetes.io/os" | string | `"linux"` |  |
-| upstream.audit.resources.limits.cpu | float | `1.2` |  |
-| upstream.audit.resources.limits.memory | string | `"768Mi"` |  |
-| upstream.audit.resources.requests.cpu | float | `1.2` |  |
-| upstream.audit.resources.requests.memory | string | `"768Mi"` |  |
-| upstream.audit.securityContext.allowPrivilegeEscalation | bool | `false` |  |
-| upstream.audit.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
-| upstream.audit.securityContext.readOnlyRootFilesystem | bool | `true` |  |
-| upstream.audit.securityContext.runAsGroup | int | `999` |  |
-| upstream.audit.securityContext.runAsNonRoot | bool | `true` |  |
-| upstream.audit.securityContext.runAsUser | int | `1000` |  |
-| upstream.audit.podSecurityContext.fsGroup | int | `999` |  |
-| upstream.audit.podSecurityContext.supplementalGroups[0] | int | `999` |  |
-| upstream.audit.writeToRAMDisk | bool | `false` |  |
-| upstream.audit.extraRules | list | `[]` |  |
-| upstream.audit.disableGenerateOperation | bool | `false` |  |
-| upstream.audit.disableAuditOperation | bool | `false` |  |
-| upstream.audit.disableStatusOperation | bool | `false` |  |
-| upstream.crds.affinity | object | `{}` |  |
-| upstream.crds.tolerations | list | `[]` |  |
-| upstream.crds.nodeSelector."kubernetes.io/os" | string | `"linux"` |  |
-| upstream.crds.resources | object | `{}` |  |
-| upstream.crds.securityContext.allowPrivilegeEscalation | bool | `false` |  |
-| upstream.crds.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
-| upstream.crds.securityContext.readOnlyRootFilesystem | bool | `true` |  |
-| upstream.crds.securityContext.runAsGroup | int | `65532` |  |
-| upstream.crds.securityContext.runAsNonRoot | bool | `true` |  |
-| upstream.crds.securityContext.runAsUser | int | `65532` |  |
-| upstream.pdb.controllerManager.minAvailable | int | `1` |  |
-| upstream.service | object | `{}` |  |
-| upstream.disabledBuiltins[0] | string | `"{http.send}"` |  |
-| upstream.psp.enabled | bool | `false` |  |
-| upstream.upgradeCRDs.serviceAccount.create | bool | `true` |  |
-| upstream.upgradeCRDs.serviceAccount.name | string | `"gatekeeper-admin-upgrade-crds"` |  |
-| upstream.upgradeCRDs.enabled | bool | `true` |  |
-| upstream.upgradeCRDs.extraRules | list | `[]` |  |
-| upstream.upgradeCRDs.priorityClassName | string | `""` |  |
-| upstream.cleanupCRDs.enabled | bool | `true` |  |
-| upstream.cleanupCRDs.containerSecurityContext.allowPrivilegeEscalation | bool | `false` |  |
-| upstream.cleanupCRDs.containerSecurityContext.capabilities.drop[0] | string | `"ALL"` |  |
-| upstream.cleanupCRDs.containerSecurityContext.readOnlyRootFilesystem | bool | `true` |  |
-| upstream.cleanupCRDs.containerSecurityContext.runAsGroup | int | `999` |  |
-| upstream.cleanupCRDs.containerSecurityContext.runAsNonRoot | bool | `true` |  |
-| upstream.cleanupCRDs.containerSecurityContext.runAsUser | int | `1000` |  |
-| upstream.cleanupCRDs.securityContext.readOnlyRootFilesystem | bool | `true` |  |
-| upstream.cleanupCRDs.securityContext.runAsGroup | int | `999` |  |
-| upstream.cleanupCRDs.securityContext.runAsNonRoot | bool | `true` |  |
-| upstream.cleanupCRDs.securityContext.runAsUser | int | `1000` |  |
-| upstream.cleanupCRDs.securityContext.fsGroup | int | `999` |  |
-| upstream.cleanupCRDs.securityContext.supplementalGroups[0] | int | `999` |  |
-| upstream.rbac.create | bool | `true` |  |
-| upstream.externalCertInjection.enabled | bool | `false` |  |
-| upstream.externalCertInjection.secretName | string | `"gatekeeper-webhook-server-cert"` |  |
-| upstream.serviceAccount.gatekeeperAdmin.create | bool | `false` |  |
-| violations.allowedAppArmorProfiles.enabled | bool | `false` |  |
-| violations.allowedAppArmorProfiles.enforcementAction | string | `"dryrun"` |  |
-| violations.allowedAppArmorProfiles.kind | string | `"K8sPSPAppArmor"` |  |
-| violations.allowedAppArmorProfiles.name | string | `"allowed-app-armor-profiles"` |  |
-| violations.allowedAppArmorProfiles.match | object | `{}` |  |
-| violations.allowedAppArmorProfiles.parameters.allowedProfiles[0] | string | `"runtime/default"` |  |
-| violations.allowedAppArmorProfiles.parameters.excludedResources | list | `[]` |  |
-| violations.allowedCapabilities.enabled | bool | `true` |  |
-| violations.allowedCapabilities.enforcementAction | string | `"dryrun"` |  |
-| violations.allowedCapabilities.kind | string | `"K8sPSPCapabilities"` |  |
-| violations.allowedCapabilities.name | string | `"allowed-capabilities"` |  |
-| violations.allowedCapabilities.match | object | `{}` |  |
-| violations.allowedCapabilities.parameters.allowedCapabilities | list | `[]` |  |
-| violations.allowedCapabilities.parameters.requiredDropCapabilities[0] | string | `"all"` |  |
-| violations.allowedCapabilities.parameters.excludedResources | list | `[]` |  |
-| violations.allowedDockerRegistries.enabled | bool | `true` |  |
-| violations.allowedDockerRegistries.enforcementAction | string | `"deny"` |  |
-| violations.allowedDockerRegistries.kind | string | `"K8sAllowedRepos"` |  |
-| violations.allowedDockerRegistries.name | string | `"allowed-docker-registries"` |  |
-| violations.allowedDockerRegistries.match | object | `{}` |  |
-| violations.allowedDockerRegistries.parameters.repos[0] | string | `"registry1.dso.mil"` |  |
-| violations.allowedDockerRegistries.parameters.excludedResources | list | `[]` |  |
-| violations.allowedFlexVolumes.enabled | bool | `true` |  |
-| violations.allowedFlexVolumes.enforcementAction | string | `"deny"` |  |
-| violations.allowedFlexVolumes.kind | string | `"K8sPSPFlexVolumes"` |  |
-| violations.allowedFlexVolumes.name | string | `"allowed-flex-volumes"` |  |
-| violations.allowedFlexVolumes.match | object | `{}` |  |
-| violations.allowedFlexVolumes.parameters.allowedFlexVolumes | list | `[]` |  |
-| violations.allowedFlexVolumes.parameters.excludedResources | list | `[]` |  |
-| violations.allowedHostFilesystem.enabled | bool | `true` |  |
-| violations.allowedHostFilesystem.enforcementAction | string | `"deny"` |  |
-| violations.allowedHostFilesystem.kind | string | `"K8sPSPHostFilesystem"` |  |
-| violations.allowedHostFilesystem.name | string | `"allowed-host-filesystem"` |  |
-| violations.allowedHostFilesystem.match | object | `{}` |  |
-| violations.allowedHostFilesystem.parameters.allowedHostPaths | list | `[]` |  |
-| violations.allowedHostFilesystem.parameters.excludedResources | list | `[]` |  |
-| violations.allowedIPs.enabled | bool | `true` |  |
-| violations.allowedIPs.enforcementAction | string | `"deny"` |  |
-| violations.allowedIPs.kind | string | `"K8sExternalIPs"` |  |
-| violations.allowedIPs.name | string | `"allowed-ips"` |  |
-| violations.allowedIPs.match | object | `{}` |  |
-| violations.allowedIPs.parameters.allowedIPs | list | `[]` |  |
-| violations.allowedIPs.parameters.excludedResources | list | `[]` |  |
-| violations.allowedProcMount.enabled | bool | `true` |  |
-| violations.allowedProcMount.enforcementAction | string | `"deny"` |  |
-| violations.allowedProcMount.kind | string | `"K8sPSPProcMount"` |  |
-| violations.allowedProcMount.name | string | `"allowed-proc-mount"` |  |
-| violations.allowedProcMount.match | object | `{}` |  |
-| violations.allowedProcMount.parameters.procMount | string | `"Default"` |  |
-| violations.allowedProcMount.parameters.excludedResources | list | `[]` |  |
-| violations.allowedSecCompProfiles.enabled | bool | `true` |  |
-| violations.allowedSecCompProfiles.enforcementAction | string | `"dryrun"` |  |
-| violations.allowedSecCompProfiles.kind | string | `"K8sPSPSeccomp"` |  |
-| violations.allowedSecCompProfiles.name | string | `"allowed-sec-comp-profiles"` |  |
-| violations.allowedSecCompProfiles.match | object | `{}` |  |
-| violations.allowedSecCompProfiles.parameters.allowedProfiles[0] | string | `"runtime/default"` |  |
-| violations.allowedSecCompProfiles.parameters.excludedResources | list | `[]` |  |
-| violations.allowedUsers.enabled | bool | `true` |  |
-| violations.allowedUsers.enforcementAction | string | `"dryrun"` |  |
-| violations.allowedUsers.kind | string | `"K8sPSPAllowedUsers"` |  |
-| violations.allowedUsers.name | string | `"allowed-users"` |  |
-| violations.allowedUsers.match | object | `{}` |  |
-| violations.allowedUsers.parameters.runAsUser.rule | string | `"MustRunAsNonRoot"` |  |
-| violations.allowedUsers.parameters.fsGroup.rule | string | `"MustRunAs"` |  |
-| violations.allowedUsers.parameters.fsGroup.ranges[0].min | int | `1000` |  |
-| violations.allowedUsers.parameters.fsGroup.ranges[0].max | int | `65535` |  |
-| violations.allowedUsers.parameters.runAsGroup.rule | string | `"MustRunAs"` |  |
-| violations.allowedUsers.parameters.runAsGroup.ranges[0].min | int | `1000` |  |
-| violations.allowedUsers.parameters.runAsGroup.ranges[0].max | int | `65535` |  |
-| violations.allowedUsers.parameters.supplementalGroups.rule | string | `"MustRunAs"` |  |
-| violations.allowedUsers.parameters.supplementalGroups.ranges[0].min | int | `1000` |  |
-| violations.allowedUsers.parameters.supplementalGroups.ranges[0].max | int | `65535` |  |
-| violations.allowedUsers.parameters.excludedResources | list | `[]` |  |
-| violations.bannedImageTags.enabled | bool | `true` |  |
-| violations.bannedImageTags.enforcementAction | string | `"deny"` |  |
-| violations.bannedImageTags.kind | string | `"K8sBannedImageTags"` |  |
-| violations.bannedImageTags.name | string | `"banned-image-tags"` |  |
-| violations.bannedImageTags.match | object | `{}` |  |
-| violations.bannedImageTags.parameters.tags[0] | string | `"latest"` |  |
-| violations.bannedImageTags.parameters.excludedResources | list | `[]` |  |
-| violations.blockNodePort.enabled | bool | `true` |  |
-| violations.blockNodePort.enforcementAction | string | `"dryrun"` |  |
-| violations.blockNodePort.kind | string | `"K8sBlockNodePort"` |  |
-| violations.blockNodePort.name | string | `"block-node-ports"` |  |
-| violations.blockNodePort.match | object | `{}` |  |
-| violations.blockNodePort.parameters.excludedResources | list | `[]` |  |
-| violations.containerRatio.enabled | bool | `true` |  |
-| violations.containerRatio.enforcementAction | string | `"dryrun"` |  |
-| violations.containerRatio.kind | string | `"K8sContainerRatios"` |  |
-| violations.containerRatio.name | string | `"container-ratios"` |  |
-| violations.containerRatio.match | object | `{}` |  |
-| violations.containerRatio.parameters.ratio | string | `"2"` |  |
-| violations.containerRatio.parameters.excludedResources | list | `[]` |  |
-| violations.hostNetworking.enabled | bool | `true` |  |
-| violations.hostNetworking.enforcementAction | string | `"deny"` |  |
-| violations.hostNetworking.kind | string | `"K8sPSPHostNetworkingPorts"` |  |
-| violations.hostNetworking.name | string | `"host-networking"` |  |
-| violations.hostNetworking.match | object | `{}` |  |
-| violations.hostNetworking.parameters.hostNetwork | bool | `false` |  |
-| violations.hostNetworking.parameters.min | int | `0` |  |
-| violations.hostNetworking.parameters.max | int | `0` |  |
-| violations.hostNetworking.parameters.excludedResources | list | `[]` |  |
-| violations.httpsOnly.enabled | bool | `true` |  |
-| violations.httpsOnly.enforcementAction | string | `"deny"` |  |
-| violations.httpsOnly.kind | string | `"K8sHttpsOnly2"` |  |
-| violations.httpsOnly.name | string | `"https-only"` |  |
-| violations.httpsOnly.match | object | `{}` |  |
-| violations.httpsOnly.parameters.excludedResources | list | `[]` |  |
-| violations.imageDigest.enabled | bool | `true` |  |
-| violations.imageDigest.enforcementAction | string | `"dryrun"` |  |
-| violations.imageDigest.kind | string | `"K8sImageDigests2"` |  |
-| violations.imageDigest.name | string | `"image-digest"` |  |
-| violations.imageDigest.match | object | `{}` |  |
-| violations.imageDigest.parameters.excludedResources | list | `[]` |  |
-| violations.namespacesHaveIstio.enabled | bool | `true` |  |
-| violations.namespacesHaveIstio.enforcementAction | string | `"dryrun"` |  |
-| violations.namespacesHaveIstio.kind | string | `"K8sRequiredLabelValues"` |  |
-| violations.namespacesHaveIstio.name | string | `"namespaces-have-istio"` |  |
-| violations.namespacesHaveIstio.match.namespaceSelector.matchExpressions[0].key | string | `"admission.gatekeeper.sh/ignore"` |  |
-| violations.namespacesHaveIstio.match.namespaceSelector.matchExpressions[0].operator | string | `"DoesNotExist"` |  |
-| violations.namespacesHaveIstio.parameters.labels[0].allowedRegex | string | `"^enabled"` |  |
-| violations.namespacesHaveIstio.parameters.labels[0].key | string | `"istio-injection"` |  |
-| violations.namespacesHaveIstio.parameters.excludedResources | list | `[]` |  |
-| violations.noBigContainers.enabled | bool | `true` |  |
-| violations.noBigContainers.enforcementAction | string | `"dryrun"` |  |
-| violations.noBigContainers.kind | string | `"K8sContainerLimits"` |  |
-| violations.noBigContainers.name | string | `"no-big-container"` |  |
-| violations.noBigContainers.match | object | `{}` |  |
-| violations.noBigContainers.parameters.cpu | string | `"2000m"` |  |
-| violations.noBigContainers.parameters.memory | string | `"4G"` |  |
-| violations.noBigContainers.parameters.excludedResources | list | `[]` |  |
-| violations.noHostNamespace.enabled | bool | `true` |  |
-| violations.noHostNamespace.enforcementAction | string | `"deny"` |  |
-| violations.noHostNamespace.kind | string | `"K8sPSPHostNamespace2"` |  |
-| violations.noHostNamespace.name | string | `"no-host-namespace"` |  |
-| violations.noHostNamespace.match | object | `{}` |  |
-| violations.noHostNamespace.parameters.excludedResources | list | `[]` |  |
-| violations.noPrivilegedContainers.enabled | bool | `true` |  |
-| violations.noPrivilegedContainers.enforcementAction | string | `"deny"` |  |
-| violations.noPrivilegedContainers.kind | string | `"K8sPSPPrivilegedContainer2"` |  |
-| violations.noPrivilegedContainers.name | string | `"no-privileged-containers"` |  |
-| violations.noPrivilegedContainers.match | object | `{}` |  |
-| violations.noPrivilegedContainers.parameters.excludedResources | list | `[]` |  |
-| violations.noDefaultServiceAccount.enabled | bool | `true` |  |
-| violations.noDefaultServiceAccount.enforcementAction | string | `"dryrun"` |  |
-| violations.noDefaultServiceAccount.kind | string | `"K8sDenySADefault"` |  |
-| violations.noDefaultServiceAccount.name | string | `"no-default-service-account"` |  |
-| violations.noDefaultServiceAccount.match | object | `{}` |  |
-| violations.noDefaultServiceAccount.parameters.excludedResources | list | `[]` |  |
-| violations.noPrivilegedEscalation.enabled | bool | `true` |  |
-| violations.noPrivilegedEscalation.enforcementAction | string | `"dryrun"` |  |
-| violations.noPrivilegedEscalation.kind | string | `"K8sPSPAllowPrivilegeEscalationContainer2"` |  |
-| violations.noPrivilegedEscalation.name | string | `"no-privileged-escalation"` |  |
-| violations.noPrivilegedEscalation.match | object | `{}` |  |
-| violations.noPrivilegedEscalation.parameters.excludedResources | list | `[]` |  |
-| violations.noSysctls.enabled | bool | `true` |  |
-| violations.noSysctls.enforcementAction | string | `"deny"` |  |
-| violations.noSysctls.kind | string | `"K8sPSPForbiddenSysctls"` |  |
-| violations.noSysctls.name | string | `"no-sysctls"` |  |
-| violations.noSysctls.match | object | `{}` |  |
-| violations.noSysctls.parameters.forbiddenSysctls[0] | string | `"*"` |  |
-| violations.noSysctls.parameters.excludedResources | list | `[]` |  |
-| violations.podsHaveIstio.enabled | bool | `true` |  |
-| violations.podsHaveIstio.enforcementAction | string | `"dryrun"` |  |
-| violations.podsHaveIstio.kind | string | `"K8sNoAnnotationValues"` |  |
-| violations.podsHaveIstio.name | string | `"pods-have-istio"` |  |
-| violations.podsHaveIstio.match | object | `{}` |  |
-| violations.podsHaveIstio.parameters.annotations[0].disallowedRegex | string | `"^false"` |  |
-| violations.podsHaveIstio.parameters.annotations[0].key | string | `"sidecar.istio.io/inject"` |  |
-| violations.podsHaveIstio.parameters.excludedResources | list | `[]` |  |
-| violations.readOnlyRoot.enabled | bool | `true` |  |
-| violations.readOnlyRoot.enforcementAction | string | `"dryrun"` |  |
-| violations.readOnlyRoot.kind | string | `"K8sPSPReadOnlyRootFilesystem2"` |  |
-| violations.readOnlyRoot.name | string | `"read-only-root"` |  |
-| violations.readOnlyRoot.match | object | `{}` |  |
-| violations.readOnlyRoot.parameters.excludedResources | list | `[]` |  |
-| violations.requiredLabels.enabled | bool | `true` |  |
-| violations.requiredLabels.enforcementAction | string | `"dryrun"` |  |
-| violations.requiredLabels.kind | string | `"K8sRequiredLabelValues"` |  |
-| violations.requiredLabels.name | string | `"required-labels"` |  |
-| violations.requiredLabels.match | object | `{}` |  |
-| violations.requiredLabels.parameters.labels[0].allowedRegex | string | `""` |  |
-| violations.requiredLabels.parameters.labels[0].key | string | `"app.kubernetes.io/name"` |  |
-| violations.requiredLabels.parameters.labels[1].allowedRegex | string | `""` |  |
-| violations.requiredLabels.parameters.labels[1].key | string | `"app.kubernetes.io/instance"` |  |
-| violations.requiredLabels.parameters.labels[2].allowedRegex | string | `""` |  |
-| violations.requiredLabels.parameters.labels[2].key | string | `"app.kubernetes.io/version"` |  |
-| violations.requiredLabels.parameters.labels[3].allowedRegex | string | `""` |  |
-| violations.requiredLabels.parameters.labels[3].key | string | `"app.kubernetes.io/component"` |  |
-| violations.requiredLabels.parameters.labels[4].allowedRegex | string | `""` |  |
-| violations.requiredLabels.parameters.labels[4].key | string | `"app.kubernetes.io/part-of"` |  |
-| violations.requiredLabels.parameters.labels[5].allowedRegex | string | `""` |  |
-| violations.requiredLabels.parameters.labels[5].key | string | `"app.kubernetes.io/managed-by"` |  |
-| violations.requiredLabels.parameters.excludedResources | list | `[]` |  |
-| violations.requiredProbes.enabled | bool | `true` |  |
-| violations.requiredProbes.enforcementAction | string | `"dryrun"` |  |
-| violations.requiredProbes.kind | string | `"K8sRequiredProbes"` |  |
-| violations.requiredProbes.name | string | `"required-probes"` |  |
-| violations.requiredProbes.match | object | `{}` |  |
-| violations.requiredProbes.parameters.probeTypes[0] | string | `"tcpSocket"` |  |
-| violations.requiredProbes.parameters.probeTypes[1] | string | `"httpGet"` |  |
-| violations.requiredProbes.parameters.probeTypes[2] | string | `"exec"` |  |
-| violations.requiredProbes.parameters.probes[0] | string | `"readinessProbe"` |  |
-| violations.requiredProbes.parameters.probes[1] | string | `"livenessProbe"` |  |
-| violations.requiredProbes.parameters.excludedResources | list | `[]` |  |
-| violations.restrictedTaint.enabled | bool | `true` |  |
-| violations.restrictedTaint.enforcementAction | string | `"deny"` |  |
-| violations.restrictedTaint.kind | string | `"RestrictedTaintToleration"` |  |
-| violations.restrictedTaint.name | string | `"restricted-taint"` |  |
-| violations.restrictedTaint.match | object | `{}` |  |
-| violations.restrictedTaint.parameters.allowGlobalToleration | bool | `false` |  |
-| violations.restrictedTaint.parameters.restrictedTaint.effect | string | `"NoSchedule"` |  |
-| violations.restrictedTaint.parameters.restrictedTaint.key | string | `"privileged"` |  |
-| violations.restrictedTaint.parameters.restrictedTaint.value | string | `"true"` |  |
-| violations.restrictedTaint.parameters.excludedResources | list | `[]` |  |
-| violations.selinuxPolicy.enabled | bool | `true` |  |
-| violations.selinuxPolicy.enforcementAction | string | `"deny"` |  |
-| violations.selinuxPolicy.kind | string | `"K8sPSPSELinuxV2"` |  |
-| violations.selinuxPolicy.name | string | `"selinux-policy"` |  |
-| violations.selinuxPolicy.match | object | `{}` |  |
-| violations.selinuxPolicy.parameters.allowedSELinuxOptions[0].level | string | `nil` |  |
-| violations.selinuxPolicy.parameters.allowedSELinuxOptions[0].role | string | `nil` |  |
-| violations.selinuxPolicy.parameters.allowedSELinuxOptions[0].type | string | `nil` |  |
-| violations.selinuxPolicy.parameters.allowedSELinuxOptions[0].user | string | `nil` |  |
-| violations.selinuxPolicy.parameters.excludedResources | list | `[]` |  |
-| violations.uniqueIngressHost.enabled | bool | `true` |  |
-| violations.uniqueIngressHost.enforcementAction | string | `"deny"` |  |
-| violations.uniqueIngressHost.kind | string | `"K8sUniqueIngressHost"` |  |
-| violations.uniqueIngressHost.name | string | `"unique-ingress-hosts"` |  |
-| violations.uniqueIngressHost.match | object | `{}` |  |
-| violations.uniqueIngressHost.parameters.excludedResources | list | `[]` |  |
-| violations.volumeTypes.enabled | bool | `true` |  |
-| violations.volumeTypes.enforcementAction | string | `"deny"` |  |
-| violations.volumeTypes.kind | string | `"K8sPSPVolumeTypes"` |  |
-| violations.volumeTypes.name | string | `"volume-types"` |  |
-| violations.volumeTypes.match | object | `{}` |  |
-| violations.volumeTypes.parameters.volumes[0] | string | `"configMap"` |  |
-| violations.volumeTypes.parameters.volumes[1] | string | `"emptyDir"` |  |
-| violations.volumeTypes.parameters.volumes[2] | string | `"projected"` |  |
-| violations.volumeTypes.parameters.volumes[3] | string | `"secret"` |  |
-| violations.volumeTypes.parameters.volumes[4] | string | `"downwardAPI"` |  |
-| violations.volumeTypes.parameters.volumes[5] | string | `"persistentVolumeClaim"` |  |
-| violations.volumeTypes.parameters.excludedResources | list | `[]` |  |
-| cleanupCRDs.enabled | bool | `true` |  |
-| cleanupCRDs.containerSecurityContext.allowPrivilegeEscalation | bool | `false` |  |
-| cleanupCRDs.containerSecurityContext.capabilities.drop[0] | string | `"ALL"` |  |
-| cleanupCRDs.containerSecurityContext.readOnlyRootFilesystem | bool | `true` |  |
-| cleanupCRDs.containerSecurityContext.runAsGroup | int | `999` |  |
-| cleanupCRDs.containerSecurityContext.runAsNonRoot | bool | `true` |  |
-| cleanupCRDs.containerSecurityContext.runAsUser | int | `1000` |  |
-| cleanupCRDs.securityContext.readOnlyRootFilesystem | bool | `true` |  |
-| cleanupCRDs.securityContext.runAsGroup | int | `999` |  |
-| cleanupCRDs.securityContext.runAsNonRoot | bool | `true` |  |
-| cleanupCRDs.securityContext.runAsUser | int | `1000` |  |
-| cleanupCRDs.securityContext.fsGroup | int | `999` |  |
-| cleanupCRDs.securityContext.supplementalGroups[0] | int | `999` |  |
-| image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.pullSecrets[0].name | string | `"private-registry"` |  |
-| image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| image.crdRelease | string | `"v1.33"` |  |
-| monitoring.enabled | bool | `false` |  |
-| networkPolicies.enabled | bool | `false` |  |
-| networkPolicies.controlPlaneCidr | string | `"0.0.0.0/0"` |  |
-| networkPolicies.vpcCidr | string | `"0.0.0.0/0"` |  |
-| networkPolicies.additionalPolicies | list | `[]` |  |
-| bbtests.enabled | bool | `false` |  |
-| bbtests.scripts.image | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.33"` |  |
-| bbtests.scripts.securityContext.allowPrivilegeEscalation | bool | `false` |  |
-| bbtests.scripts.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
-| bbtests.scripts.securityContext.readOnlyRootFilesystem | bool | `true` |  |
-| bbtests.scripts.securityContext.runAsGroup | int | `999` |  |
-| bbtests.scripts.securityContext.runAsNonRoot | bool | `true` |  |
-| bbtests.scripts.securityContext.runAsUser | int | `1000` |  |
-| bbtests.scripts.additionalVolumeMounts[0].name | string | `"{{ .Chart.Name }}-test-config"` |  |
-| bbtests.scripts.additionalVolumeMounts[0].mountPath | string | `"/yaml"` |  |
-| bbtests.scripts.additionalVolumeMounts[1].name | string | `"{{ .Chart.Name }}-kube-cache"` |  |
-| bbtests.scripts.additionalVolumeMounts[1].mountPath | string | `"/.kube/cache"` |  |
-| bbtests.scripts.additionalVolumes[0].name | string | `"{{ .Chart.Name }}-test-config"` |  |
-| bbtests.scripts.additionalVolumes[0].configMap.name | string | `"{{ .Chart.Name }}-test-config"` |  |
-| bbtests.scripts.additionalVolumes[1].name | string | `"{{ .Chart.Name }}-kube-cache"` |  |
-| bbtests.scripts.additionalVolumes[1].emptyDir | object | `{}` |  |
-| bbtests.openshift | bool | `false` |  |
-| serviceAccount.gatekeeperAdmin.create | bool | `true` |  |
-| postInstall.labelNamespace.serviceAccount.name | string | `"gatekeeper-update-namespace-label"` |  |
-| postInstall.labelNamespace.serviceAccount.create | bool | `true` |  |
-| postInstall.labelNamespace.enabled | bool | `true` |  |
-| rbac.create | bool | `false` |  |
-| postUpgrade.labelNamespace.serviceAccount.name | string | `"gatekeeper-update-namespace-label-post-upgrade"` |  |
-| postUpgrade.labelNamespace.serviceAccount.create | bool | `true` |  |
-| postUpgrade.labelNamespace.enabled | bool | `true` |  |
+  if (goBackElement && history.length > 1) {
+    goBackElement.removeAttribute('hidden');
 
-## Contributing
+    goBackElement.querySelector('button').addEventListener('click', function() {
+      history.back();
+    });
+  }
 
-Please see the [contributing guide](./CONTRIBUTING.md) if you are interested in contributing.
+  // We do not have rails_ujs here, so we're manually making a link trigger a form submit.
+  document.querySelector('.js-sign-out-link')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('.js-sign-out-form')?.submit();
+  });
+}());
 
----
-
-_This file is programatically generated using `helm-docs` and some BigBang-specific templates. The `gluon` repository has [instructions for regenerating package READMEs](https://repo1.dso.mil/big-bang/product/packages/gluon/-/blob/master/docs/bb-package-readme.md)._
-
+//]]>
+</script></body>
+</html>
