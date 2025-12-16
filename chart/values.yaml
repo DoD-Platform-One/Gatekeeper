@@ -335,7 +335,7 @@ upstream:
     serviceAccount:
       create: true
       name: gatekeeper-admin-upgrade-crds
-    enabled: false
+    enabled: true
     extraRules: []
     priorityClassName: ""
   cleanupCRDs:
@@ -366,6 +366,11 @@ upstream:
   serviceAccount:
     gatekeeperAdmin:
       create: false
+
+# Big Bang specific values to use hardened gatekeeper-admin ServiceAccount
+serviceAccount:
+  gatekeeperAdmin:
+    create: true
 
 ########################################################################################################################
 # Big Bang Constraints
