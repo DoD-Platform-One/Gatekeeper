@@ -335,7 +335,7 @@ upstream:
     serviceAccount:
       create: true
       name: gatekeeper-admin-upgrade-crds
-    enabled: true
+    enabled: false
     extraRules: []
     priorityClassName: ""
   cleanupCRDs:
