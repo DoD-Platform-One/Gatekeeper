@@ -1,5 +1,11 @@
 
 
+# Big Bang specific values to use hardened gatekeeper-admin ServiceAccount
+serviceAccount:
+  gatekeeperAdmin:
+    create: true
+
+
 # Values passed to the upstream Gatekeeper dependency (alias: upstream).
 # Disable its gatekeeper-admin ServiceAccount so Big Bang's hardened version can own it.
 upstream:
@@ -367,10 +373,6 @@ upstream:
     gatekeeperAdmin:
       create: false
 
-# Big Bang specific values to use hardened gatekeeper-admin ServiceAccount
-serviceAccount:
-  gatekeeperAdmin:
-    create: true
 
 ########################################################################################################################
 # Big Bang Constraints
@@ -841,11 +843,6 @@ bbtests:
 
   # Toggles scc needed for openshift
   openshift: false
-
-## BB specific changes to enable our versions
-serviceAccount:
-  gatekeeperAdmin:
-    create: false
 
 postInstall:
   labelNamespace:
