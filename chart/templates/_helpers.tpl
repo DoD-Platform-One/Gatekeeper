@@ -9,3 +9,8 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 app.kubernetes.io/instance: "{{ .Release.Name }}"
 app.kubernetes.io/version: "{{ .Chart.AppVersion }}"
 {{- end -}}
+
+# Only here to have CI pass
+{{- define "gatekeeper.name" -}}
+{{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
+{{- end -}}
