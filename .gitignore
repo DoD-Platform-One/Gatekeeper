@@ -17,13 +17,6 @@
 # Go workspace file
 go.work
 
-# Helm chart dependencies
-**/charts/*.tgz
-**/charts/*.prov
-
-# Helm release information
-*.tgz
-*.prov
 
 # Temporary files
 *.tmp
