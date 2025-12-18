@@ -9,6 +9,10 @@ serviceAccount:
 # Values passed to the upstream Gatekeeper dependency (alias: upstream).
 # Disable its gatekeeper-admin ServiceAccount so Big Bang's hardened version can own it.
 upstream:
+  ## Required for passthrough,
+  nameOverride: gatekeeper
+  fullnameOverride: gatekeeper
+  ###
   replicas: 3
   revisionHistoryLimit: 10
   auditInterval: 60
