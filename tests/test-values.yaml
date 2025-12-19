@@ -23,6 +23,12 @@ addons:
 ########################
 gatekeeper:
   enabled: true
+  flux:
+    install:
+      crds: CreateReplace
+    upgrade:
+      crds: CreateReplace
+
 kyvernoPolicies:
   values:
     bbtests:

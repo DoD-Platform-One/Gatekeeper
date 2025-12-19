@@ -349,7 +349,7 @@ upstream:
     serviceAccount:
       create: true
       name: gatekeeper-admin-upgrade-crds
-    enabled: false # BB change that should be reverted after we remove CRDs from this chart, related to https://repo1.dso.mil/dsop/opensource/openpolicyagent/gatekeeper-crds/-/issues/7
+    enabled: false # Flux-managed CRDs; keep Helm hook disabled
     extraRules: []
     priorityClassName: ""
   cleanupCRDs:
@@ -771,14 +771,7 @@ violations:
 
 # Bigbang Additions to handle CRD upgrades and cleanup, should be removed after https://repo1.dso.mil/dsop/opensource/openpolicyagent/gatekeeper-crds/-/issues/7 is done
 upgradeCRDs:
-  enabled: true
-  rbac:
-    create: true
-  serviceAccount:
-    create: true
-    name: gatekeeper-admin-upgrade-crds
-  extraRules: []
-  priorityClassName: ""
+  enabled: false # Flux-managed CRDs (Kyverno pattern) – disable Helm hook
 
 cleanupCRDs:
   enabled: true
