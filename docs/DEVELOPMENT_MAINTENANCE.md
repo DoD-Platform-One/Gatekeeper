@@ -25,13 +25,9 @@ b. Update `tests/test-values.yml` as necessary.
       branch: "renovate/ironbank"
   ```
 
-
 # Testing new version
 
-- Create `overrides/gatekeeper.yaml`
 ```yaml
-clusterAuditor:
-  enabled: true
 
 gatekeeper:
   enabled: true
@@ -40,11 +36,12 @@ gatekeeper:
     tag: null
     repo: "https://repo1.dso.mil/big-bang/product/packages/policy.git"
     branch: "renovate/ironbank"
+
 ```
 
 - Deploy Big Bang and Gatekeeper to dev environment
 ```
-helm upgrade -i bigbang ./bigbang/chart --create-namespace -n bigbang -f ./bigbang/chart/ingress-certs.yaml -f ./overrides/registry-values.yaml -f ./overrides/gatekeeper.yaml
+helm upgrade -i bigbang ./bigbang/chart --create-namespace -n bigbang  -f ./overrides/gatekeeper.yaml -f ./bigbang/chart/ingress-certs.yaml -f ./overrides/registry-values.yaml
 ```
 
 - Verify all resources are successfully deployed
