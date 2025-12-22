@@ -3,8 +3,8 @@
 1. Navigate to the Gatekeeper [upstream](https://github.com/open-policy-agent/gatekeeper/releases) and find the latest chart version that works with the image update.  
 a. Verify that this version is available in the [registry](https://registry1.dso.mil).
 
-2. From the top level of the repo run `kpt pkg update chart@{GIT TAG} --strategy alpha-git-patch` replacing `{GIT TAG}` with the tag you found in step one. For example: `kpt pkg update chart@v3.16.2 --strategy alpha-git-patch`.  
-a. You may run into some merge conflicts, resolve these in the way that makes the most sense. In general, if something is a Big Bang addition you will want to keep it, otherwise go with the upstream change.  
+2. Update the chart to the upstream tag by bumping dependencies in `chart/Chart.yaml` and running `helm dependency update chart` (passthrough pattern).  
+a. Resolve merge conflicts by keeping Big Bang additions and otherwise preferring upstream changes. These are expected to be minimal.
 b. Update `tests/test-values.yml` as necessary.
 
 3. Increment the `-bb.#` to the version in `chart/Chart.yaml`. The `-bb-.#` should be incremented for patch updates. Whenever a major or minor version of the upstream occurs, increase the version and reset to `-bb.0`.
