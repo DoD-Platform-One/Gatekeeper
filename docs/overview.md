@@ -6,14 +6,14 @@ OPA Gatekeeper controls the policies for Kubernetes and acts as a customizable K
 
 OPA Gatekeeper functionality includes:
 
-- [An extensible, parameterized policy library](./docs/policylibrary.md).
-- Native Kubernetes CRDs called [`ConstraintTemplates`](./docs/constraint-templates.md) for extending the policy library
-  - A high level language, [Rego](./docs/rego.md), to create policies.
+- [An extensible, parameterized policy library](./policylibrary.md).
+- Native Kubernetes CRDs called [`ConstraintTemplates`](./constraint-templates.md) for extending the policy library
+  - A high level language, [Rego](./rego.md), to create policies.
 - Native Kubernetes CRDs called `Constraints` for instantiating the policy library.
 - Audit functionality.
-- [Security](./docs/security.md)
-- [Test framework](./docs/test.md) for developing tests for policies.
-- [Upgrade](./docs/upgrade.md) Guide for upgrading versions.
+- [Security](./security.md)
+- [Test framework](./test.md) for developing tests for policies.
+- [Upgrade](./upgrade.md) Guide for upgrading versions.
 
 ## Installation
 
@@ -49,29 +49,29 @@ The repo contains `ConstraintTemplate` and `Constraints`.
 
 - `ConstraintTemplates` describe both the Rego that enforces the constraint and the schema of the constraint. It is the same context as the `ConstraintTemplate` being a CRD with the schema definition and the `Constraints` being the CRs passing parameters.
 
-You can find `ConstraintTemplates` in [`/chart/templates/constraint-templates`](./chart/templates/constraint-templates).
+You can find `ConstraintTemplates` in [`/chart/templates/constraint-templates`](../chart/templates/constraint-templates).
 
 - `Constraints` represent the instantiation of the `ConstraintTemplates`. They inform Gatekeeper that the admin wants a `ConstraintTemplate` to be enforced, and how.
 
-You can find `Constraint` in [`/chart/templates/constraints`](./chart/templates/constraints).
+You can find `Constraint` in [`/chart/templates/constraints`](../chart/templates/constraints).
 
 Further information on `Constraints` and `ConstraintTemplates`:
 
-- [Constraint Framework](./docs/constraint-framework.md)
-- [Constraint Template List](./docs/constraint-templates.md)
-- [Constraint Annotations](./docs/constraint-annotations.md)
-- [Policy Library](./docs/policylibrary.md)
-- [Rego](./docs/rego.md)
-- [Violation Exceptions](./docs/exceptions.md)
+- [Constraint Framework](./constraint-framework.md)
+- [Constraint Template List](./constraint-templates.md)
+- [Constraint Annotations](./constraint-annotations.md)
+- [Policy Library](./policylibrary.md)
+- [Rego](./rego.md)
+- [Violation Exceptions](./exceptions.md)
 
 ## Additional OPA Gatekeeper Links
 
 - [Webinar: K8s with OPA Gatekeeper](https://www.youtube.com/watch?v=v4wJE3I8BYM)
 - [Difference between OPA and Gatekeeper](https://www.infracloud.io/blogs/opa-and-gatekeeper/)
 - [K8s with OPA Gatekeeper](https://www.youtube.com/watch?v=v4wJE3I8BYM&t=2735s)
-- [Fitness Validation For Your Kubernetes Apps: Policy As Code](https://itnext.io/fitness-validation-for-your-kubernetes-apps-policy-as-code-7fad698e7dec)
+- [Fitness Validation For Your Kubernetes Apps: Policy As Code](https://medium.com/itnext/fitness-validation-for-your-kubernetes-apps-policy-as-code-7fad698e7dec)
 - [Introduction to Open Policy Agent | Rawkode Live](https://www.youtube.com/watch?v=ejH4EzmL7e0)
-- [Open Policy Agent Debugging](https://www.openpolicyagent.org/docs/latest/kubernetes-debugging/)
+- [Open Policy Agent Debugging](https://www.openpolicyagent.org/docs/kubernetes-debugging/)
 - [OPA Gatekeeper Debugging](https://open-policy-agent.github.io/gatekeeper/website/docs/debug/)
 
 For additional info on the architecture and how OPA fits into Big Bang see the [Architecture Doc](https://repo1.dso.mil/platform-one/big-bang/bigbang/-/blob/master/charter/packages/opa-gatekeeper/Architecture.md).

@@ -4,7 +4,7 @@ name: gatekeeper
 icon: https://open-policy-agent.github.io/gatekeeper/website/img/logo.svg
 keywords:
   - open policy agent
-version: 3.21.0-bb.0
+version: 3.21.0-bb.1
 home: https://github.com/open-policy-agent/gatekeeper
 sources:
   - https://github.com/open-policy-agent/gatekeeper.git
@@ -13,11 +13,15 @@ dependencies:
   - name: gluon
     version: 0.9.7
     repository: oci://registry1.dso.mil/bigbang
+  - name: gatekeeper
+    version: 3.21.0
+    repository: https://open-policy-agent.github.io/gatekeeper/charts
+    alias: upstream
 annotations:
   bigbang.dev/maintenanceTrack: bb_integrated
   bigbang.dev/applicationVersions: |
     - Gatekeeper: v3.21.0
-  # kubectl and base images below are conditionally used 
+  # kubectl and base images below are conditionally used
   # dependent on your configuration of bbtests, postInstall, probeWebhook, preUninstall values
   helm.sh/images: |
     - name: gatekeeper
