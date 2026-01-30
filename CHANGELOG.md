@@ -4,6 +4,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
+## [3.21.0-bb.2] (2026-01-09)
+
+### Changed
+
+- Migrated network policies to bb-common DSL and removed legacy netpol templates
+- Added bb-common dependency and unit tests for network policies
+
 ## [3.21.0-bb.1] (2025-12-11)
 
 ### Changed
