@@ -72,12 +72,12 @@ upstream:
     pullSecrets:
     - name: private-registry
     crdRepository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-    crdRelease: v1.33
+    crdRelease: v1.34
   preInstall:
     crdRepository:
       image:
         repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-        tag: v1.33
+        tag: v1.34
     securityContext:
       allowPrivilegeEscalation: false
       capabilities:
@@ -95,7 +95,7 @@ upstream:
       enabled: false
       image:
         repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-        tag: v1.33
+        tag: v1.34
         pullPolicy: IfNotPresent
         pullSecrets:
           - name: private-registry
@@ -125,7 +125,7 @@ upstream:
       extraRules: []
       image:
         repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-        tag: v1.33
+        tag: v1.34
         pullPolicy: IfNotPresent
         pullSecrets:
         - name: private-registry
@@ -166,7 +166,7 @@ upstream:
       enabled: false
       image:
         repository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-        tag: v1.33
+        tag: v1.34
         pullPolicy: IfNotPresent
         pullSecrets:
         - name: private-registry
@@ -800,37 +800,66 @@ image:
   pullSecrets:
   - name: private-registry
   crdRepository: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl
-  crdRelease: v1.33
+  crdRelease: v1.34
 
 monitoring:
   enabled: false
+
 networkPolicies:
   enabled: false
-  # See `kubectl cluster-info` and then resolve to IP
-  controlPlaneCidr: "0.0.0.0/0"
-  # See `kubectl cluster-info` and then resolve to IP
-  vpcCidr: "0.0.0.0/0"
-  additionalPolicies: [] # section for additional custom network policies
-    # Example usage:
-    # - name: example-network-policy
-    #   spec:
-    #     podSelector: {}
-    #     policyTypes:
-    #       - Egress
-    #     egress:
-    #       - to:
-    #           - ipBlock:
-    #               cidr: "0.0.0.0/0"
-    #               except:
-    #               # Block requests to AWS cloud metadata IP
-    #               - 169.254.169.254/32
-    #               # Block requests to controlPlane if CIDR not 0.0.0.0/0
-    #               - '{{ .Values.networkPolicies.controlPlaneCidr }}'
+  ingress:
+    defaults:
+      # Gatekeeper is not in the service mesh; disable sidecar scrape default.
+      allowPrometheusToIstioSidecar:
+        enabled: false
+    definitions:
+      kubeAPI:
+        from:
+          - ipBlock:
+              cidr: 192.168.0.0/16
+          - ipBlock:
+              cidr: 172.16.0.0/12
+          - ipBlock:
+              cidr: 10.0.0.0/8
+    to:
+      gatekeeper:8443:
+        from:
+          definition:
+            # Allow ingress to the webhook from the kube-apiserver CIDR.
+            kubeAPI: true
+      gatekeeper:8888:
+        from:
+          k8s:
+            # Allow Prometheus to scrape Gatekeeper metrics.
+            monitoring-monitoring-kube-prometheus@monitoring/prometheus: false
+
+  egress:
+    defaults:
+      # Gatekeeper is not in the service mesh; disable istiod default.
+      allowIstiod:
+        enabled: false
+    from:
+      gatekeeper:
+        to:
+          definition:
+            kubeAPI: true
+          k8s:
+            "udp://*/*:5353":
+              # Enable when running on OpenShift.
+              enabled: false
+      crd-cleanup:
+        # Allow the post-upgrade cleanup job to reach the Kubernetes API.
+        podSelector:
+          matchLabels:
+            job-name: "{{ .Chart.Name }}-crd-cleanup"
+        to:
+          definition:
+            kubeAPI: true
 
 bbtests:
   enabled: false
   scripts:
-    image: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.33
+    image: registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.34
     securityContext:
       allowPrivilegeEscalation: false
       capabilities:

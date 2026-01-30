@@ -1,7 +1,7 @@
 <!-- Warning: Do not manually edit this file. See notes on gluon + helm-docs at the end of this file for more information. -->
 # gatekeeper
 
-![Version: 3.21.0-bb.1](https://img.shields.io/badge/Version-3.21.0--bb.1-informational?style=flat-square) ![AppVersion: v3.21.0](https://img.shields.io/badge/AppVersion-v3.21.0-informational?style=flat-square) ![Maintenance Track: bb_integrated](https://img.shields.io/badge/Maintenance_Track-bb_integrated-green?style=flat-square)
+![Version: 3.21.0-bb.2](https://img.shields.io/badge/Version-3.21.0--bb.2-informational?style=flat-square) ![AppVersion: v3.21.0](https://img.shields.io/badge/AppVersion-v3.21.0-informational?style=flat-square) ![Maintenance Track: bb_integrated](https://img.shields.io/badge/Maintenance_Track-bb_integrated-green?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -49,6 +49,9 @@ helm install gatekeeper chart/
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
+| serviceAccount.gatekeeperAdmin.create | bool | `true` |  |
+| upstream.nameOverride | string | `"gatekeeper"` |  |
+| upstream.fullnameOverride | string | `"gatekeeper"` |  |
 | upstream.replicas | int | `3` |  |
 | upstream.revisionHistoryLimit | int | `10` |  |
 | upstream.auditInterval | int | `60` |  |
@@ -135,9 +138,9 @@ helm install gatekeeper chart/
 | upstream.image.pullPolicy | string | `"IfNotPresent"` |  |
 | upstream.image.pullSecrets[0].name | string | `"private-registry"` |  |
 | upstream.image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| upstream.image.crdRelease | string | `"v1.33"` |  |
+| upstream.image.crdRelease | string | `"v1.34"` |  |
 | upstream.preInstall.crdRepository.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| upstream.preInstall.crdRepository.image.tag | string | `"v1.33"` |  |
+| upstream.preInstall.crdRepository.image.tag | string | `"v1.34"` |  |
 | upstream.preInstall.securityContext.allowPrivilegeEscalation | bool | `false` |  |
 | upstream.preInstall.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
 | upstream.preInstall.securityContext.readOnlyRootFilesystem | bool | `true` |  |
@@ -148,9 +151,9 @@ helm install gatekeeper chart/
 | upstream.postUpgrade.labelNamespace.serviceAccount.create | bool | `false` |  |
 | upstream.postUpgrade.labelNamespace.enabled | bool | `false` |  |
 | upstream.postUpgrade.labelNamespace.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| upstream.postUpgrade.labelNamespace.image.tag | string | `"v1.33"` |  |
+| upstream.postUpgrade.labelNamespace.image.tag | string | `"v1.34"` |  |
 | upstream.postUpgrade.labelNamespace.image.pullPolicy | string | `"IfNotPresent"` |  |
-| upstream.postUpgrade.labelNamespace.image.pullSecrets | list | `[]` |  |
+| upstream.postUpgrade.labelNamespace.image.pullSecrets[0].name | string | `"private-registry"` |  |
 | upstream.postUpgrade.labelNamespace.extraNamespaces | list | `[]` |  |
 | upstream.postUpgrade.labelNamespace.podSecurity | list | `[]` |  |
 | upstream.postUpgrade.labelNamespace.extraAnnotations | object | `{}` |  |
@@ -170,9 +173,9 @@ helm install gatekeeper chart/
 | upstream.postInstall.labelNamespace.enabled | bool | `false` |  |
 | upstream.postInstall.labelNamespace.extraRules | list | `[]` |  |
 | upstream.postInstall.labelNamespace.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| upstream.postInstall.labelNamespace.image.tag | string | `"v1.33"` |  |
+| upstream.postInstall.labelNamespace.image.tag | string | `"v1.34"` |  |
 | upstream.postInstall.labelNamespace.image.pullPolicy | string | `"IfNotPresent"` |  |
-| upstream.postInstall.labelNamespace.image.pullSecrets | list | `[]` |  |
+| upstream.postInstall.labelNamespace.image.pullSecrets[0].name | string | `"private-registry"` |  |
 | upstream.postInstall.labelNamespace.extraNamespaces | list | `[]` |  |
 | upstream.postInstall.labelNamespace.podSecurity | list | `[]` |  |
 | upstream.postInstall.labelNamespace.extraAnnotations | object | `{}` |  |
@@ -181,7 +184,7 @@ helm install gatekeeper chart/
 | upstream.postInstall.probeWebhook.image.repository | string | `"registry1.dso.mil/ironbank/big-bang/base"` |  |
 | upstream.postInstall.probeWebhook.image.tag | string | `"2.1.0"` |  |
 | upstream.postInstall.probeWebhook.image.pullPolicy | string | `"IfNotPresent"` |  |
-| upstream.postInstall.probeWebhook.image.pullSecrets | list | `[]` |  |
+| upstream.postInstall.probeWebhook.image.pullSecrets[0].name | string | `"private-registry"` |  |
 | upstream.postInstall.probeWebhook.waitTimeout | int | `60` |  |
 | upstream.postInstall.probeWebhook.httpTimeout | int | `2` |  |
 | upstream.postInstall.probeWebhook.insecureHTTPS | bool | `false` |  |
@@ -200,9 +203,9 @@ helm install gatekeeper chart/
 | upstream.preUninstall.deleteWebhookConfigurations.extraRules | list | `[]` |  |
 | upstream.preUninstall.deleteWebhookConfigurations.enabled | bool | `false` |  |
 | upstream.preUninstall.deleteWebhookConfigurations.image.repository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| upstream.preUninstall.deleteWebhookConfigurations.image.tag | string | `"v1.33"` |  |
+| upstream.preUninstall.deleteWebhookConfigurations.image.tag | string | `"v1.34"` |  |
 | upstream.preUninstall.deleteWebhookConfigurations.image.pullPolicy | string | `"IfNotPresent"` |  |
-| upstream.preUninstall.deleteWebhookConfigurations.image.pullSecrets | list | `[]` |  |
+| upstream.preUninstall.deleteWebhookConfigurations.image.pullSecrets[0].name | string | `"private-registry"` |  |
 | upstream.preUninstall.deleteWebhookConfigurations.priorityClassName | string | `""` |  |
 | upstream.preUninstall.affinity | object | `{}` |  |
 | upstream.preUninstall.tolerations | list | `[]` |  |
@@ -329,7 +332,7 @@ helm install gatekeeper chart/
 | upstream.psp.enabled | bool | `false` |  |
 | upstream.upgradeCRDs.serviceAccount.create | bool | `true` |  |
 | upstream.upgradeCRDs.serviceAccount.name | string | `"gatekeeper-admin-upgrade-crds"` |  |
-| upstream.upgradeCRDs.enabled | bool | `true` |  |
+| upstream.upgradeCRDs.enabled | bool | `false` |  |
 | upstream.upgradeCRDs.extraRules | list | `[]` |  |
 | upstream.upgradeCRDs.priorityClassName | string | `""` |  |
 | upstream.cleanupCRDs.enabled | bool | `true` |  |
@@ -592,6 +595,7 @@ helm install gatekeeper chart/
 | violations.volumeTypes.parameters.volumes[4] | string | `"downwardAPI"` |  |
 | violations.volumeTypes.parameters.volumes[5] | string | `"persistentVolumeClaim"` |  |
 | violations.volumeTypes.parameters.excludedResources | list | `[]` |  |
+| upgradeCRDs.enabled | bool | `false` |  |
 | cleanupCRDs.enabled | bool | `true` |  |
 | cleanupCRDs.containerSecurityContext.allowPrivilegeEscalation | bool | `false` |  |
 | cleanupCRDs.containerSecurityContext.capabilities.drop[0] | string | `"ALL"` |  |
@@ -609,14 +613,22 @@ helm install gatekeeper chart/
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.pullSecrets[0].name | string | `"private-registry"` |  |
 | image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
-| image.crdRelease | string | `"v1.33"` |  |
+| image.crdRelease | string | `"v1.34"` |  |
 | monitoring.enabled | bool | `false` |  |
 | networkPolicies.enabled | bool | `false` |  |
-| networkPolicies.controlPlaneCidr | string | `"0.0.0.0/0"` |  |
-| networkPolicies.vpcCidr | string | `"0.0.0.0/0"` |  |
-| networkPolicies.additionalPolicies | list | `[]` |  |
+| networkPolicies.ingress.defaults.allowPrometheusToIstioSidecar.enabled | bool | `false` |  |
+| networkPolicies.ingress.definitions.kubeAPI.from[0].ipBlock.cidr | string | `"192.168.0.0/16"` |  |
+| networkPolicies.ingress.definitions.kubeAPI.from[1].ipBlock.cidr | string | `"172.16.0.0/12"` |  |
+| networkPolicies.ingress.definitions.kubeAPI.from[2].ipBlock.cidr | string | `"10.0.0.0/8"` |  |
+| networkPolicies.ingress.to.gatekeeper:8443.from.definition.kubeAPI | bool | `true` |  |
+| networkPolicies.ingress.to.gatekeeper:8888.from.k8s.monitoring-monitoring-kube-prometheus@monitoring/prometheus | bool | `false` |  |
+| networkPolicies.egress.defaults.allowIstiod.enabled | bool | `false` |  |
+| networkPolicies.egress.from.gatekeeper.to.definition.kubeAPI | bool | `true` |  |
+| networkPolicies.egress.from.gatekeeper.to.k8s.udp://*/*:5353.enabled | bool | `false` |  |
+| networkPolicies.egress.from.crd-cleanup.podSelector.matchLabels.job-name | string | `"{{ .Chart.Name }}-crd-cleanup"` |  |
+| networkPolicies.egress.from.crd-cleanup.to.definition.kubeAPI | bool | `true` |  |
 | bbtests.enabled | bool | `false` |  |
-| bbtests.scripts.image | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.33"` |  |
+| bbtests.scripts.image | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl:v1.34"` |  |
 | bbtests.scripts.securityContext.allowPrivilegeEscalation | bool | `false` |  |
 | bbtests.scripts.securityContext.capabilities.drop[0] | string | `"ALL"` |  |
 | bbtests.scripts.securityContext.readOnlyRootFilesystem | bool | `true` |  |
@@ -632,7 +644,6 @@ helm install gatekeeper chart/
 | bbtests.scripts.additionalVolumes[1].name | string | `"{{ .Chart.Name }}-kube-cache"` |  |
 | bbtests.scripts.additionalVolumes[1].emptyDir | object | `{}` |  |
 | bbtests.openshift | bool | `false` |  |
-| serviceAccount.gatekeeperAdmin.create | bool | `false` |  |
 | postInstall.labelNamespace.serviceAccount.name | string | `"gatekeeper-update-namespace-label"` |  |
 | postInstall.labelNamespace.serviceAccount.create | bool | `true` |  |
 | postInstall.labelNamespace.enabled | bool | `true` |  |

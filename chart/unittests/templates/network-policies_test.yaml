@@ -1,0 +1,148 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/helm-unittest/helm-unittest/main/schema/helm-testsuite.json
+suite: Network Policies
+templates:
+  - templates/bigbang/network-policies.yaml
+values:
+  - ../../values.yaml
+tests:
+  - it: renders core network policies when enabled
+    set:
+      networkPolicies:
+        enabled: true
+    asserts:
+      - containsDocument:
+          apiVersion: networking.k8s.io/v1
+          kind: NetworkPolicy
+          spec:
+            policyTypes:
+              - Egress
+            podSelector:
+              matchLabels:
+                app.kubernetes.io/name: gatekeeper
+            egress:
+              - to:
+                  - ipBlock:
+                      cidr: 10.0.0.0/8
+          any: true
+      - containsDocument:
+          apiVersion: networking.k8s.io/v1
+          kind: NetworkPolicy
+          spec:
+            policyTypes:
+              - Ingress
+            podSelector:
+              matchLabels:
+                app.kubernetes.io/name: gatekeeper
+            ingress:
+              - from:
+                  - ipBlock:
+                      cidr: 192.168.0.0/16
+                  - ipBlock:
+                      cidr: 172.16.0.0/12
+                  - ipBlock:
+                      cidr: 10.0.0.0/8
+                ports:
+                  - port: 8443
+                    protocol: TCP
+          any: true
+      - containsDocument:
+          apiVersion: networking.k8s.io/v1
+          kind: NetworkPolicy
+          spec:
+            policyTypes:
+              - Egress
+            podSelector: {}
+            egress:
+              - to:
+                  - namespaceSelector:
+                      matchLabels:
+                        kubernetes.io/metadata.name: kube-system
+                    podSelector:
+                      matchLabels:
+                        k8s-app: kube-dns
+                ports:
+                  - port: 53
+                    protocol: UDP
+                  - port: 53
+                    protocol: TCP
+          any: true
+      - containsDocument:
+          apiVersion: networking.k8s.io/v1
+          kind: NetworkPolicy
+          spec:
+            policyTypes:
+              - Ingress
+            podSelector:
+              matchLabels:
+                app.kubernetes.io/name: gatekeeper
+            ingress:
+              - from:
+                  - namespaceSelector:
+                      matchLabels:
+                        kubernetes.io/metadata.name: monitoring
+                    podSelector:
+                      matchLabels:
+                        app.kubernetes.io/name: prometheus
+                ports:
+                  - port: 8888
+                    protocol: TCP
+          any: true
+
+  - it: allows kubeAPI egress for the crd-cleanup job
+    set:
+      networkPolicies:
+        enabled: true
+      cleanupCRDs:
+        enabled: true
+    asserts:
+      - containsDocument:
+          apiVersion: networking.k8s.io/v1
+          kind: NetworkPolicy
+          spec:
+            policyTypes:
+              - Egress
+            podSelector:
+              matchLabels:
+                job-name: gatekeeper-crd-cleanup
+            egress:
+              - to:
+                  - ipBlock:
+                      cidr: 10.0.0.0/8
+                  - ipBlock:
+                      cidr: 172.16.0.0/12
+                  - ipBlock:
+                      cidr: 192.168.0.0/16
+          any: true
+
+  - it: renders monitoring ingress for a custom metrics port when set
+    set:
+      networkPolicies:
+        enabled: true
+        ingress:
+          to:
+            gatekeeper:9999:
+              from:
+                definition:
+                  monitoring: true
+    asserts:
+      - containsDocument:
+          apiVersion: networking.k8s.io/v1
+          kind: NetworkPolicy
+          spec:
+            policyTypes:
+              - Ingress
+            podSelector:
+              matchLabels:
+                app.kubernetes.io/name: gatekeeper
+            ingress:
+              - from:
+                  - namespaceSelector:
+                      matchLabels:
+                        kubernetes.io/metadata.name: monitoring
+                    podSelector:
+                      matchLabels:
+                        app.kubernetes.io/name: prometheus
+                ports:
+                  - port: 9999
+                    protocol: TCP
+          any: true
