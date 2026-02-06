@@ -1,7 +1,7 @@
 <!-- Warning: Do not manually edit this file. See notes on gluon + helm-docs at the end of this file for more information. -->
 # gatekeeper
 
-![Version: 3.21.0-bb.2](https://img.shields.io/badge/Version-3.21.0--bb.2-informational?style=flat-square) ![AppVersion: v3.21.0](https://img.shields.io/badge/AppVersion-v3.21.0-informational?style=flat-square) ![Maintenance Track: bb_integrated](https://img.shields.io/badge/Maintenance_Track-bb_integrated-green?style=flat-square)
+![Version: 3.21.1-bb.0](https://img.shields.io/badge/Version-3.21.1--bb.0-informational?style=flat-square) ![AppVersion: v3.21.1](https://img.shields.io/badge/AppVersion-v3.21.1-informational?style=flat-square) ![Maintenance Track: bb_integrated](https://img.shields.io/badge/Maintenance_Track-bb_integrated-green?style=flat-square)
 
 A Helm chart for Gatekeeper
 
@@ -134,7 +134,7 @@ helm install gatekeeper chart/
 | upstream.externaldataProviderResponseCacheTTL | string | `"3m"` |  |
 | upstream.enableK8sNativeValidation | bool | `true` |  |
 | upstream.image.repository | string | `"registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper"` |  |
-| upstream.image.release | string | `"v3.21.0"` |  |
+| upstream.image.release | string | `"v3.21.1"` |  |
 | upstream.image.pullPolicy | string | `"IfNotPresent"` |  |
 | upstream.image.pullSecrets[0].name | string | `"private-registry"` |  |
 | upstream.image.crdRepository | string | `"registry1.dso.mil/ironbank/opensource/kubernetes/kubectl"` |  |
