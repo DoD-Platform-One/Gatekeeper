@@ -4,9 +4,9 @@ dependencies:
   version: 0.9.7
 - name: bb-common
   repository: oci://registry1.dso.mil/bigbang
-  version: 0.13.0
+  version: 0.14.0
 - name: gatekeeper
   repository: https://open-policy-agent.github.io/gatekeeper/charts
-  version: 3.21.0
-digest: sha256:610682f2e31d2d7aacf8b25ab046013976eba828d5ff2b851e37db69c7e34671
-generated: "2026-01-27T16:56:47.698838-07:00"
+  version: 3.21.1
+digest: sha256:aea7c45b71f186fc4498049871cead522cedbca72597fdbaa00c4328bc2de985
+generated: "2026-02-05T09:34:53.004667-05:00"

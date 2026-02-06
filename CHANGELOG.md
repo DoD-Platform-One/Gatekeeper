@@ -3,6 +3,13 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [3.21.1-bb.0] (2026-02-06)
+
+### Changed
+
+- Updated bb-common chart from `0.13.0` -> `0.14.0`
+- Updated gatekeeper from `3.21.0` -> `3.21.1`
+- Updated registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper from `v3.21.0` -> `v3.21.1`
 
 ## [3.21.0-bb.2] (2026-01-09)
 
