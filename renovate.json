@@ -2,82 +2,85 @@
   "baseBranches": [
     "main"
   ],
-  "configWarningReuseIssue": false,
   "dependencyDashboard": true,
   "dependencyDashboardTitle": "Renovate: Upgrade OPA Gatekeeper Package Dependencies",
   "draftPR": true,
   "labels": [
     "opagatekeeper",
+    "renovate",
     "Big Bang Core",
     "Package Sustainment",
     "kind::maintenance"
-  ],
-  "commitMessagePrefix": "SKIP UPDATE CHECK",
-  "postUpdateOptions": [
-    "helmUpdateSubChartArchives"
   ],
   "packageRules": [
     {
       "matchDatasources": [
         "docker"
       ],
-      "groupName": "Ironbank",
-      "registryUrls": [
-        "https://registry1.dso.mil"
-      ]
+      "groupName": "gatekeeper",
+      "postUpgradeTasks": {
+        "commands": [
+          "match-chart-yaml-appversion",
+          "regenerate-helm-docs",
+          "bump-changelog '{{#each upgrades}}- {{depName}} {{currentVersion}} -> {{newVersion}}\\n{{/each}}'"
+        ],
+        "fileFilters": [
+          "chart/Chart.yaml",
+          "README.md",
+          "CHANGELOG.md"
+        ],
+        "executionMode": "branch"
+      }
     }
+  ],
+  "separateMajorMinor": false,
+  "postUpdateOptions": [
+    "helmUpdateSubChartArchives"
   ],
   "customManagers": [
     {
       "customType": "regex",
-      "managerFilePatterns": [
-        "/^chart/values\\.yaml$/"
-      ],
-      "matchStrings": [
-        "image:\\s+repository:\\s+[^/]+/(?<depName>.+)\\s+release:\\s+(?<currentValue>.+)"
-      ],
-      "datasourceTemplate": "docker"
-    },
-    {
-      "customType": "regex",
-      "managerFilePatterns": [
-        "/^chart/values\\.yaml$/"
-      ],
-      "matchStrings": [
-        "image:\\s+(?<depName>.+):(?<currentValue>.+)"
-      ],
-      "datasourceTemplate": "docker"
-    },
-    {
-      "customType": "regex",
-      "managerFilePatterns": [
-        "/^chart/values\\.yaml$/"
-      ],
-      "matchStrings": [
-        "crdRepository:\\s+(?<depName>.+)\\s+crdRelease:\\s+(?<currentValue>.+)"
-      ],
-      "datasourceTemplate": "docker"
-    },
-    {
-      "customType": "regex",
+      "description": "Track Gatekeeper appVersion and annotation version in Chart.yaml",
       "managerFilePatterns": [
         "/^chart/Chart\\.yaml$/"
       ],
       "matchStrings": [
-        "appVersion:[^\\S\\r\\n]+(?<currentValue>.+)",
-        "- Gatekeeper:\\s+(?<currentValue>.+)"
+        "appVersion:[^\\S\\r\\n]+(?<currentValue>\\S+)",
+        "- Gatekeeper:\\s+(?<currentValue>\\S+)"
       ],
-      "depNameTemplate": "ironbank/opensource/openpolicyagent/gatekeeper",
-      "registryUrlTemplate": "https://registry1.dso.mil",
+      "depNameTemplate": "registry1.dso.mil/ironbank/opensource/openpolicyagent/gatekeeper",
       "datasourceTemplate": "docker"
     },
     {
       "customType": "regex",
+      "description": "Track image references in Chart.yaml helm.sh/images annotation",
       "managerFilePatterns": [
         "/^chart/Chart\\.yaml$/"
       ],
       "matchStrings": [
-        "image:[^\\S\\r\\n]+(?<depName>.+):(?<currentValue>.+)"
+        "image:[^\\S\\r\\n]+(?<depName>\\S+):(?<currentValue>\\S+)"
+      ],
+      "datasourceTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "description": "Track main image repository and release version in values.yaml",
+      "managerFilePatterns": [
+        "/^chart/values\\.yaml$/"
+      ],
+      "matchStrings": [
+        "image:\\s+repository:\\s+(?<depName>\\S+)\\s+release:\\s+(?<currentValue>\\S+)"
+      ],
+      "datasourceTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "description": "Track CRD image repository and release version in values.yaml",
+      "managerFilePatterns": [
+        "/^chart/values\\.yaml$/"
+      ],
+      "matchStrings": [
+        "crdRepository:\\s+(?<depName>\\S+)\\s+crdRelease:\\s+(?<currentValue>\\S+)"
       ],
       "datasourceTemplate": "docker"
     }
