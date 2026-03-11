@@ -1,12 +1,12 @@
 dependencies:
 - name: gluon
   repository: oci://registry1.dso.mil/bigbang
-  version: 0.9.7
+  version: 0.9.8
 - name: bb-common
   repository: oci://registry1.dso.mil/bigbang
-  version: 0.14.0
+  version: 0.14.1
 - name: gatekeeper
   repository: https://open-policy-agent.github.io/gatekeeper/charts
-  version: 3.21.1
-digest: sha256:aea7c45b71f186fc4498049871cead522cedbca72597fdbaa00c4328bc2de985
-generated: "2026-02-05T09:34:53.004667-05:00"
+  version: 3.22.0
+digest: sha256:39c25855e4189ce3cf17a01678ff5d368af564b73b06cdcd5eab48aa0e66a6e3
+generated: "2026-03-11T14:47:17.99372318Z"
